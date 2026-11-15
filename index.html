@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FelRon IT-Legacy-Capital | The CALM Protocol Client Portal &amp; Concept Engine</title>
+  <meta name="description" content="FelRon IT-Legacy-Capital: private, education-first support across Capital & Markets, Administration & Bureaucracy, Logistics & Direct Execution, and Machines, Networks & Web3. San Antonio, TX." />
+  <meta name="theme-color" content="#050708" />
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          },
+          colors: {
+            obsidian: { 950: '#050708', 900: '#0a0d0f', 800: '#11161b', 700: '#1a222a' },
+            limepulse: { 400: '#a3e635', 500: '#84cc16', 300: '#bef264' }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body { background-color: #050708; color: #f3f4f6; font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; }
+    .lime-glow { box-shadow: 0 0 24px -6px rgba(163, 230, 53, 0.35); }
+    .card-surface { background: linear-gradient(180deg, rgba(17, 22, 27, 0.95) 0%, rgba(10, 13, 15, 0.98) 100%); border: 1px solid rgba(163, 230, 53, 0.18); transition: border-color .2s; }
+    .card-surface:hover { border-color: rgba(163, 230, 53, 0.45); }
+    .hero-grid { background-image: radial-gradient(ellipse 60% 50% at 80% 0%, rgba(163,230,53,.12), transparent 60%), linear-gradient(rgba(163,230,53,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(163,230,53,.05) 1px, transparent 1px); background-size: auto, 32px 32px, 32px 32px; }
+    input[type="range"] { accent-color: #a3e635; }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #050708; }
+    ::-webkit-scrollbar-thumb { background: #1a222a; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #a3e635; }
+    .view { display: none; }
+    .view.active { display: block; }
+    .edu-badge { background: rgba(250, 204, 21, .08); border: 1px solid rgba(250, 204, 21, .35); color: #fde68a; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-lime-400 selection:text-black">
+
+  <!-- Top Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-obsidian-950/95 backdrop-blur-md border-b border-lime-400/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-lime-400 text-black flex items-center justify-center font-mono font-extrabold text-lg lime-glow">FR</div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-extrabold tracking-tight text-white text-base sm:text-lg">FELRON IT-LEGACY-CAPITAL</span>
+            <span class="hidden sm:inline-block text-[11px] font-mono uppercase px-2 py-0.5 rounded bg-lime-400/15 text-lime-300 border border-lime-400/30">The CALM Protocol</span>
+          </div>
+          <p class="text-xs text-gray-400">Matthew Alexander Diaz • Systems Operator, Capital Education &amp; Direct Execution</p>
+        </div>
+      </div>
+      <nav class="flex items-center gap-1.5 overflow-x-auto py-1 max-w-full" aria-label="Main Navigation">
+        <button id="nav-overview" onclick="switchView('overview')" class="nav-tab px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all">1. Overview &amp; Pillars</button>
+        <button id="nav-codex" onclick="switchView('codex')" class="nav-tab px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all">2. Concept Codex</button>
+        <button id="nav-sims" onclick="switchView('sims')" class="nav-tab px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all">3. Educational Simulators</button>
+        <button id="nav-intake" onclick="switchView('intake')" class="nav-tab px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all">4. Client Brief</button>
+        <button id="nav-howwework" onclick="switchView('howwework')" class="nav-tab px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all">5. How We Work</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-1">
+
+  <!-- ===================== VIEW 1: OVERVIEW ===================== -->
+  <section id="view-overview" class="view active">
+    <div class="hero-grid border-b border-lime-400/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-14 sm:py-20 grid lg:grid-cols-5 gap-10 items-center">
+        <div class="lg:col-span-3">
+          <p class="font-mono text-xs uppercase tracking-[0.3em] text-lime-300 mb-4">The Trusted First Call • San Antonio, TX</p>
+          <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-[1.02]">
+            Before the Lawyer.<br />Before the CPA.<br /><span class="text-lime-400">Call FelRon First.</span>
+          </h1>
+          <p class="mt-6 text-gray-300 text-base sm:text-lg max-w-2xl leading-relaxed">
+            When technology fails, finances tangle, or daily logistics stall, FelRon is the single, discreet operator who helps you understand the problem, organize it, and get it handled, before professional fees start piling up.
+          </p>
+          <p class="mt-3 text-lime-300/90 font-medium">Private by design. Discreet by upbringing.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <button onclick="switchView('codex')" class="px-5 py-2.5 rounded-lg bg-lime-400 text-black font-bold text-sm lime-glow hover:bg-lime-300">Explore the 17 Concepts</button>
+            <button onclick="switchView('howwework')" class="px-5 py-2.5 rounded-lg border border-lime-400/40 text-lime-300 font-semibold text-sm hover:bg-lime-400/10">How We Work</button>
+          </div>
+        </div>
+        <div class="lg:col-span-2 card-surface rounded-2xl p-6">
+          <p class="font-mono text-[11px] uppercase tracking-[0.25em] text-lime-300 mb-3">Founder</p>
+          <h3 class="text-xl font-bold">Raised on composure under pressure.</h3>
+          <p class="mt-3 text-sm text-gray-300 leading-relaxed">
+            Matthew Alexander Diaz is the son of a 29-year military combat medic and Bronze Star recipient, and of a devoted mother who earned numerous medals for her service in the Family Readiness Group (FRG). In that household, when family or friends faced a technical failure, a financial or insurance tangle, or a logistical bottleneck, you stepped up and helped resolve it.
+          </p>
+          <p class="mt-3 text-sm text-gray-300 leading-relaxed">FelRon IT-Legacy-Capital, founded in his parents' honor, brings that same calm, precision, and good faith to every private client.</p>
+          <div class="mt-5 grid grid-cols-2 gap-3 text-xs">
+            <div class="rounded-lg bg-obsidian-950 border border-gray-800 p-3"><div class="font-mono text-lime-300 font-bold">29 Years · Bronze Star</div><div class="text-gray-400 mt-1">Father's career as a military combat medic</div></div>
+            <div class="rounded-lg bg-obsidian-950 border border-gray-800 p-3"><div class="font-mono text-lime-300 font-bold">FRG Honors</div><div class="text-gray-400 mt-1">Mother's medals for Family Readiness Group service</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Private by Design -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+      <div class="rounded-2xl border border-lime-400/30 bg-gradient-to-br from-lime-400/[0.07] to-transparent p-6 sm:p-8">
+        <div class="flex flex-wrap items-end justify-between gap-3 mb-6">
+          <div>
+            <p class="font-mono text-[11px] uppercase tracking-[0.3em] text-lime-300">Core Differentiator</p>
+            <h2 class="text-2xl sm:text-3xl font-extrabold mt-1">Private by Design. <span class="text-lime-400">Zero-Knowledge by Default.</span></h2>
+          </div>
+          <p class="text-sm text-gray-400 max-w-md">Privacy is a working practice here, not a slogan. These are the habits every engagement follows.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div class="card-surface rounded-xl p-4"><div class="font-mono text-lime-300 text-xs mb-2">01</div><h4 class="font-bold text-sm">Need-to-Know Handling</h4><p class="text-xs text-gray-400 mt-1.5 leading-relaxed">Only the information the task actually requires is requested.</p></div>
+          <div class="card-surface rounded-xl p-4"><div class="font-mono text-lime-300 text-xs mb-2">02</div><h4 class="font-bold text-sm">Minimal Retention</h4><p class="text-xs text-gray-400 mt-1.5 leading-relaxed">Information is kept no longer than the work demands.</p></div>
+          <div class="card-surface rounded-xl p-4"><div class="font-mono text-lime-300 text-xs mb-2">03</div><h4 class="font-bold text-sm">Client-Held Keys</h4><p class="text-xs text-gray-400 mt-1.5 leading-relaxed">Self-custody means your keys, passwords and logins stay in your hands. We never hold them.</p></div>
+          <div class="card-surface rounded-xl p-4"><div class="font-mono text-lime-300 text-xs mb-2">04</div><h4 class="font-bold text-sm">Encrypted Channels</h4><p class="text-xs text-gray-400 mt-1.5 leading-relaxed">Sensitive conversations move over encrypted communication tools.</p></div>
+          <div class="card-surface rounded-xl p-4"><div class="font-mono text-lime-300 text-xs mb-2">05</div><h4 class="font-bold text-sm">Zero-Knowledge Infrastructure</h4><p class="text-xs text-gray-400 mt-1.5 leading-relaxed">Privacy-preserving tools and protocols, so the operator never needs to see more than necessary.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CALM Pillars -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 pb-12">
+      <div class="mb-6">
+        <p class="font-mono text-[11px] uppercase tracking-[0.3em] text-lime-300">Core Capabilities</p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold mt-1">The CALM Protocol</h2>
+        <p class="text-sm text-gray-400 mt-2 max-w-2xl">Four disciplines, one accountable operator, and a medic's composure behind every engagement. Every pillar is delivered as education, organization and hands-on setup support.</p>
+      </div>
+      <div id="pillar-cards" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+    </div>
+
+    <!-- Why clients call first -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 pb-12">
+      <div class="card-surface rounded-2xl p-6">
+        <p class="font-mono text-[11px] uppercase tracking-[0.3em] text-lime-300 mb-4">Why Clients Call First</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div><div class="font-mono text-lime-400 text-2xl font-bold">01</div><h4 class="font-bold mt-1">One confidential call</h4><p class="text-xs text-gray-400 mt-1">Bring the problem forward in complete confidence.</p></div>
+          <div><div class="font-mono text-lime-400 text-2xl font-bold">02</div><h4 class="font-bold mt-1">Objective triage</h4><p class="text-xs text-gray-400 mt-1">Laid out plainly, the way a medic assesses a scene.</p></div>
+          <div><div class="font-mono text-lime-400 text-2xl font-bold">03</div><h4 class="font-bold mt-1">Quiet execution</h4><p class="text-xs text-gray-400 mt-1">Hands-on organization and setup, with speed and good faith.</p></div>
+          <div><div class="font-mono text-lime-400 text-2xl font-bold">04</div><h4 class="font-bold mt-1">Fees kept in check</h4><p class="text-xs text-gray-400 mt-1">Get organized first, so time with licensed professionals is focused and efficient.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Foundation -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 pb-14 grid md:grid-cols-2 gap-4">
+      <div class="card-surface rounded-2xl p-6">
+        <p class="font-mono text-[11px] uppercase tracking-[0.3em] text-lime-300 mb-3">Academic &amp; Technical Foundation</p>
+        <ul class="text-sm text-gray-300 space-y-1.5">
+          <li>• Logistics &amp; Supply Chain Management (Northeast Lakeview College)</li>
+          <li>• Electrical Concepts &amp; HVAC Systems coursework (Southern Careers Institute)</li>
+          <li>• Dental Assisting Core Curriculum (Concorde Career College)</li>
+          <li>• AP Macroeconomics &amp; AP European History</li>
+        </ul>
+      </div>
+      <div class="card-surface rounded-2xl p-6">
+        <p class="font-mono text-[11px] uppercase tracking-[0.3em] text-lime-300 mb-3">Operational Experience</p>
+        <p class="text-sm text-gray-300 leading-relaxed">Years of hands-on retail management and assistant general management, spanning inventory control, logistics and team direction, alongside programmatic data tracking in Python and Go. Grounded in objective analysis, transparency and good faith.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VIEW 2: CODEX ===================== -->
+  <section id="view-codex" class="view">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div class="flex flex-wrap items-end justify-between gap-4 mb-6">
+        <div>
+          <p class="font-mono text-[11px] uppercase tracking-[0.3em] text-lime-300">Concept Codex</p>
+          <h2 class="text-2xl sm:text-3xl font-extrabold mt-1">17 Concepts, Explained in Plain English</h2>
+          <p class="text-sm text-gray-400 mt-2 max-w-2xl">General education on how each topic works and the common approaches people consider. Nothing here is a recommendation for your situation.</p>
+        </div>
+        <input id="codex-search" oninput="renderCodex()" placeholder="Search concepts…" class="bg-obsidian-900 border border-gray-800 focus:border-lime-400 outline-none rounded-lg px-3 py-2 text-sm w-full sm:w-64" />
+      </div>
+      <div id="codex-filters" class="flex flex-wrap gap-2 mb-6"></div>
+      <div id="codex-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </div>
+  </section>
+
+  <!-- ===================== VIEW 3: SIMULATORS ===================== -->
+  <section id="view-sims" class="view">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <p class="font-mono text-[11px] uppercase tracking-[0.3em] text-lime-300">C — Capital &amp; Markets</p>
+      <h2 class="text-2xl sm:text-3xl font-extrabold mt-1">Educational Simulators</h2>
+      <div class="edu-badge rounded-lg px-4 py-3 text-sm mt-4 mb-8">
+        <strong>Educational simulator, hypothetical illustration, not a recommendation.</strong> These tools show how the math of options and leveraged contracts works using made-up numbers. They ignore fees, taxes, time decay before expiration, funding rates and slippage. Real results can differ greatly, and you can lose your entire investment.
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-6">
+        <!-- LEAPS -->
+        <div class="card-surface rounded-2xl p-6">
+          <div class="flex items-center justify-between gap-2 mb-1">
+            <h3 class="text-lg font-bold">LEAPS Call Payoff at Expiration</h3>
+            <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded edu-badge">Educational</span>
+          </div>
+          <p class="text-xs text-gray-400 mb-4">How a long-dated call option's profit or loss changes with the stock price at expiration.</p>
+          <button onclick="loadLeapsExample()" class="mb-4 text-xs px-3 py-1.5 rounded-lg border border-lime-400/40 text-lime-300 hover:bg-lime-400/10">Load Example: $5 LEAPS call</button>
+          <div class="grid grid-cols-2 gap-3 text-xs">
+            <label>Stock price today ($)<input id="lp-spot" type="number" step="0.01" value="5" oninput="updateLeaps()" class="mt-1 w-full bg-obsidian-950 border border-gray-800 rounded px-2 py-1.5" /></label>
+            <label>Strike price ($)<input id="lp-strike" type="number" step="0.5" value="5" oninput="updateLeaps()" class="mt-1 w-full bg-obsidian-950 border border-gray-800 rounded px-2 py-1.5" /></label>
+            <label>Premium per share ($)<input id="lp-prem" type="number" step="0.05" value="1.20" oninput="updateLeaps()" class="mt-1 w-full bg-obsidian-950 border border-gray-800 rounded px-2 py-1.5" /></label>
+            <label>Contracts (100 shares each)<input id="lp-qty" type="number" min="1" value="1" oninput="updateLeaps()" class="mt-1 w-full bg-obsidian-950 border border-gray-800 rounded px-2 py-1.5" /></label>
+          </div>
+          <label class="block text-xs mt-4">Hypothetical stock price at expiration: <span id="lp-target-label" class="font-mono text-lime-300"></span>
+            <input id="lp-target" type="range" min="0" max="20" step="0.1" value="8" oninput="updateLeaps()" class="w-full mt-1" />
+          </label>
+          <div class="grid grid-cols-3 gap-2 mt-4 text-center">
+            <div class="rounded-lg bg-obsidian-950 border border-gray-800 p-2"><div class="text-[10px] text-gray-500 uppercase">Cost (max loss)</div><div id="lp-cost" class="font-mono font-bold"></div></div>
+            <div class="rounded-lg bg-obsidian-950 border border-gray-800 p-2"><div class="text-[10px] text-gray-500 uppercase">Breakeven</div><div id="lp-be" class="font-mono font-bold"></div></div>
+            <div class="rounded-lg bg-obsidian-950 border border-gray-800 p-2"><div class="text-[10px] text-gray-500 uppercase">Hypothetical P/L</div><div id="lp-pl" class="font-mono font-bold"></div></div>
+          </div>
+          <div class="mt-4 h-56"><canvas id="leapsChart"></canvas></div>
+        </div>
+
+        <!-- Perps -->
+        <div class="card-surface rounded-2xl p-6">
+          <div class="flex items-center justify-between gap-2 mb-1">
+            <h3 class="text-lg font-bold">Perpetual Futures &amp; Leverage Mechanics</h3>
+            <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded edu-badge">Educational</span>
+          </div>
+          <p class="text-xs text-gray-400 mb-4">How leverage magnifies both gains and losses, and roughly where a position could be liquidated.</p>
+          <div class="grid grid-cols-2 gap-3 text-xs">
+            <label>Collateral / margin ($)<input id="pp-margin" type="number" value="100" oninput="updatePerps()" class="mt-1 w-full bg-obsidian-950 border border-gray-800 rounded px-2 py-1.5" /></label>
+            <label>Entry price ($)<input id="pp-entry" type="number" value="100" oninput="updatePerps()" class="mt-1 w-full bg-obsidian-950 border border-gray-800 rounded px-2 py-1.5" /></label>
+            <label>Leverage (x)<input id="pp-lev" type="number" min="1" max="50" value="5" oninput="updatePerps()" class="mt-1 w-full bg-obsidian-950 border border-gray-800 rounded px-2 py-1.5" /></label>
+            <label>Direction<select id="pp-dir" onchange="updatePerps()" class="mt-1 w-full bg-obsidian-950 border border-gray-800 rounded px-2 py-1.5"><option value="long">Long (price up)</option><option value="short">Short (price down)</option></select></label>
+          </div>
+          <label class="block text-xs mt-4">Hypothetical price move: <span id="pp-move-label" class="font-mono text-lime-300"></span>
+            <input id="pp-move" type="range" min="-30" max="30" step="0.5" value="5" oninput="updatePerps()" class="w-full mt-1" />
+          </label>
+          <div class="grid grid-cols-3 gap-2 mt-4 text-center">
+            <div class="rounded-lg bg-obsidian-950 border border-gray-800 p-2"><div class="text-[10px] text-gray-500 uppercase">Position size</div><div id="pp-size" class="font-mono font-bold"></div></div>
+            <div class="rounded-lg bg-obsidian-950 border border-gray-800 p-2"><div class="text-[10px] text-gray-500 uppercase">Approx. liquidation</div><div id="pp-liq" class="font-mono font-bold"></div></div>
+            <div class="rounded-lg bg-obsidian-950 border border-gray-800 p-2"><div class="text-[10px] text-gray-500 uppercase">Hypothetical P/L</div><div id="pp-pl" class="font-mono font-bold"></div></div>
+          </div>
+          <div class="mt-4 h-56"><canvas id="perpsChart"></canvas></div>
+          <p class="text-[11px] text-gray-500 mt-3">Liquidation is simplified (collateral fully lost). Real exchanges use maintenance margin, fees and funding, so liquidation usually happens sooner.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VIEW 4: CLIENT BRIEF ===================== -->
+  <section id="view-intake" class="view">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 grid lg:grid-cols-2 gap-6">
+      <div class="card-surface rounded-2xl p-6">
+        <p class="font-mono text-[11px] uppercase tracking-[0.3em] text-lime-300">Client Brief Generator</p>
+        <h2 class="text-2xl font-extrabold mt-1">Build an Engagement Brief</h2>
+        <p class="text-xs text-gray-400 mt-2">Pick the topics you'd like to learn about or get organized. This creates a summary to bring to your first session.</p>
+        <div class="grid sm:grid-cols-2 gap-3 mt-5 text-xs">
+          <label>Client / partner name<input id="client-name" oninput="updateClientBrief()" placeholder="Your name" class="mt-1 w-full bg-obsidian-950 border border-gray-800 focus:border-lime-400 outline-none rounded px-2 py-2" /></label>
+          <label>Format<select id="client-tier" onchange="updateClientBrief()" class="mt-1 w-full bg-obsidian-950 border border-gray-800 rounded px-2 py-2">
+            <option>1-on-1 education session</option>
+            <option>Hands-on setup &amp; organization session</option>
+            <option>Ongoing monthly support</option>
+          </select></label>
+        </div>
+        <div class="flex items-center justify-between mt-5 mb-2">
+          <span id="selected-count-badge" class="text-[11px] font-mono px-2 py-0.5 rounded bg-lime-400/15 text-lime-300 border border-lime-400/30">0 Selected</span>
+          <button onclick="selectAllServices()" class="text-xs text-lime-300 hover:underline">Select / clear all</button>
+        </div>
+        <div id="service-checkboxes" class="grid sm:grid-cols-2 gap-2 max-h-[460px] overflow-y-auto pr-1"></div>
+      </div>
+      <div class="card-surface rounded-2xl p-6 flex flex-col">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="font-bold">Generated Brief</h3>
+          <button onclick="copyClientBrief()" class="px-3 py-1.5 rounded-lg bg-lime-400 text-black text-xs font-bold hover:bg-lime-300">Copy Brief</button>
+        </div>
+        <pre id="client-brief-output" class="flex-1 bg-obsidian-950 border border-gray-800 rounded-lg p-4 text-[11px] font-mono text-gray-300 whitespace-pre-wrap overflow-auto min-h-[420px]"></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VIEW 5: HOW WE WORK ===================== -->
+  <section id="view-howwework" class="view">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10">
+      <p class="font-mono text-[11px] uppercase tracking-[0.3em] text-lime-300">How We Work</p>
+      <h2 class="text-2xl sm:text-3xl font-extrabold mt-1">Education &amp; Organization. Your Decisions, Always.</h2>
+      <p class="text-sm text-gray-400 mt-2 max-w-3xl">Clear ground rules protect you and keep every engagement honest. This is how each one runs.</p>
+      <div class="grid md:grid-cols-2 gap-4 mt-6">
+        <div class="card-surface rounded-xl p-5"><h4 class="font-bold text-lime-300">Education and organization only</h4><p class="text-sm text-gray-300 mt-2">We explain how things work, lay out the common approaches people consider, and help you get organized and set up.</p></div>
+        <div class="card-surface rounded-xl p-5"><h4 class="font-bold text-lime-300">Not legal, tax or investment advice</h4><p class="text-sm text-gray-300 mt-2">FelRon is not a law firm, CPA firm, registered investment adviser, insurance adjuster or licensed electrician. When something needs a licensed professional, we help you get organized and refer you out.</p></div>
+        <div class="card-surface rounded-xl p-5"><h4 class="font-bold text-lime-300">You make your own decisions</h4><p class="text-sm text-gray-300 mt-2">We never tell you what to buy, sell or move. Every financial and personal decision is yours.</p></div>
+        <div class="card-surface rounded-xl p-5"><h4 class="font-bold text-lime-300">No custody, ever</h4><p class="text-sm text-gray-300 mt-2">We never take custody of your funds, crypto keys, seed phrases or account logins, and we never place trades for you.</p></div>
+        <div class="card-surface rounded-xl p-5"><h4 class="font-bold text-lime-300">Signed service agreement first</h4><p class="text-sm text-gray-300 mt-2">Every engagement starts with a short written agreement that sets out the scope and these ground rules.</p></div>
+        <div class="card-surface rounded-xl p-5"><h4 class="font-bold text-lime-300">Written recap after every session</h4><p class="text-sm text-gray-300 mt-2">Each session ends with a written summary of what was covered, so you have a clear record.</p></div>
+      </div>
+
+      <div class="card-surface rounded-2xl p-6 mt-8">
+        <p class="font-mono text-[11px] uppercase tracking-[0.3em] text-lime-300 mb-3">Contact &amp; Secure Dispatch</p>
+        <div class="grid sm:grid-cols-2 gap-3 text-sm">
+          <div class="rounded-lg bg-obsidian-950 border border-gray-800 p-4"><div class="text-[11px] text-gray-500 uppercase">Direct</div><div class="font-mono mt-1">[Phone Number]</div></div>
+          <div class="rounded-lg bg-obsidian-950 border border-gray-800 p-4"><div class="text-[11px] text-gray-500 uppercase">Fiverr / Secure Dispatch</div><div class="font-mono mt-1">[Fiverr Profile Link]</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-lime-400/20 bg-obsidian-900 mt-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 text-xs text-gray-400 space-y-3">
+      <div class="flex flex-wrap justify-between gap-2">
+        <span class="font-semibold text-gray-200">FelRon IT-Legacy-Capital • San Antonio, TX</span>
+        <span class="font-mono text-lime-300/80">The CALM Protocol · Capital · Administration · Logistics · Machines</span>
+      </div>
+      <p id="site-disclaimer" class="leading-relaxed text-gray-500">
+        FelRon IT-Legacy-Capital provides educational, organizational and logistical support only. Nothing on this site or in any session is legal, tax or investment advice, and no returns or outcomes are promised. Clients make their own decisions. We never take custody of client funds, crypto keys or account logins. Work that requires a license (such as investment advice, legal services, insurance adjusting, tax preparation or electrical work) is referred to licensed professionals. Simulators show hypothetical illustrations only.
+      </p>
+    </div>
+  </footer>
+
+  <div id="toast" class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 bg-lime-400 text-black font-bold text-sm px-4 py-2 rounded-lg lime-glow z-50">Brief copied to clipboard</div>
+
+  <script>
+    const DISCLAIMER = 'Education and organization only. Not legal, tax, or investment advice. Client makes all decisions. No custody of funds, keys, or account logins.';
+
+    const PILLARS = {
+      C: { code: 'C', name: 'Capital & Markets', tagline: 'Clarity and context before capital moves.' },
+      A: { code: 'A', name: 'Administration & Bureaucracy', tagline: 'Red tape organized before it becomes expensive.' },
+      L: { code: 'L', name: 'Logistics & Direct Execution', tagline: 'Money basics, daily logistics, handled quietly.' },
+      M: { code: 'M', name: 'Machines, Networks & Web3', tagline: 'Systems secured, private and running.' }
+    };
+
+    const NOTEBOOK_CONCEPTS = [
+      { id: 'leaps', pillar: 'C', title: 'LEAPS Call Options',
+        plainEnglish: 'A LEAPS is a call option that expires a year or more out. How it works: you pay a premium for the right to buy shares at a set strike price. The premium is the most you can lose, and more time means a higher price.',
+        clientAction: 'Walkthrough of strike, expiration, premium and breakeven, using the educational LEAPS simulator.' },
+      { id: 'options-risk', pillar: 'C', title: 'Options Basics & Risk Mechanics',
+        plainEnglish: 'Calls, puts, time decay, implied volatility and the bid/ask spread. Common approaches people consider include defined-risk positions and position sizing limits, and each comes with tradeoffs.',
+        clientAction: 'Plain-English glossary and risk checklist covering how options gain and lose value.' },
+      { id: 'perps-margin', pillar: 'C', title: 'Perpetual Futures, Margin & Leverage',
+        plainEnglish: 'Perps and margin let a trader control a position larger than their cash. Leverage magnifies gains and losses equally, and liquidation can wipe out the collateral.',
+        clientAction: 'Educational session on margin requirements, funding rates and liquidation math, using the perps simulator.' },
+      { id: 'macro', pillar: 'C', title: 'Macro Cycles & Market Research Methods',
+        plainEnglish: 'How interest rates, inflation and business cycles have historically moved markets, and how people research companies and sectors objectively.',
+        clientAction: 'Overview of macro indicators and a research framework you can apply on your own.' },
+
+      { id: 'biz-plan', pillar: 'A', title: 'Business Planning & Entity Basics',
+        plainEnglish: 'How sole proprietorships, DBAs and LLCs differ, what each one generally involves, and how a simple business plan is structured.',
+        clientAction: 'Organized business-plan outline and a checklist of filings to discuss with an attorney or the state.' },
+      { id: 'banking', pillar: 'A', title: 'Business Banking Setup',
+        plainEnglish: 'Why business and personal money are usually kept separate, and what banks typically ask for when you open a business account.',
+        clientAction: 'Document checklist and organized setup for opening a business account in your own name.' },
+      { id: 'tax-records', pillar: 'A', title: 'Tax Record Organization',
+        plainEnglish: 'Receipts, 1099s, mileage and expense records sorted into a clean system, so your tax preparer has what they need.',
+        clientAction: 'Organized tax-record folder and summary to hand to your CPA or licensed tax preparer.' },
+      { id: 'insurance', pillar: 'A', title: 'Insurance Paperwork & Policy Understanding',
+        plainEnglish: 'Organizing paperwork and understanding your health, life or auto policy: what is covered, deductibles, deadlines and what documents are typically requested.',
+        clientAction: 'Organized claim file and a plain-English policy summary. Claims are handled by you, your insurer or a licensed adjuster.' },
+      { id: 'assisted-living', pillar: 'A', title: 'Assisted Living & Care Paperwork',
+        plainEnglish: 'How assisted-living and senior-care options are commonly compared, and what forms, records and questions are usually involved.',
+        clientAction: 'Comparison worksheet, organized records and a question list for facility tours and calls.' },
+      { id: 'api-mcp', pillar: 'A', title: 'API & MCP Automation for Admin Work',
+        plainEnglish: 'How APIs and AI tool connections (MCP) can automate repetitive paperwork, reminders and data entry.',
+        clientAction: 'Map of your repetitive admin tasks and setup of simple automations on accounts you control.' },
+
+      { id: 'money-coaching', pillar: 'L', title: 'Money Education & Coaching',
+        plainEnglish: 'Budgeting, credit, debt and investing basics explained in plain English. Common approaches people consider, with the tradeoffs of each.',
+        clientAction: '1-on-1 education session with a written recap. You decide what, if anything, to do.' },
+      { id: '401k', pillar: 'L', title: '401(k) Literacy: Understanding Your Fund Menu',
+        plainEnglish: 'How to read your plan\'s fund menu: expense ratios, target-date funds, index vs. active funds, and how employer matching generally works.',
+        clientAction: 'Plain-English guide to the terms on your own plan statement. Allocation decisions stay with you or a licensed adviser.' },
+      { id: 'savings', pillar: 'L', title: 'Savings Systems & Emergency Funds',
+        plainEnglish: 'How savings systems are commonly structured, such as automatic transfers, separate goal accounts and emergency funds.',
+        clientAction: 'Simple savings-tracking setup on accounts you own and control.' },
+      { id: 'logistics', pillar: 'L', title: 'Personal Assistance, Calendar & Transport Logistics',
+        plainEnglish: 'High-trust help with calendars, medical appointment logistics, driving coordination, moving and physical labor.',
+        clientAction: 'Organized schedule, appointment coordination and hands-on logistics support.' },
+
+      { id: 'self-custody', pillar: 'M', title: 'Crypto Self-Custody & Wallet Security',
+        plainEnglish: 'How hardware wallets, seed phrases and cold storage work, and the common security habits people use. Your keys never leave your hands.',
+        clientAction: 'Guided setup where you create and store your own keys. We never see or hold them.' },
+      { id: 'networking', pillar: 'M', title: 'Networking, IT Rescue & Hardware Setup',
+        plainEnglish: 'Home and office Wi-Fi, routers, backups, device cleanup, and configuration and setup of mining/DePIN hardware. Licensed electrical work is referred out.',
+        clientAction: 'Network and device setup, troubleshooting and a written summary of what was configured.' },
+      { id: 'zk-privacy', pillar: 'M', title: 'Zero-Knowledge & Privacy-Preserving Infrastructure',
+        plainEnglish: 'How encryption, zero-knowledge proofs and privacy tools let you prove or share only what is necessary.',
+        clientAction: 'Education and setup of encrypted messaging, password managers and privacy tools on your own devices.' }
+    ];
+    NOTEBOOK_CONCEPTS.forEach((c, i) => { c.number = String(i + 1).padStart(2, '0'); c.pillarLabel = c.pillar + ' — ' + PILLARS[c.pillar].name; });
+
+    let activeFilter = 'ALL';
+    const selectedServices = new Set(['money-coaching']);
+
+    function switchView(view) {
+      document.querySelectorAll('.view').forEach((v) => v.classList.remove('active'));
+      document.getElementById('view-' + view).classList.add('active');
+      document.querySelectorAll('.nav-tab').forEach((b) => {
+        b.className = 'nav-tab px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all text-gray-300 hover:text-lime-300 hover:bg-obsidian-800';
+      });
+      const active = document.getElementById('nav-' + view);
+      if (active) active.className = 'nav-tab px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-lime-400 text-black';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (view === 'sims') { updateLeaps(); updatePerps(); }
+    }
+
+    function renderPillars() {
+      document.getElementById('pillar-cards').innerHTML = Object.values(PILLARS).map((p) => {
+        const items = NOTEBOOK_CONCEPTS.filter((c) => c.pillar === p.code);
+        return `
+          <div class="card-surface rounded-2xl p-5 cursor-pointer" onclick="activeFilter='${p.code}';switchView('codex');renderCodex();">
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-lg bg-lime-400 text-black font-mono font-extrabold text-xl flex items-center justify-center lime-glow">${p.code}</div>
+              <div><div class="font-bold leading-tight">${p.name}</div><div class="text-[11px] font-mono text-lime-300/80">${items.length} concepts</div></div>
+            </div>
+            <p class="text-xs text-gray-400 mt-3 italic">${p.tagline}</p>
+            <ul class="mt-3 space-y-1 text-xs text-gray-300">${items.map((i) => `<li>• ${i.title}</li>`).join('')}</ul>
+          </div>`;
+      }).join('');
+    }
+
+    function renderFilters() {
+      const btns = [{ code: 'ALL', name: 'All 17' }].concat(Object.values(PILLARS).map((p) => ({ code: p.code, name: p.code + ' — ' + p.name })));
+      document.getElementById('codex-filters').innerHTML = btns.map((b) => `
+        <button onclick="activeFilter='${b.code}';renderCodex();" class="px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all ${
+          activeFilter === b.code ? 'bg-lime-400 text-black border-lime-400' : 'border-gray-800 text-gray-300 hover:border-lime-400/50'
+        }">${b.name}</button>`).join('');
+    }
+
+    function renderCodex() {
+      renderFilters();
+      const q = (document.getElementById('codex-search').value || '').toLowerCase();
+      const list = NOTEBOOK_CONCEPTS.filter((c) => (activeFilter === 'ALL' || c.pillar === activeFilter) &&
+        (!q || (c.title + c.plainEnglish + c.clientAction).toLowerCase().includes(q)));
+      document.getElementById('codex-grid').innerHTML = list.map((c) => `
+        <article class="card-surface rounded-xl p-5 flex flex-col">
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-lime-400 font-bold">#${c.number}</span>
+            <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-lime-400/10 text-lime-300 border border-lime-400/25">${c.pillarLabel}</span>
+          </div>
+          <h3 class="font-bold mt-2">${c.title}</h3>
+          <p class="text-xs text-gray-400 mt-2 leading-relaxed"><span class="text-gray-200 font-semibold">How it works: </span>${c.plainEnglish}</p>
+          <p class="text-xs text-gray-400 mt-2 leading-relaxed"><span class="text-gray-200 font-semibold">What you get: </span>${c.clientAction}</p>
+          <button onclick="selectedServices.add('${c.id}');renderServiceCheckboxes();updateClientBrief();switchView('intake');" class="mt-auto pt-4 text-left text-xs text-lime-300 hover:underline">+ Add to client brief</button>
+        </article>`).join('') || '<p class="text-sm text-gray-500">No concepts match.</p>';
+    }
+
+    /* ---------- Simulators ---------- */
+    let leapsChart, perpsChart;
+    const fmt = (n) => (n < 0 ? '-$' : '$') + Math.abs(n).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const plColor = (el, n) => { el.className = 'font-mono font-bold ' + (n >= 0 ? 'text-lime-400' : 'text-red-400'); };
+
+    function loadLeapsExample() {
+      document.getElementById('lp-spot').value = 5;
+      document.getElementById('lp-strike').value = 5;
+      document.getElementById('lp-prem').value = 1.20;
+      document.getElementById('lp-qty').value = 1;
+      document.getElementById('lp-target').value = 8;
+      updateLeaps();
+    }
+
+    function chartOpts(xLabel) {
+      return {
+        responsive: true, maintainAspectRatio: false, animation: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { title: { display: true, text: xLabel, color: '#9ca3af' }, ticks: { color: '#6b7280', maxTicksLimit: 8 }, grid: { color: '#11161b' } },
+          y: { title: { display: true, text: 'Hypothetical P/L ($)', color: '#9ca3af' }, ticks: { color: '#6b7280' }, grid: { color: '#1a222a' } }
+        }
+      };
+    }
+
+    function updateLeaps() {
+      const spot = +document.getElementById('lp-spot').value || 0;
+      const K = +document.getElementById('lp-strike').value || 0;
+      const prem = +document.getElementById('lp-prem').value || 0;
+      const qty = Math.max(1, +document.getElementById('lp-qty').value || 1);
+      const slider = document.getElementById('lp-target');
+      const maxX = Math.max(10, Math.ceil((K + prem) * 3));
+      slider.max = maxX;
+      const T = +slider.value;
+      const cost = prem * 100 * qty;
+      const pl = (Math.max(0, T - K) - prem) * 100 * qty;
+      document.getElementById('lp-target-label').textContent = '$' + T.toFixed(2);
+      document.getElementById('lp-cost').textContent = fmt(cost);
+      document.getElementById('lp-be').textContent = '$' + (K + prem).toFixed(2);
+      const plEl = document.getElementById('lp-pl'); plEl.textContent = fmt(pl); plColor(plEl, pl);
+      const xs = [], ys = [];
+      for (let i = 0; i <= 60; i++) { const x = (maxX * i) / 60; xs.push(x.toFixed(2)); ys.push(+((Math.max(0, x - K) - prem) * 100 * qty).toFixed(2)); }
+      if (typeof Chart === 'undefined') return;
+      if (!leapsChart) {
+        leapsChart = new Chart(document.getElementById('leapsChart'), { type: 'line',
+          data: { labels: xs, datasets: [{ data: ys, borderColor: '#a3e635', backgroundColor: 'rgba(163,230,53,.08)', fill: true, pointRadius: 0, borderWidth: 2 }] },
+          options: chartOpts('Stock price at expiration ($)') });
+      } else { leapsChart.data.labels = xs; leapsChart.data.datasets[0].data = ys; leapsChart.update(); }
+    }
+
+    function updatePerps() {
+      const m = +document.getElementById('pp-margin').value || 0;
+      const entry = +document.getElementById('pp-entry').value || 0;
+      const lev = Math.max(1, +document.getElementById('pp-lev').value || 1);
+      const dir = document.getElementById('pp-dir').value === 'long' ? 1 : -1;
+      const move = +document.getElementById('pp-move').value;
+      const size = m * lev;
+      const liqMove = 100 / lev;
+      const liqPrice = entry * (1 - dir * liqMove / 100);
+      const plOf = (mv) => Math.max(-m, size * dir * mv / 100);
+      const pl = plOf(move);
+      document.getElementById('pp-move-label').textContent = (move > 0 ? '+' : '') + move + '%';
+      document.getElementById('pp-size').textContent = fmt(size);
+      document.getElementById('pp-liq').textContent = '$' + liqPrice.toFixed(2);
+      const plEl = document.getElementById('pp-pl'); plEl.textContent = fmt(pl); plColor(plEl, pl);
+      const xs = [], ys = [];
+      for (let v = -30; v <= 30; v += 1) { xs.push(v + '%'); ys.push(+plOf(v).toFixed(2)); }
+      if (typeof Chart === 'undefined') return;
+      if (!perpsChart) {
+        perpsChart = new Chart(document.getElementById('perpsChart'), { type: 'line',
+          data: { labels: xs, datasets: [{ data: ys, borderColor: '#a3e635', backgroundColor: 'rgba(163,230,53,.08)', fill: true, pointRadius: 0, borderWidth: 2 }] },
+          options: chartOpts('Price move from entry') });
+      } else { perpsChart.data.labels = xs; perpsChart.data.datasets[0].data = ys; perpsChart.update(); }
+    }
+
+    /* ---------- Client brief ---------- */
+    function renderServiceCheckboxes() {
+      const container = document.getElementById('service-checkboxes');
+      if (!container) return;
+      container.innerHTML = NOTEBOOK_CONCEPTS.map((item) => {
+        const checked = selectedServices.has(item.id);
+        return `
+          <label class="cursor-pointer flex items-start gap-2.5 p-3 rounded-xl border transition-all ${
+            checked ? 'bg-lime-400/10 border-lime-400 text-white' : 'bg-obsidian-950 border-gray-800 text-gray-400 hover:border-gray-700'
+          }">
+            <input type="checkbox" ${checked ? 'checked' : ''} onchange="toggleServiceFromIntake('${item.id}')" class="mt-0.5 accent-lime-400" />
+            <span class="text-xs leading-snug">
+              <strong class="block font-semibold text-gray-100">#${item.number} ${item.title}</strong>
+              <span class="text-[11px] text-gray-400">${item.pillarLabel}</span>
+            </span>
+          </label>`;
+      }).join('');
+    }
+
+    function toggleServiceFromIntake(id) {
+      if (selectedServices.has(id)) selectedServices.delete(id); else selectedServices.add(id);
+      renderServiceCheckboxes();
+      updateClientBrief();
+    }
+
+    function selectAllServices() {
+      if (selectedServices.size === NOTEBOOK_CONCEPTS.length) { selectedServices.clear(); selectedServices.add('money-coaching'); }
+      else NOTEBOOK_CONCEPTS.forEach((c) => selectedServices.add(c.id));
+      renderServiceCheckboxes();
+      updateClientBrief();
+    }
+
+    function updateClientBrief() {
+      const clientName = document.getElementById('client-name').value.trim() || 'Client';
+      const clientTier = document.getElementById('client-tier').value;
+      const badge = document.getElementById('selected-count-badge');
+      const output = document.getElementById('client-brief-output');
+      const chosen = NOTEBOOK_CONCEPTS.filter((c) => selectedServices.has(c.id));
+      if (badge) badge.textContent = chosen.length + ' Selected';
+      const lines = [
+        '====================================================',
+        'FELRON IT-LEGACY-CAPITAL • CLIENT ENGAGEMENT BRIEF',
+        'The CALM Protocol • San Antonio, TX',
+        '====================================================',
+        `Client / Partner: ${clientName}`,
+        `Format: ${clientTier}`,
+        `Selected Topics (${chosen.length} of ${NOTEBOOK_CONCEPTS.length}):`,
+        ''
+      ];
+      chosen.forEach((item) => {
+        lines.push(`[${item.number}] ${item.title.toUpperCase()}  (${item.pillarLabel})`);
+        lines.push(`  • How It Works: ${item.plainEnglish}`);
+        lines.push(`  • What You Get: ${item.clientAction}`);
+        lines.push('');
+      });
+      lines.push('----------------------------------------------------');
+      lines.push('Disclaimer: ' + DISCLAIMER);
+      lines.push('Next Step: Schedule a 1-on-1 education & setup session.');
+      if (output) output.textContent = lines.join('\n');
+    }
+
+    function copyClientBrief() {
+      const text = document.getElementById('client-brief-output').textContent;
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(showToast).catch(() => fallbackCopy(text));
+      else fallbackCopy(text);
+    }
+    function fallbackCopy(text) {
+      const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta); showToast();
+    }
+    function showToast() {
+      const toast = document.getElementById('toast'); toast.classList.remove('hidden');
+      setTimeout(() => toast.classList.add('hidden'), 2400);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderPillars();
+      renderCodex();
+      renderServiceCheckboxes();
+      updateClientBrief();
+      switchView('overview');
+    });
+  </script>
+</body>
+</html>
