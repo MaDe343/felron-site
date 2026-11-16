@@ -10,7 +10,7 @@ A practical, low-budget plan built around a day job. Target: 3–5 hours a week 
 
 ## 2. 30-second pitch
 
-> "I'm Matthew Diaz, founder of FelRon IT-Legacy-Capital here in San Antonio. FelRon is named for my parents, Felicia and Ronald. My dad was a 29-year Army combat medic and paratrooper. When something causes friction, like a computer that won't cooperate, a handful of small fixes around the house, a quote that looks too high or a crypto machine you want to buy without overpaying, I'm the one call that handles it. I do the hands-on work, line up the handyman I work with for painting and repairs, call around and compare quotes so you know what fair pricing looks like, and I teach you along the way. Flat fees, written recaps, and the first 15 minutes are free. What's the friction?"
+> "I'm Alexander Diaz, founder of FelRon IT-Legacy-Capital here in San Antonio. FelRon is named for my parents, Felicia and Ronald. My dad was a 29-year Army combat medic and paratrooper. When something causes friction, like a computer that won't cooperate, a handful of small fixes around the house, a quote that looks too high or a crypto machine you want to buy without overpaying, I'm the one call that handles it. I do the hands-on work, line up the handyman I work with for painting and repairs, call around and compare quotes so you know what fair pricing looks like, and I teach you along the way. Flat fees, written recaps, and the first 15 minutes are free. What's the friction?"
 
 ---
 
@@ -90,7 +90,7 @@ A practical, low-budget plan built around a day job. Target: 3–5 hours a week 
 ## 6. Sample posts
 
 **Nextdoor intro**
-> Hi neighbors! I'm Matthew, a San Antonio local and the founder of FelRon (named for my parents, Felicia and Ronald). I help with the small stuff that piles up: painting touch-ups, drywall patches, TV and shelf mounting, furniture assembly, Wi-Fi and computer help, and AC filter changes. For bigger jobs, I call around and compare quotes so you know what fair pricing looks like. Flat fees and a free 15-minute first call. What's the friction? (210) 535-4987
+> Hi neighbors! I'm Alexander, a San Antonio local and the founder of FelRon (named for my parents, Felicia and Ronald). I help with the small stuff that piles up: painting touch-ups, drywall patches, TV and shelf mounting, furniture assembly, Wi-Fi and computer help, and AC filter changes. For bigger jobs, I call around and compare quotes so you know what fair pricing looks like. Flat fees and a free 15-minute first call. What's the friction? (210) 535-4987
 
 **Facebook group (crypto and mining)**
 > Thinking about buying an Antminer or a GPU node for DePIN? Before you pay a vendor quote, run it through my free ROI calculator: power cost, break-even and a circuit load check. If you want help, I'll source the machine, inspect it, plug it in and configure your pool. Education only, not financial advice. made343.github.io/felron-site/#/roi
