@@ -102,7 +102,7 @@ A practical, low-budget plan built around a day job. Target: 3–5 hours a week 
 > Taking care of mom or dad from across town? I help seniors with phones, tablets and TVs, paperwork, appointment logistics and comparing contractor quotes, and I send the family a written recap after every visit. Patient, respectful and local. (210) 535-4987
 
 **Military families (JBSA)**
-> PCS move or deployment month? I grew up in an Army family (my dad served 29 years, 82nd Airborne). I can knock out the to-do list: assembly, mounting, painting touch-ups, Wi-Fi setup and paperwork, and I compare quotes for anything bigger. Thank you for your service. (210) 535-4987
+> PCS move or deployment month? I grew up in an Army family (my dad served 29 years as an airborne paratrooper with the 82nd Airborne). I can knock out the to-do list: assembly, mounting, painting touch-ups, Wi-Fi setup and paperwork, and I compare quotes for anything bigger. Thank you for your service. (210) 535-4987
 
 **Short video script (30 sec)**
 > "This vendor quoted $1,650 for an Antminer Z15. Watch: [screen: ROI tool]. Sourced at $1,250, it breaks even in 9.4 months instead of 12.5. That's $400 that stays in your pocket. Before you buy hardware, call FelRon first. Link in bio. Education only, not financial advice."
