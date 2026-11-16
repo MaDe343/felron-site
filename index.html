@@ -44,6 +44,14 @@
     .card-surface:hover { border-color: rgba(212, 175, 55, 0.55); }
     .gold-cta-banner { background: linear-gradient(135deg, #f3dca2 0%, #d4af37 55%, #b68d23 100%); color: #081021; }
     .pillar-watermark { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 4.5rem; line-height: 1; color: rgba(212, 175, 55, 0.08); user-select: none; pointer-events: none; }
+    /* Name & brand typography: fluid, never truncated */
+    .brand-line { font-size: clamp(0.9rem, 3.9vw, 1.35rem); letter-spacing: clamp(0.03em, 0.5vw, 0.14em); line-height: 1.15; white-space: normal; overflow: visible; text-overflow: clip; }
+    .founder-name { font-size: clamp(1.05rem, 4.3vw, 1.4rem); line-height: 1.15; white-space: normal; overflow: visible; }
+    .hero-name { font-size: clamp(1.35rem, 6.4vw, 2.6rem); line-height: 1.05; white-space: normal; overflow: visible; }
+    .about-name { font-size: clamp(1.35rem, 6.4vw, 3.4rem); line-height: 1.02; white-space: normal; overflow: visible; }
+    .footer-name { font-size: clamp(1.05rem, 4.2vw, 1.3rem); line-height: 1.2; }
+    .seg { display: inline-block; }
+    html, body { max-width: 100%; overflow-x: hidden; }
     .edu-badge { background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(243, 217, 139, 0.45); color: #f3d98b; }
     input[type="range"] { accent-color: #d4af37; }
     ::-webkit-scrollbar { width: 6px; height: 6px; }
@@ -68,23 +76,25 @@
 
   <!-- Top Navigation Bar (Executive Dossier Masthead) -->
   <header class="sticky top-0 z-40 bg-obsidian-950/95 backdrop-blur-md border-b border-lime-400/30 no-print">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-3">
-      <div class="flex items-center gap-3.5">
-        <div class="w-11 h-11 flex items-center justify-center relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
+      <div class="flex items-center gap-3 min-w-0">
+        <div class="w-11 h-11 shrink-0 flex items-center justify-center relative">
           <svg viewBox="0 0 100 100" class="w-11 h-11">
             <polygon points="50,4 93,27 93,73 50,96 7,73 7,27" fill="#0b1324" stroke="#d4af37" stroke-width="4" />
             <polygon points="50,11 86,31 86,69 50,89 14,69 14,31" fill="none" stroke="#d4af37" stroke-width="1.2" stroke-opacity="0.5" />
             <text x="50" y="58" text-anchor="middle" fill="#f3d98b" font-family="Cormorant Garamond, Georgia, serif" font-weight="700" font-size="30" letter-spacing="2">FR</text>
           </svg>
         </div>
-        <div>
-          <div class="flex items-center gap-2.5">
-            <span class="dossier-serif font-bold tracking-widest text-lime-300 text-lg sm:text-xl uppercase">FELRON IT-LEGACY-CAPITAL</span>
-            <span class="hidden md:inline-block text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-lime-400/15 text-lime-300 border border-lime-400/30">EXECUTIVE DOSSIER • TRIAGE PROTOCOL</span>
+        <div class="min-w-0">
+          <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1">
+            <span class="brand-line dossier-serif font-bold text-lime-300 uppercase">FelRon IT-Legacy-Capital</span>
+            <span class="hidden lg:inline-block text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-lime-400/15 text-lime-300 border border-lime-400/30">TRIAGE PROTOCOL</span>
           </div>
-          <p class="text-[11px] font-mono tracking-wider uppercase text-gray-400">
-            GUIDANCE &amp; EDUCATION • IT HELP • EVERYDAY PROBLEM SOLVING &nbsp;|&nbsp; FOUNDER: MATTHEW ALEXANDER DIAZ
-          </p>
+          <div class="flex flex-wrap items-baseline gap-x-2 mt-0.5">
+            <span class="founder-name dossier-serif font-semibold text-white">Matthew Alexander Diaz</span>
+            <span class="text-[10px] font-mono uppercase tracking-widest text-lime-400">Founder</span>
+          </div>
+          <p class="hidden md:block text-[10px] font-mono tracking-wider uppercase text-gray-400 mt-0.5">Guidance &amp; Education • IT Help • Problem Solving</p>
         </div>
       </div>
 
@@ -111,12 +121,16 @@
       <!-- Hero -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center border-b border-lime-400/20 pb-7">
         <div class="lg:col-span-7 space-y-3">
-          <div class="text-xs font-mono tracking-widest uppercase text-lime-400 font-semibold">THE TRUSTED FIRST CALL • SAN ANTONIO, TX</div>
+          <div class="text-xs font-mono tracking-widest uppercase text-lime-400 font-semibold"><span class="seg">THE TRUSTED FIRST CALL •</span> <span class="seg">SAN ANTONIO, TX</span></div>
           <h1 class="dossier-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.08] tracking-tight">
             Before the Lawyer.<br />
             Before the CPA.<br />
             <span class="italic text-lime-300">Call FelRon First.</span>
           </h1>
+          <div class="pt-2 border-t border-lime-400/20 max-w-md">
+            <div class="text-[10px] font-mono uppercase tracking-widest text-lime-400 font-semibold">Founder</div>
+            <div class="hero-name dossier-serif font-bold text-white">Matthew Alexander Diaz</div>
+          </div>
           <div class="flex flex-wrap gap-3 pt-3">
             <button onclick="go('help')" class="px-4 py-2.5 rounded-lg bg-lime-400 hover:bg-lime-300 text-black font-bold text-xs sm:text-sm uppercase tracking-wider transition-all lime-glow">How Can I Help You Today? →</button>
             <button onclick="go('triage')" class="px-4 py-2.5 rounded-lg bg-obsidian-800 hover:bg-obsidian-700 text-lime-300 border border-lime-400/40 font-semibold text-xs sm:text-sm transition-all">See the TRIAGE Framework</button>
@@ -156,7 +170,12 @@
       <div class="border-b border-lime-400/20 pb-4 no-print">
         <div class="text-xs font-mono tracking-widest uppercase text-lime-400 font-semibold">MODULE 01</div>
         <h1 class="dossier-serif text-3xl sm:text-4xl font-bold text-white mt-1">About Matthew &amp; His Parents</h1>
-        <p class="text-sm text-gray-400 mt-1 max-w-3xl">The family of service behind FelRon IT-Legacy-Capital.</p>
+        <p class="text-sm text-gray-400 mt-1 max-w-3xl">The family of service behind <span class="seg">FelRon IT-Legacy-Capital</span>.</p>
+      </div>
+      <div class="space-y-1">
+        <div class="text-[11px] font-mono uppercase tracking-widest text-lime-400 font-semibold">Founder • <span class="seg">FelRon IT-Legacy-Capital</span></div>
+        <div class="about-name dossier-serif font-bold text-lime-300">Matthew Alexander Diaz</div>
+        <div class="text-xs sm:text-sm text-gray-400">San Antonio, Texas</div>
       </div>
       <!-- Origin Story -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start py-2">
@@ -167,7 +186,7 @@
               <span class="dossier-serif float-left text-4xl font-bold text-lime-300 pr-2.5 leading-none">M</span>y name is Matthew Alexander Diaz, and I grew up in a family built on service. My father spent 29 years as a U.S. Army combat medic, serving with airborne, light infantry and Stryker units, and he earned the Bronze Star along the way. My mother held our family together through every move and deployment. She was decorated for her work with the Family Readiness Group (FRG), supporting other military families, and she built her own career in fine retail and diamond jewelry.
             </p>
             <p>
-              From them I learned to stay calm when things go wrong and to take care of the people around me. In our house, when a relative or friend had a computer that wouldn't work, a confusing bill or insurance letter, or a schedule falling apart, we helped. <strong class="text-white">FelRon IT-Legacy-Capital</strong> is named in my parents' honor. It brings that same steady calm, patience and good faith to everyone I work with, whether you're brand new to these topics or just need a second set of hands.
+              From them I learned to stay calm when things go wrong and to take care of the people around me. In our house, when a relative or friend had a computer that wouldn't work, a confusing bill or insurance letter, or a schedule falling apart, we helped. <strong class="text-white"><span class="seg">FelRon IT-Legacy-Capital</span></strong> is named in my parents' honor. It brings that same steady calm, patience and good faith to everyone I work with, whether you're brand new to these topics or just need a second set of hands.
             </p>
           </div>
         </div>
@@ -623,7 +642,7 @@
         <h3 class="dossier-serif text-xl font-bold mb-3">Client Acknowledgment &amp; Waiver</h3>
         <p class="mb-3">Please read each statement. By signing below, you confirm that you understand and agree.</p>
         <ol class="list-decimal pl-5 space-y-2">
-          <li><strong>Services.</strong> FelRon IT-Legacy-Capital ("FelRon"), operated by Matthew Alexander Diaz, provides educational, organizational and logistical services only.</li>
+          <li><strong>Services.</strong> <span class="seg">FelRon IT-Legacy-Capital</span> ("FelRon"), operated by Matthew Alexander Diaz, provides educational, organizational and logistical services only.</li>
           <li><strong>Not a licensed professional.</strong> Matthew is not a licensed investment adviser, broker, certified public accountant (CPA), attorney, insurance adjuster or electrician, and does not act as one.</li>
           <li><strong>General information, not personal recommendations.</strong> Anything discussed is general information and a description of options. It is not personalized investment, legal, tax or insurance advice, and it is not a recommendation to buy, sell or hold any security or other asset.</li>
           <li><strong>Your decisions.</strong> I make all of my own decisions, and I am solely responsible for them and their results, including any decision to act on information I received.</li>
@@ -638,9 +657,9 @@
           <div><div class="sig-line"></div><div class="text-[11px] uppercase tracking-wider text-gray-600 mt-1">Client printed name</div></div>
           <div><div class="sig-line"></div><div class="text-[11px] uppercase tracking-wider text-gray-600 mt-1">Date</div></div>
           <div><div class="sig-line"></div><div class="text-[11px] uppercase tracking-wider text-gray-600 mt-1">Client signature</div></div>
-          <div><div class="sig-line"></div><div class="text-[11px] uppercase tracking-wider text-gray-600 mt-1">Matthew Alexander Diaz, FelRon IT-Legacy-Capital</div></div>
+          <div><div class="sig-line"></div><div class="text-[11px] uppercase tracking-wider text-gray-600 mt-1">Matthew Alexander Diaz, <span class="seg">FelRon IT-Legacy-Capital</span></div></div>
         </div>
-        <p class="text-[10px] text-gray-500 mt-8 border-t border-gray-300 pt-3">Template. Have a Texas attorney review before use. FelRon IT-Legacy-Capital • San Antonio, TX</p>
+        <p class="text-[10px] text-gray-500 mt-8 border-t border-gray-300 pt-3">Template. Have a Texas attorney review before use. <span class="seg">FelRon IT-Legacy-Capital</span> • San Antonio, TX</p>
       </div>
 
       <div id="pager-waiver"></div>
@@ -707,10 +726,13 @@
   <footer class="border-t border-lime-400/20 bg-obsidian-950 py-6 px-4 sm:px-6 mt-12 no-print">
     <div class="max-w-7xl mx-auto space-y-3 text-[11px] text-gray-400 leading-relaxed">
       <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-        <strong class="text-lime-300 dossier-serif text-base tracking-wider">FelRon IT-Legacy-Capital • San Antonio, TX</strong>
+        <div>
+          <div class="footer-name text-lime-300 dossier-serif font-bold tracking-wide">FelRon IT-Legacy-Capital</div>
+          <div class="text-gray-300 text-xs mt-0.5"><span class="seg">Founded by <span class="dossier-serif text-sm text-white font-semibold">Matthew Alexander Diaz</span></span> <span class="seg">• San Antonio, TX</span></div>
+        </div>
         <span class="font-mono">The TRIAGE Protocol • Guidance &amp; Education</span>
       </div>
-      <p><strong class="text-gray-200">Disclaimer:</strong> FelRon IT-Legacy-Capital provides educational, organizational and logistical services only. Nothing on this site or in any session is legal, tax, insurance or investment advice, or a recommendation to buy, sell or hold any security or asset. Matthew Alexander Diaz is not a licensed investment adviser, broker, CPA, attorney, insurance adjuster or electrician. Clients make and are solely responsible for their own decisions. FelRon never takes custody of client funds, crypto keys or account logins and never places trades for clients. No results are promised or guaranteed. Simulators are hypothetical illustrations only. For advice specific to your situation, consult a licensed professional.</p>
+      <p><strong class="text-gray-200">Disclaimer:</strong> <span class="seg">FelRon IT-Legacy-Capital</span> provides educational, organizational and logistical services only. Nothing on this site or in any session is legal, tax, insurance or investment advice, or a recommendation to buy, sell or hold any security or asset. Matthew Alexander Diaz is not a licensed investment adviser, broker, CPA, attorney, insurance adjuster or electrician. Clients make and are solely responsible for their own decisions. FelRon never takes custody of client funds, crypto keys or account logins and never places trades for clients. No results are promised or guaranteed. Simulators are hypothetical illustrations only. For advice specific to your situation, consult a licensed professional.</p>
     </div>
   </footer>
 
