@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FelRon IT-Legacy-Capital | Before the Lawyer. Before the CPA. Call FelRon First.</title>
+  <meta name="description" content="FelRon IT-Legacy-Capital, San Antonio, TX. The trusted first call: crypto hardware sourcing and setup, quote and estimate comparison, handyman and painting coordination, AC filter basics, car basics, IT and Web3 help, business setup, paperwork and money education." />
+  <meta name="theme-color" content="#060c18" />
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = { theme: { extend: {
+      fontFamily: { sans: ['Inter','system-ui','sans-serif'], serif: ['Cormorant Garamond','Georgia','serif'], mono: ['JetBrains Mono','monospace'] },
+      colors: {
+        navy: { 950: '#060c18', 900: '#0b1324', 800: '#101c33', 700: '#182847', 600: '#22365e' },
+        gold: { 200: '#f8e7b5', 300: '#f3d98b', 400: '#d4af37', 500: '#b89225' },
+        obsidian: { 950: '#060c18', 900: '#0b1324', 800: '#101c33', 700: '#182847' },
+        lime: { 300: '#f3d98b', 400: '#d4af37', 500: '#b89225' }
+      } } } };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    html, body { max-width: 100%; overflow-x: hidden; }
+    body { background: #060c18; color: #e5e7eb; font-family: 'Inter', system-ui, sans-serif; }
+    .serif, .dossier-serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .hero-bg { background: radial-gradient(ellipse 80% 60% at 70% 0%, rgba(212,175,55,.16) 0%, rgba(6,12,24,0) 60%), linear-gradient(180deg, #0b1324 0%, #060c18 100%); }
+    .grid-lines { background-image: linear-gradient(rgba(212,175,55,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,.05) 1px, transparent 1px); background-size: 48px 48px; }
+    .card { background: linear-gradient(180deg, rgba(16,28,51,.92) 0%, rgba(11,19,36,.98) 100%); border: 1px solid rgba(212,175,55,.2); }
+    .card-surface { background: linear-gradient(180deg, rgba(16,28,51,.92) 0%, rgba(11,19,36,.98) 100%); border: 1px solid rgba(212,175,55,.2); }
+    .card-hover { transition: border-color .2s, transform .2s, box-shadow .2s; }
+    .card-hover:hover { border-color: rgba(212,175,55,.6); transform: translateY(-2px); box-shadow: 0 18px 40px -20px rgba(212,175,55,.35); }
+    .gold-glow { box-shadow: 0 0 28px -8px rgba(212,175,55,.55); }
+    .gold-cta-banner, .gold-band { background: linear-gradient(135deg, #f3dca2 0%, #d4af37 55%, #b68d23 100%); color: #081021; }
+    .edu-badge { background: rgba(212,175,55,.08); border: 1px solid rgba(243,217,139,.45); color: #f3d98b; }
+    .icon-tile { width: 2.75rem; height: 2.75rem; border-radius: .75rem; display: flex; align-items: center; justify-content: center; background: rgba(212,175,55,.12); border: 1px solid rgba(212,175,55,.35); color: #f3d98b; flex-shrink: 0; }
+    .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: #d4af37; font-weight: 600; }
+    .brand-line { font-size: clamp(.95rem, 3.6vw, 1.2rem); letter-spacing: .08em; line-height: 1.1; }
+    .founder-line { font-size: clamp(.95rem, 3.6vw, 1.1rem); line-height: 1.15; }
+    .h-display { font-size: clamp(2.4rem, 7.5vw, 4.6rem); line-height: 1.02; }
+    .h-section { font-size: clamp(1.8rem, 4.8vw, 2.8rem); line-height: 1.08; }
+    .seg { display: inline-block; }
+    .nav-link { padding: .5rem .7rem; border-radius: .5rem; font-size: .84rem; font-weight: 600; color: #cbd5e1; white-space: nowrap; }
+    .nav-link:hover { color: #f3d98b; }
+    .nav-link.active { color: #f3d98b; background: rgba(212,175,55,.1); }
+    .btn-gold { background: #d4af37; color: #060c18; font-weight: 700; border-radius: .6rem; padding: .7rem 1.1rem; font-size: .85rem; display: inline-flex; align-items: center; gap: .45rem; justify-content: center; }
+    .btn-gold:hover { background: #f3d98b; }
+    .btn-ghost { border: 1px solid rgba(212,175,55,.45); color: #f3d98b; font-weight: 600; border-radius: .6rem; padding: .7rem 1.1rem; font-size: .85rem; display: inline-flex; align-items: center; gap: .45rem; justify-content: center; background: rgba(16,28,51,.6); }
+    .btn-ghost:hover { background: rgba(24,40,71,.9); }
+    .field { width: 100%; background: #060c18; border: 1px solid #334155; border-radius: .6rem; padding: .6rem .8rem; font-size: .9rem; color: #fff; outline: none; }
+    .field:focus { border-color: #d4af37; }
+    .chk li { display: flex; gap: .55rem; align-items: flex-start; }
+    .chk li::before { content: '✓'; color: #d4af37; font-weight: 700; flex-shrink: 0; }
+    .view { display: none; }
+    .view.on { display: block; }
+    .mtab { display: flex; align-items: center; gap: .6rem; padding: .55rem .75rem; border-radius: .55rem; font-size: .85rem; font-weight: 600; color: #cbd5e1; white-space: nowrap; width: 100%; text-align: left; }
+    .mtab:hover { color: #f3d98b; background: rgba(212,175,55,.06); }
+    .mtab.on { color: #060c18; background: #d4af37; }
+    .locked-blur { filter: blur(5px); pointer-events: none; user-select: none; }
+    input[type="checkbox"], input[type="radio"] { accent-color: #d4af37; }
+    .waiver-paper { background: #fbf8ef; color: #111827; }
+    .waiver-paper h3, .waiver-paper h4 { color: #0b1324; }
+    .sig-line { border-bottom: 1px solid #111827; height: 2.25rem; }
+    ::-webkit-scrollbar { width: 8px; height: 6px; } ::-webkit-scrollbar-track { background: #060c18; } ::-webkit-scrollbar-thumb { background: #182847; border-radius: 4px; }
+    @media print {
+      @page { size: Letter; margin: .6in; }
+      body { background: #fff !important; }
+      body * { visibility: hidden; }
+      #waiver-doc, #waiver-doc * { visibility: visible; }
+      #waiver-doc { position: absolute; left: 0; top: 0; width: 100%; box-shadow: none !important; border: none !important; padding: 0 !important; background: #fff !important; }
+      .no-print { display: none !important; }
+    }
+  </style>
+</head>
