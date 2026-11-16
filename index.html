@@ -5,66 +5,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FelRon IT-Legacy-Capital | Before the Lawyer. Before the CPA. Call FelRon First.</title>
   <meta name="description" content="FelRon IT-Legacy-Capital, San Antonio, TX. The trusted first call: crypto hardware sourcing and setup, quote and estimate comparison, handyman and painting coordination, AC filter basics, car basics, IT and Web3 help, business setup, paperwork and money education." />
-  <meta name="theme-color" content="#060c18" />
+  <meta name="theme-color" content="#0B1A2F" />
+  <link rel="icon" type="image/svg+xml" sizes="64x64" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.svg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://made343.github.io/felron-site/" />
+  <meta property="og:title" content="FelRon IT-Legacy-Capital | Call FelRon First." />
+  <meta property="og:description" content="Zorro de Oro. The trusted first call in San Antonio for crypto hardware, quote comparison, handyman coordination, IT help and money education." />
+  <meta property="og:image" content="https://made343.github.io/felron-site/assets/og-image.svg" />
+  <meta property="og:image:type" content="image/svg+xml" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FelRon IT-Legacy-Capital | Call FelRon First." />
+  <meta name="twitter:description" content="Zorro de Oro. The trusted first call in San Antonio." />
+  <meta name="twitter:image" content="https://made343.github.io/felron-site/assets/og-image.svg" />
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script>
     tailwind.config = { theme: { extend: {
-      fontFamily: { sans: ['Inter','system-ui','sans-serif'], serif: ['Cormorant Garamond','Georgia','serif'], mono: ['JetBrains Mono','monospace'] },
+      fontFamily: { sans: ['Inter','system-ui','sans-serif'], serif: ['Cormorant Garamond','Georgia','serif'], display: ['Cinzel','Cormorant Garamond','Georgia','serif'], mono: ['JetBrains Mono','monospace'] },
       colors: {
-        navy: { 950: '#060c18', 900: '#0b1324', 800: '#101c33', 700: '#182847', 600: '#22365e' },
-        gold: { 200: '#f8e7b5', 300: '#f3d98b', 400: '#d4af37', 500: '#b89225' },
-        obsidian: { 950: '#060c18', 900: '#0b1324', 800: '#101c33', 700: '#182847' },
-        lime: { 300: '#f3d98b', 400: '#d4af37', 500: '#b89225' }
+        navy: { 950: '#0B1A2F', 900: '#0F1A33', 800: '#15233C', 700: '#1E2A40', 600: '#2A3B58' },
+        gold: { 200: '#F4E4B0', 300: '#E6C873', 400: '#D4AF37', 500: '#B8912F' },
+        obsidian: { 950: '#0B1A2F', 900: '#0F1A33', 800: '#15233C', 700: '#1E2A40' },
+        lime: { 300: '#E6C873', 400: '#D4AF37', 500: '#B8912F' }
       } } } };
   </script>
   <style>
     html { scroll-behavior: smooth; }
     html, body { max-width: 100%; overflow-x: hidden; }
-    body { background: #060c18; color: #e5e7eb; font-family: 'Inter', system-ui, sans-serif; }
+    body { background: #0B1A2F; color: #e5e7eb; font-family: 'Inter', system-ui, sans-serif; }
     .serif, .dossier-serif { font-family: 'Cormorant Garamond', Georgia, serif; }
-    .hero-bg { background: radial-gradient(ellipse 80% 60% at 70% 0%, rgba(212,175,55,.16) 0%, rgba(6,12,24,0) 60%), linear-gradient(180deg, #0b1324 0%, #060c18 100%); }
+    .display, .wordmark { font-family: 'Cinzel', 'Cormorant Garamond', Georgia, serif; }
+    .hero-bg { background: radial-gradient(ellipse 80% 60% at 78% 0%, rgba(212,175,55,.18) 0%, rgba(15,26,51,0) 58%), linear-gradient(180deg, #1E2A40 0%, #0F1A33 48%, #0B1A2F 100%); }
     .grid-lines { background-image: linear-gradient(rgba(212,175,55,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,.05) 1px, transparent 1px); background-size: 48px 48px; }
-    .card { background: linear-gradient(180deg, rgba(16,28,51,.92) 0%, rgba(11,19,36,.98) 100%); border: 1px solid rgba(212,175,55,.2); }
-    .card-surface { background: linear-gradient(180deg, rgba(16,28,51,.92) 0%, rgba(11,19,36,.98) 100%); border: 1px solid rgba(212,175,55,.2); }
+    .card { background: linear-gradient(180deg, rgba(30,42,64,.94) 0%, rgba(15,26,51,.98) 100%); border: 1px solid rgba(212,175,55,.22); }
+    .card-surface { background: linear-gradient(180deg, rgba(30,42,64,.94) 0%, rgba(15,26,51,.98) 100%); border: 1px solid rgba(212,175,55,.22); }
     .card-hover { transition: border-color .2s, transform .2s, box-shadow .2s; }
-    .card-hover:hover { border-color: rgba(212,175,55,.6); transform: translateY(-2px); box-shadow: 0 18px 40px -20px rgba(212,175,55,.35); }
+    .card-hover:hover { border-color: rgba(230,200,115,.7); transform: translateY(-2px); box-shadow: 0 18px 40px -20px rgba(212,175,55,.4); }
     .gold-glow { box-shadow: 0 0 28px -8px rgba(212,175,55,.55); }
-    .gold-cta-banner, .gold-band { background: linear-gradient(135deg, #f3dca2 0%, #d4af37 55%, #b68d23 100%); color: #081021; }
-    .edu-badge { background: rgba(212,175,55,.08); border: 1px solid rgba(243,217,139,.45); color: #f3d98b; }
-    .icon-tile { width: 2.75rem; height: 2.75rem; border-radius: .75rem; display: flex; align-items: center; justify-content: center; background: rgba(212,175,55,.12); border: 1px solid rgba(212,175,55,.35); color: #f3d98b; flex-shrink: 0; }
-    .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: #d4af37; font-weight: 600; }
-    .brand-line { font-size: clamp(.95rem, 3.6vw, 1.2rem); letter-spacing: .08em; line-height: 1.1; }
-    .founder-line { font-size: clamp(.95rem, 3.6vw, 1.1rem); line-height: 1.15; }
+    .gold-cta-banner, .gold-band { background: linear-gradient(135deg, #E6C873 0%, #D4AF37 52%, #B8912F 100%); color: #0B1A2F; }
+    .edu-badge { background: rgba(212,175,55,.08); border: 1px solid rgba(230,200,115,.45); color: #E6C873; }
+    .icon-tile { width: 2.75rem; height: 2.75rem; border-radius: .75rem; display: flex; align-items: center; justify-content: center; background: rgba(212,175,55,.12); border: 1px solid rgba(212,175,55,.35); color: #E6C873; flex-shrink: 0; }
+    .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: #D4AF37; font-weight: 600; }
+    .brand-line { font-family: 'Cinzel', 'Cormorant Garamond', Georgia, serif; font-size: clamp(.88rem, 3.2vw, 1.12rem); letter-spacing: .06em; line-height: 1.15; }
+    .wordmark { font-size: clamp(.72rem, 2.6vw, .88rem); letter-spacing: .16em; line-height: 1.2; font-weight: 600; color: #E6C873; }
+    .founder-line { font-size: clamp(.9rem, 3.4vw, 1.05rem); line-height: 1.15; }
     .h-display { font-size: clamp(2.4rem, 7.5vw, 4.6rem); line-height: 1.02; }
     .h-section { font-size: clamp(1.8rem, 4.8vw, 2.8rem); line-height: 1.08; }
     .seg { display: inline-block; }
     .nav-link { padding: .5rem .7rem; border-radius: .5rem; font-size: .84rem; font-weight: 600; color: #cbd5e1; white-space: nowrap; }
-    .nav-link:hover { color: #f3d98b; }
-    .nav-link.active { color: #f3d98b; background: rgba(212,175,55,.1); }
-    .btn-gold { background: #d4af37; color: #060c18; font-weight: 700; border-radius: .6rem; padding: .7rem 1.1rem; font-size: .85rem; display: inline-flex; align-items: center; gap: .45rem; justify-content: center; }
-    .btn-gold:hover { background: #f3d98b; }
-    .btn-ghost { border: 1px solid rgba(212,175,55,.45); color: #f3d98b; font-weight: 600; border-radius: .6rem; padding: .7rem 1.1rem; font-size: .85rem; display: inline-flex; align-items: center; gap: .45rem; justify-content: center; background: rgba(16,28,51,.6); }
-    .btn-ghost:hover { background: rgba(24,40,71,.9); }
-    .field { width: 100%; background: #060c18; border: 1px solid #334155; border-radius: .6rem; padding: .6rem .8rem; font-size: .9rem; color: #fff; outline: none; }
-    .field:focus { border-color: #d4af37; }
+    .nav-link:hover { color: #E6C873; }
+    .nav-link.active { color: #E6C873; background: rgba(212,175,55,.1); }
+    .btn-gold { background: linear-gradient(180deg, #E6C873 0%, #D4AF37 48%, #B8912F 100%); color: #0B1A2F; font-weight: 700; border-radius: .6rem; padding: .7rem 1.1rem; font-size: .85rem; display: inline-flex; align-items: center; gap: .45rem; justify-content: center; box-shadow: inset 0 1px 0 rgba(255,255,255,.28), 0 8px 18px -12px rgba(212,175,55,.7); }
+    .btn-gold:hover { background: linear-gradient(180deg, #F4E4B0 0%, #E6C873 50%, #D4AF37 100%); }
+    .btn-ghost { border: 1px solid rgba(212,175,55,.45); color: #E6C873; font-weight: 600; border-radius: .6rem; padding: .7rem 1.1rem; font-size: .85rem; display: inline-flex; align-items: center; gap: .45rem; justify-content: center; background: rgba(15,26,51,.6); }
+    .btn-ghost:hover { background: rgba(30,42,64,.95); }
+    .field { width: 100%; background: #0B1A2F; border: 1px solid #2A3B58; border-radius: .6rem; padding: .6rem .8rem; font-size: .9rem; color: #fff; outline: none; }
+    .field:focus { border-color: #D4AF37; }
     .chk li { display: flex; gap: .55rem; align-items: flex-start; }
-    .chk li::before { content: '✓'; color: #d4af37; font-weight: 700; flex-shrink: 0; }
+    .chk li::before { content: '✓'; color: #D4AF37; font-weight: 700; flex-shrink: 0; }
     .view { display: none; }
     .view.on { display: block; }
     .mtab { display: flex; align-items: center; gap: .6rem; padding: .55rem .75rem; border-radius: .55rem; font-size: .85rem; font-weight: 600; color: #cbd5e1; white-space: nowrap; width: 100%; text-align: left; }
-    .mtab:hover { color: #f3d98b; background: rgba(212,175,55,.06); }
-    .mtab.on { color: #060c18; background: #d4af37; }
+    .mtab:hover { color: #E6C873; background: rgba(212,175,55,.06); }
+    .mtab.on { color: #0B1A2F; background: linear-gradient(180deg, #E6C873 0%, #D4AF37 100%); }
     .locked-blur { filter: blur(5px); pointer-events: none; user-select: none; }
-    input[type="checkbox"], input[type="radio"] { accent-color: #d4af37; }
+    input[type="checkbox"], input[type="radio"] { accent-color: #D4AF37; }
     .waiver-paper { background: #fbf8ef; color: #111827; }
-    .waiver-paper h3, .waiver-paper h4 { color: #0b1324; }
+    .waiver-paper h3, .waiver-paper h4 { color: #0B1A2F; }
     .sig-line { border-bottom: 1px solid #111827; height: 2.25rem; }
-    ::-webkit-scrollbar { width: 8px; height: 6px; } ::-webkit-scrollbar-track { background: #060c18; } ::-webkit-scrollbar-thumb { background: #182847; border-radius: 4px; }
+    .emblem { display: block; flex-shrink: 0; }
+    ::-webkit-scrollbar { width: 8px; height: 6px; } ::-webkit-scrollbar-track { background: #0B1A2F; } ::-webkit-scrollbar-thumb { background: #1E2A40; border-radius: 4px; }
     @media print {
       @page { size: Letter; margin: .6in; }
       body { background: #fff !important; }
@@ -76,27 +93,27 @@
   </style>
   <style>
     .tool-tab { padding: .38rem .7rem; border-radius: .45rem; font-size: .78rem; font-weight: 600; color: #cbd5e1; white-space: nowrap; }
-    .tool-tab:hover { color: #f3d98b; } .tool-tab.active { background: #d4af37; color: #060c18; }
+    .tool-tab:hover { color: #E6C873; } .tool-tab.active { background: linear-gradient(180deg, #E6C873 0%, #D4AF37 100%); color: #0B1A2F; }
     .h-tool { font-size: clamp(1.9rem, 5.5vw, 3.2rem); line-height: 1.06; }
     .seg-btn { padding: .5rem .8rem; border-radius: .5rem; font-size: .8rem; font-weight: 700; color: #cbd5e1; white-space: nowrap; }
-    .seg-btn.on { background: #d4af37; color: #060c18; }
+    .seg-btn.on { background: linear-gradient(180deg, #E6C873 0%, #D4AF37 100%); color: #0B1A2F; }
     .chip { padding: .4rem .75rem; border-radius: .5rem; font-size: .75rem; font-family: 'JetBrains Mono', monospace; border: 1px solid #334155; color: #cbd5e1; white-space: nowrap; }
-    .chip.on { background: #d4af37; color: #060c18; border-color: #d4af37; font-weight: 700; }
-    .kpi { background: rgba(6,12,24,.7); border: 1px solid #1f2a44; border-radius: .9rem; padding: .9rem; min-width: 0; }
+    .chip.on { background: linear-gradient(180deg, #E6C873 0%, #D4AF37 100%); color: #0B1A2F; border-color: #D4AF37; font-weight: 700; }
+    .kpi { background: rgba(11,26,47,.7); border: 1px solid #1E2A40; border-radius: .9rem; padding: .9rem; min-width: 0; }
     .kpi .v { font-family: 'JetBrains Mono', monospace; font-size: 1.2rem; font-weight: 700; color: #fff; overflow-wrap: anywhere; }
     .kpi .l { font-size: .7rem; color: #94a3b8; }
     input[type="range"] { accent-color: #d4af37; width: 100%; }
     .rowlbl { display: flex; justify-content: space-between; gap: .5rem; font-size: .78rem; color: #cbd5e1; }
-    .rowlbl b { font-family: 'JetBrains Mono', monospace; color: #f3d98b; white-space: nowrap; }
+    .rowlbl b { font-family: 'JetBrains Mono', monospace; color: #E6C873; white-space: nowrap; }
     .chart-box { position: relative; height: 280px; }
   </style>
 </head>
 <body class="min-h-screen flex flex-col">
   <header class="sticky top-0 z-50 bg-navy-950/95 backdrop-blur-md border-b border-gold-400/25 no-print">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 py-2.5 flex items-center justify-between gap-4">
-      <a href="#/" class="flex items-center gap-3 min-w-0" aria-label="FelRon home"><svg viewBox="0 0 100 100" class="w-11 h-11 shrink-0" aria-hidden="true"><polygon points="50,4 93,27 93,73 50,96 7,73 7,27" fill="#0b1324" stroke="#d4af37" stroke-width="4"/><polygon points="50,11 86,31 86,69 50,89 14,69 14,31" fill="none" stroke="#d4af37" stroke-width="1.2" stroke-opacity=".5"/><text x="50" y="58" text-anchor="middle" fill="#f3d98b" font-family="Cormorant Garamond, Georgia, serif" font-weight="700" font-size="30" letter-spacing="2">FR</text></svg>
-        <div class="min-w-0"><div class="brand-line serif font-bold text-gold-300 uppercase">FelRon IT-Legacy-Capital</div>
-          <div class="founder-line serif font-semibold text-white">Matthew Alexander Diaz <span class="font-mono text-[10px] uppercase tracking-widest text-gold-400 align-middle">Founder</span></div>
+      <a href="#/" class="flex items-center gap-3 min-w-0" aria-label="FelRon IT-Legacy-Capital home"><img src="assets/logo-emblem.svg" alt="" class="emblem w-12 h-12 sm:w-14 sm:h-14" width="56" height="56" />
+        <div class="min-w-0"><div class="brand-line font-bold text-gold-300 uppercase">FelRon IT-Legacy-Capital</div>
+          <div class="wordmark">Zorro de Oro <span class="serif italic font-semibold text-white tracking-normal normal-case text-[0.95em]">· Alexander Diaz</span></div>
           <div class="hidden md:block font-mono text-[10px] uppercase tracking-wider text-gray-400">San Antonio, TX • (210) 535-4987</div></div></a>
       <nav class="hidden xl:flex items-center gap-0.5" aria-label="Main"><a href="#/" data-nav="home" class="nav-link">Home</a><a href="#/services" data-nav="services" class="nav-link">Services</a><a href="#/how" data-nav="how" class="nav-link">How It Works</a><a href="#/pricing" data-nav="pricing" class="nav-link">Pricing</a><a href="#/members" data-nav="members" class="nav-link">Members</a><a href="#/about" data-nav="about" class="nav-link">About</a><a href="#/contact" data-nav="contact" class="nav-link">Contact</a></nav>
       <div class="flex items-center gap-2">
@@ -115,12 +132,19 @@
   <section class="hero-bg grid-lines border-b border-gold-400/15">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 py-12 sm:py-16 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
       <div class="lg:col-span-7 space-y-6 pt-2">
+        <div class="flex items-center gap-4">
+          <img src="assets/logo-emblem.svg" alt="Zorro de Oro" class="emblem w-24 h-24 sm:w-28 sm:h-28" width="112" height="112" />
+          <div class="min-w-0">
+            <div class="wordmark text-xl sm:text-2xl !leading-tight">Zorro de Oro</div>
+            <div class="brand-line font-bold text-gold-300 uppercase mt-1">FelRon IT-Legacy-Capital</div>
+          </div>
+        </div>
         <div class="eyebrow">The trusted first call • What's the friction?</div>
         <h1 class="serif h-display font-bold text-white">Before the Lawyer.<br />Before the CPA.<br /><span class="italic text-gold-300">Call FelRon First.</span></h1>
         <p class="text-lg text-gray-300 leading-relaxed max-w-2xl">When hardware needs sourcing, a quote looks inflated, finances tangle or daily logistics stall, <strong class="text-white">FelRon is the single, discreet first call</strong>. I bring the know-how, the hands-on work and the coordination, so you only pay a CPA, attorney or licensed contractor for the final step that truly needs them.</p>
         <p class="text-sm text-gray-400">Specializing in <strong class="text-gold-300">Crypto Hardware &amp; Machine Sourcing</strong>, <strong class="text-gold-300">Quote &amp; Estimate Comparison</strong>, <strong class="text-gold-300">Plug-In Machine Setup &amp; ROI Outlook Modeling</strong> and the <strong class="text-gold-300">Capital Flywheel</strong>.</p>
         <div class="flex flex-wrap gap-3"><a href="#intake" onclick="document.getElementById('home-intake').scrollIntoView({behavior:'smooth'});return false" class="btn-gold">Tell me the friction <i data-lucide="arrow-right" class="w-4 h-4"></i></a><a href="#/roi" class="btn-ghost"><i data-lucide="cpu" class="w-4 h-4"></i>Machine ROI Lab</a><a href="#/codex" class="btn-ghost"><i data-lucide="library" class="w-4 h-4"></i>Inspect all 20 modules</a></div>
-        <div class="pt-5 border-t border-gold-400/20 max-w-lg"><div class="text-[11px] font-mono uppercase tracking-widest text-gold-400">Founder</div><div class="serif text-2xl sm:text-3xl font-bold text-white">Matthew Alexander Diaz</div><div class="serif italic text-lg text-gold-300">Private by design. Discreet by upbringing.</div></div>
+        <div class="pt-5 border-t border-gold-400/20 max-w-lg"><div class="text-[11px] font-mono uppercase tracking-widest text-gold-400">Founder</div><div class="serif text-2xl sm:text-3xl font-bold text-white">Alexander Diaz</div><div class="serif italic text-lg text-gold-300">Private by design. Discreet by upbringing.</div></div>
       </div>
       <div id="home-intake" class="lg:col-span-5 scroll-mt-32"><form class="card rounded-2xl p-5 sm:p-6 space-y-5 gold-glow" onsubmit="return false" aria-label="Intake form">
       <div><div class="eyebrow">What's the friction? • free first call</div><h2 class="serif text-2xl sm:text-3xl font-bold text-white mt-1">What solvable problem can I help with?</h2></div>
@@ -144,7 +168,7 @@
   <section class="border-b border-gold-400/15 bg-navy-900/60"><div class="max-w-7xl mx-auto px-5 sm:px-8 py-14 sm:py-16 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
     <div class="lg:col-span-7 space-y-4"><div class="eyebrow">The FelRon story</div>
       <h2 class="serif h-section font-bold text-white">Fel + Ron. <span class="italic text-gold-300">Felicia and Ronald.</span></h2>
-      <p class="text-gray-300 leading-relaxed">FelRon is named for my parents, <strong class="text-white">Felicia and Ronald</strong>, and founded in their honor.</p><p class="text-gray-300 leading-relaxed">My father, Ronald, served 29 years as a U.S. Army combat medic and paratrooper. He fought in the Gulf War with the 2nd Armored Cavalry Regiment at the Battle of 73 Easting, served separately with the 82nd Airborne Division at Fort Bragg, and was stationed in Italy and Germany. He deployed to Iraq in 2004–05 and again for the 2007–08 surge, made more than 80 jumps, earned the Bronze Star, and retired as a Sergeant First Class from the Warrior Transition Unit at Fort Sam Houston. My mother, Felicia, earned numerous medals for her Family Readiness Group service, supporting military families through every move and deployment, while building a career in fine retail and diamond jewelry.</p><p class="text-gray-300 leading-relaxed">From them I learned composure under pressure and genuine caretaking. In our house, when family or friends hit a technical failure, a financial tangle or a logistical bottleneck, you stepped up and solved it. FelRon brings that same calm, precision and good faith to every client.</p><div class="serif italic text-lg text-gold-300">— Matthew Alexander Diaz, Founder</div></div>
+      <p class="text-gray-300 leading-relaxed">FelRon is named for my parents, <strong class="text-white">Felicia and Ronald</strong>, and founded in their honor.</p><p class="text-gray-300 leading-relaxed">My father, Ronald, served 29 years as a U.S. Army combat medic and paratrooper. He fought in the Gulf War with the 2nd Armored Cavalry Regiment at the Battle of 73 Easting, served separately with the 82nd Airborne Division at Fort Bragg, and was stationed in Italy and Germany. He deployed to Iraq in 2004–05 and again for the 2007–08 surge, made more than 80 jumps, earned the Bronze Star, and retired as a Sergeant First Class from the Warrior Transition Unit at Fort Sam Houston. My mother, Felicia, earned numerous medals for her Family Readiness Group service, supporting military families through every move and deployment, while building a career in fine retail and diamond jewelry.</p><p class="text-gray-300 leading-relaxed">From them I learned composure under pressure and genuine caretaking. In our house, when family or friends hit a technical failure, a financial tangle or a logistical bottleneck, you stepped up and solved it. FelRon brings that same calm, precision and good faith to every client.</p><div class="serif italic text-lg text-gold-300">— Alexander Diaz, Founder</div></div>
     <div class="lg:col-span-5 space-y-4"><div class="card rounded-2xl p-5 border-l-4 border-l-gold-400"><div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Ron • Ronald</div><div class="serif text-2xl font-bold text-gold-300 mt-0.5">29 Years • Bronze Star</div><p class="text-sm text-gray-400 mt-1">U.S. Army combat medic &amp; paratrooper • Gulf War, 2nd Armored Cavalry (73 Easting) • 82nd Airborne • Iraq 2004–05 &amp; 2007–08 • 80+ jumps • Retired SFC</p></div>
   <div class="card rounded-2xl p-5 border-l-4 border-l-gold-400"><div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Fel • Felicia</div><div class="serif text-2xl font-bold text-gold-300 mt-0.5">FRG Honors</div><p class="text-sm text-gray-400 mt-1">Numerous Family Readiness Group medals • Career in fine retail &amp; diamond jewelry</p></div><a href="#/about" class="btn-ghost">Read the full story <i data-lucide="arrow-right" class="w-4 h-4"></i></a></div>
   </div></section>
@@ -206,7 +230,7 @@
     <a href="tel:+12105354987" class="flex items-center gap-3 text-white font-semibold hover:text-gold-300"><i data-lucide="phone" class="w-4 h-4 text-gold-400"></i>(210) 535-4987</a>
     <a href="mailto:MattDiazSA@gmail.com" class="flex items-center gap-3 text-white font-semibold hover:text-gold-300 break-all"><i data-lucide="mail" class="w-4 h-4 text-gold-400"></i>MattDiazSA@gmail.com</a>
     <div class="flex items-center gap-3 text-gray-300"><i data-lucide="map-pin" class="w-4 h-4 text-gold-400"></i>San Antonio, TX</div>
-    <div class="pt-2 border-t border-gray-800"><div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Founder</div><div class="serif text-xl font-bold text-white">Matthew Alexander Diaz</div></div>
+    <div class="pt-2 border-t border-gray-800"><div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Founder</div><div class="serif text-xl font-bold text-white">Alexander Diaz</div></div>
   </div></div></section>
 </div>
 <div id="view-services" class="view">
@@ -235,7 +259,7 @@
     <a href="tel:+12105354987" class="flex items-center gap-3 text-white font-semibold hover:text-gold-300"><i data-lucide="phone" class="w-4 h-4 text-gold-400"></i>(210) 535-4987</a>
     <a href="mailto:MattDiazSA@gmail.com" class="flex items-center gap-3 text-white font-semibold hover:text-gold-300 break-all"><i data-lucide="mail" class="w-4 h-4 text-gold-400"></i>MattDiazSA@gmail.com</a>
     <div class="flex items-center gap-3 text-gray-300"><i data-lucide="map-pin" class="w-4 h-4 text-gold-400"></i>San Antonio, TX</div>
-    <div class="pt-2 border-t border-gray-800"><div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Founder</div><div class="serif text-xl font-bold text-white">Matthew Alexander Diaz</div></div>
+    <div class="pt-2 border-t border-gray-800"><div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Founder</div><div class="serif text-xl font-bold text-white">Alexander Diaz</div></div>
   </div></div></section>
 </div>
 <div id="view-how" class="view">
@@ -251,7 +275,7 @@
     <a href="tel:+12105354987" class="flex items-center gap-3 text-white font-semibold hover:text-gold-300"><i data-lucide="phone" class="w-4 h-4 text-gold-400"></i>(210) 535-4987</a>
     <a href="mailto:MattDiazSA@gmail.com" class="flex items-center gap-3 text-white font-semibold hover:text-gold-300 break-all"><i data-lucide="mail" class="w-4 h-4 text-gold-400"></i>MattDiazSA@gmail.com</a>
     <div class="flex items-center gap-3 text-gray-300"><i data-lucide="map-pin" class="w-4 h-4 text-gold-400"></i>San Antonio, TX</div>
-    <div class="pt-2 border-t border-gray-800"><div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Founder</div><div class="serif text-xl font-bold text-white">Matthew Alexander Diaz</div></div>
+    <div class="pt-2 border-t border-gray-800"><div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Founder</div><div class="serif text-xl font-bold text-white">Alexander Diaz</div></div>
   </div></div></section>
 </div>
 <div id="view-pricing" class="view">
@@ -272,7 +296,7 @@
     <a href="tel:+12105354987" class="flex items-center gap-3 text-white font-semibold hover:text-gold-300"><i data-lucide="phone" class="w-4 h-4 text-gold-400"></i>(210) 535-4987</a>
     <a href="mailto:MattDiazSA@gmail.com" class="flex items-center gap-3 text-white font-semibold hover:text-gold-300 break-all"><i data-lucide="mail" class="w-4 h-4 text-gold-400"></i>MattDiazSA@gmail.com</a>
     <div class="flex items-center gap-3 text-gray-300"><i data-lucide="map-pin" class="w-4 h-4 text-gold-400"></i>San Antonio, TX</div>
-    <div class="pt-2 border-t border-gray-800"><div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Founder</div><div class="serif text-xl font-bold text-white">Matthew Alexander Diaz</div></div>
+    <div class="pt-2 border-t border-gray-800"><div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Founder</div><div class="serif text-xl font-bold text-white">Alexander Diaz</div></div>
   </div></div></section>
 </div>
 <div id="view-roi" class="view"><section class="hero-bg border-b border-gold-400/15"><div class="max-w-7xl mx-auto px-5 sm:px-8 py-10 sm:py-14 space-y-3"><div class="eyebrow">Tool 2 • Lead specialty • hardware sourcing, quote evaluation &amp; ROI outlook</div><h1 class="serif h-tool font-bold text-white max-w-4xl">Machine Sourcing, Estimation Audit &amp; <span class="italic text-gold-300">ROI Simulator</span></h1><p class="text-base sm:text-lg text-gray-300 max-w-3xl leading-relaxed">Evaluate ASIC and DePIN machine quotes, compare vendor markup against a sourced price, check circuit load, and project 12-month net ROI. Estimates only: prices, difficulty and yields change daily.</p></div></section><section class="max-w-7xl mx-auto px-5 sm:px-8 py-10"><div id="host-roi"></div></section><section class="max-w-7xl mx-auto px-5 sm:px-8 py-14"><div class="gold-band rounded-3xl p-7 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center shadow-2xl">
@@ -282,7 +306,7 @@
     <a href="tel:+12105354987" class="flex items-center gap-3 text-white font-semibold hover:text-gold-300"><i data-lucide="phone" class="w-4 h-4 text-gold-400"></i>(210) 535-4987</a>
     <a href="mailto:MattDiazSA@gmail.com" class="flex items-center gap-3 text-white font-semibold hover:text-gold-300 break-all"><i data-lucide="mail" class="w-4 h-4 text-gold-400"></i>MattDiazSA@gmail.com</a>
     <div class="flex items-center gap-3 text-gray-300"><i data-lucide="map-pin" class="w-4 h-4 text-gold-400"></i>San Antonio, TX</div>
-    <div class="pt-2 border-t border-gray-800"><div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Founder</div><div class="serif text-xl font-bold text-white">Matthew Alexander Diaz</div></div>
+    <div class="pt-2 border-t border-gray-800"><div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Founder</div><div class="serif text-xl font-bold text-white">Alexander Diaz</div></div>
   </div></div></section></div>
 <div id="view-codex" class="view"><section class="hero-bg border-b border-gold-400/15"><div class="max-w-7xl mx-auto px-5 sm:px-8 py-10 sm:py-14 space-y-3"><div class="eyebrow">Tool 3 • Public overview + behind-the-paywall member preview</div><h1 class="serif h-tool font-bold text-white max-w-4xl">Interactive 20-Concept Codex &amp; <span class="italic text-gold-300">Client Vault</span></h1><p class="text-base sm:text-lg text-gray-300 max-w-3xl leading-relaxed">See what visitors read for free versus the step-by-step checklists, calculators and templates unlocked in your paid modules. Flip the view to compare.</p></div></section><section class="max-w-7xl mx-auto px-5 sm:px-8 py-10"><div id="host-codex"></div></section><section class="max-w-7xl mx-auto px-5 sm:px-8 py-14"><div class="gold-band rounded-3xl p-7 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center shadow-2xl">
   <div class="lg:col-span-7 space-y-2"><div class="font-mono text-xs uppercase tracking-[.2em] font-bold text-navy-800">Before a problem becomes an invoice</div><h2 class="serif text-3xl sm:text-4xl font-bold text-navy-950">Make FelRon your <span class="italic">first call.</span></h2><p class="text-sm sm:text-base font-semibold text-navy-900">Bring it to someone raised to resolve it calmly, privately and in good faith: the knowledge, the quotes and the hands-on work from one contact.</p>
@@ -291,7 +315,7 @@
     <a href="tel:+12105354987" class="flex items-center gap-3 text-white font-semibold hover:text-gold-300"><i data-lucide="phone" class="w-4 h-4 text-gold-400"></i>(210) 535-4987</a>
     <a href="mailto:MattDiazSA@gmail.com" class="flex items-center gap-3 text-white font-semibold hover:text-gold-300 break-all"><i data-lucide="mail" class="w-4 h-4 text-gold-400"></i>MattDiazSA@gmail.com</a>
     <div class="flex items-center gap-3 text-gray-300"><i data-lucide="map-pin" class="w-4 h-4 text-gold-400"></i>San Antonio, TX</div>
-    <div class="pt-2 border-t border-gray-800"><div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Founder</div><div class="serif text-xl font-bold text-white">Matthew Alexander Diaz</div></div>
+    <div class="pt-2 border-t border-gray-800"><div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Founder</div><div class="serif text-xl font-bold text-white">Alexander Diaz</div></div>
   </div></div></section></div>
 <div id="view-lab" class="view"><section class="hero-bg border-b border-gold-400/15"><div class="max-w-7xl mx-auto px-5 sm:px-8 py-10 sm:py-14 space-y-3"><div class="eyebrow">Tool 4 • Options, equities &amp; macro simulator</div><h1 class="serif h-tool font-bold text-white max-w-4xl">Options/LEAPS Payoff &amp; <span class="italic text-gold-300">Perpetuals Margin Lab</span></h1><p class="text-base sm:text-lg text-gray-300 max-w-3xl leading-relaxed">Clarity before capital moves: stress-test LEAPS convexity, theta cliffs, isolated margin, mark price and funding rates. Hypothetical, education-only illustrations.</p></div></section><section class="max-w-7xl mx-auto px-5 sm:px-8 py-10"><div id="host-lab"></div></section><section class="max-w-7xl mx-auto px-5 sm:px-8 py-14"><div class="gold-band rounded-3xl p-7 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center shadow-2xl">
   <div class="lg:col-span-7 space-y-2"><div class="font-mono text-xs uppercase tracking-[.2em] font-bold text-navy-800">Before a problem becomes an invoice</div><h2 class="serif text-3xl sm:text-4xl font-bold text-navy-950">Make FelRon your <span class="italic">first call.</span></h2><p class="text-sm sm:text-base font-semibold text-navy-900">Bring it to someone raised to resolve it calmly, privately and in good faith: the knowledge, the quotes and the hands-on work from one contact.</p>
@@ -300,7 +324,7 @@
     <a href="tel:+12105354987" class="flex items-center gap-3 text-white font-semibold hover:text-gold-300"><i data-lucide="phone" class="w-4 h-4 text-gold-400"></i>(210) 535-4987</a>
     <a href="mailto:MattDiazSA@gmail.com" class="flex items-center gap-3 text-white font-semibold hover:text-gold-300 break-all"><i data-lucide="mail" class="w-4 h-4 text-gold-400"></i>MattDiazSA@gmail.com</a>
     <div class="flex items-center gap-3 text-gray-300"><i data-lucide="map-pin" class="w-4 h-4 text-gold-400"></i>San Antonio, TX</div>
-    <div class="pt-2 border-t border-gray-800"><div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Founder</div><div class="serif text-xl font-bold text-white">Matthew Alexander Diaz</div></div>
+    <div class="pt-2 border-t border-gray-800"><div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Founder</div><div class="serif text-xl font-bold text-white">Alexander Diaz</div></div>
   </div></div></section></div>
 <div id="view-flywheel" class="view"><section class="hero-bg border-b border-gold-400/15"><div class="max-w-7xl mx-auto px-5 sm:px-8 py-10 sm:py-14 space-y-3"><div class="eyebrow">Tool 5 • Capital flywheel architecture • barbell + compute loop</div><h1 class="serif h-tool font-bold text-white max-w-4xl">The FelRon Capital Flywheel &amp; <span class="italic text-gold-300">401(k) Barbell</span></h1><p class="text-base sm:text-lg text-gray-300 max-w-3xl leading-relaxed">What I do personally, shared as an educational example: Stage 1 (cashflow &amp; quote savings) feeds Stage 2 (a 401(k) defensive anchor) and Stage 3 (bi-weekly LEAPS), with gains above a +20% gate recycled into Stage 4 (compute hardware &amp; physical bullion). Not a recommendation.</p></div></section><section class="max-w-7xl mx-auto px-5 sm:px-8 py-10"><div id="host-flywheel"></div></section><section class="max-w-7xl mx-auto px-5 sm:px-8 py-14"><div class="gold-band rounded-3xl p-7 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center shadow-2xl">
   <div class="lg:col-span-7 space-y-2"><div class="font-mono text-xs uppercase tracking-[.2em] font-bold text-navy-800">Before a problem becomes an invoice</div><h2 class="serif text-3xl sm:text-4xl font-bold text-navy-950">Make FelRon your <span class="italic">first call.</span></h2><p class="text-sm sm:text-base font-semibold text-navy-900">Bring it to someone raised to resolve it calmly, privately and in good faith: the knowledge, the quotes and the hands-on work from one contact.</p>
@@ -309,7 +333,7 @@
     <a href="tel:+12105354987" class="flex items-center gap-3 text-white font-semibold hover:text-gold-300"><i data-lucide="phone" class="w-4 h-4 text-gold-400"></i>(210) 535-4987</a>
     <a href="mailto:MattDiazSA@gmail.com" class="flex items-center gap-3 text-white font-semibold hover:text-gold-300 break-all"><i data-lucide="mail" class="w-4 h-4 text-gold-400"></i>MattDiazSA@gmail.com</a>
     <div class="flex items-center gap-3 text-gray-300"><i data-lucide="map-pin" class="w-4 h-4 text-gold-400"></i>San Antonio, TX</div>
-    <div class="pt-2 border-t border-gray-800"><div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Founder</div><div class="serif text-xl font-bold text-white">Matthew Alexander Diaz</div></div>
+    <div class="pt-2 border-t border-gray-800"><div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Founder</div><div class="serif text-xl font-bold text-white">Alexander Diaz</div></div>
   </div></div></section></div>
 <div id="view-dispatch" class="view"><section class="hero-bg border-b border-gold-400/15"><div class="max-w-7xl mx-auto px-5 sm:px-8 py-10 sm:py-14 space-y-3"><div class="eyebrow">Tool 6 • Zero-knowledge first-call dispatch • triage configurator</div><h1 class="serif h-tool font-bold text-white max-w-4xl">Build a Confidential <span class="italic text-gold-300">Client Triage Brief</span></h1><p class="text-base sm:text-lg text-gray-300 max-w-3xl leading-relaxed">Select the exact modules you need, from crypto hardware sourcing to quote comparison and pre-CPA organization, then copy the scope sheet or send it straight to me.</p></div></section><section class="max-w-7xl mx-auto px-5 sm:px-8 py-10"><div id="host-dispatch"></div></section></div>
 <div id="view-members" class="view">
@@ -339,7 +363,7 @@
 <div id="view-about" class="view">
   <section class="hero-bg border-b border-gold-400/15"><div class="max-w-7xl mx-auto px-5 sm:px-8 py-14 sm:py-20 space-y-3">
     <div class="eyebrow">About • Founder, <span class="seg">FelRon IT-Legacy-Capital</span></div>
-    <h1 class="serif h-display font-bold text-gold-300">Matthew Alexander Diaz</h1><p class="text-lg text-gray-300">San Antonio, Texas</p></div></section>
+    <h1 class="serif h-display font-bold text-gold-300">Alexander Diaz</h1><p class="text-lg text-gray-300">San Antonio, Texas</p></div></section>
   <section class="max-w-7xl mx-auto px-5 sm:px-8 py-14 grid grid-cols-1 lg:grid-cols-12 gap-10">
     <div class="lg:col-span-8 space-y-5 text-gray-300 leading-relaxed">
       <h2 class="serif h-section font-bold text-white">Fel + Ron. <span class="italic text-gold-300">Felicia and Ronald.</span></h2>
@@ -361,7 +385,7 @@
     <a href="tel:+12105354987" class="flex items-center gap-3 text-white font-semibold hover:text-gold-300"><i data-lucide="phone" class="w-4 h-4 text-gold-400"></i>(210) 535-4987</a>
     <a href="mailto:MattDiazSA@gmail.com" class="flex items-center gap-3 text-white font-semibold hover:text-gold-300 break-all"><i data-lucide="mail" class="w-4 h-4 text-gold-400"></i>MattDiazSA@gmail.com</a>
     <div class="flex items-center gap-3 text-gray-300"><i data-lucide="map-pin" class="w-4 h-4 text-gold-400"></i>San Antonio, TX</div>
-    <div class="pt-2 border-t border-gray-800"><div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Founder</div><div class="serif text-xl font-bold text-white">Matthew Alexander Diaz</div></div>
+    <div class="pt-2 border-t border-gray-800"><div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Founder</div><div class="serif text-xl font-bold text-white">Alexander Diaz</div></div>
   </div></div></section>
 </div>
 <div id="view-contact" class="view">
@@ -389,7 +413,7 @@
         <div><div class="eyebrow">Direct line</div><a href="tel:+12105354987" class="serif text-3xl font-bold text-white hover:text-gold-300">(210) 535-4987</a></div>
         <div><div class="eyebrow">Secure email</div><a href="mailto:MattDiazSA@gmail.com" class="text-lg font-semibold text-white hover:text-gold-300 break-all">MattDiazSA@gmail.com</a></div>
         <div><div class="eyebrow">Service area</div><div class="text-white font-semibold">San Antonio, TX and surrounding area</div><div class="text-sm text-gray-400">On-site visits, plus remote sessions anywhere.</div></div>
-        <div><div class="eyebrow">Founder</div><div class="serif text-2xl font-bold text-gold-300">Matthew Alexander Diaz</div></div>
+        <div><div class="eyebrow">Founder</div><div class="serif text-2xl font-bold text-gold-300">Alexander Diaz</div></div>
       </div>
       <div class="card rounded-2xl p-6 space-y-2"><div class="font-bold text-white">Need a detailed brief?</div><p class="text-sm text-gray-400">Pick exact modules and generate a confidential scope sheet.</p><a href="#/dispatch" class="btn-gold mt-1">First-Call Dispatch <i data-lucide="arrow-right" class="w-4 h-4"></i></a></div>
     </div>
@@ -446,7 +470,7 @@
       </div>
 
       
-    <div class="text-sm text-gray-400 leading-relaxed card rounded-2xl p-5"><strong class="text-gray-200">Full disclaimer:</strong> FelRon IT-Legacy-Capital provides educational, organizational, logistical and hands-on help services. Nothing on this site, in any tool or in any session is legal, tax, insurance or investment advice, or a recommendation to buy, sell or hold any security, asset or equipment. Simulators and calculators are hypothetical illustrations. The Capital Flywheel describes what the founder does personally and is not a recommendation. Matthew Alexander Diaz is not a licensed investment adviser, broker, CPA, attorney, insurance adjuster, electrician, plumber or air-conditioning contractor. Clients make and are responsible for their own decisions. FelRon never takes custody of client funds, crypto keys or account logins and never places trades for clients. No results are guaranteed.</div></section></div>
+    <div class="text-sm text-gray-400 leading-relaxed card rounded-2xl p-5"><strong class="text-gray-200">Full disclaimer:</strong> FelRon IT-Legacy-Capital provides educational, organizational, logistical and hands-on help services. Nothing on this site, in any tool or in any session is legal, tax, insurance or investment advice, or a recommendation to buy, sell or hold any security, asset or equipment. Simulators and calculators are hypothetical illustrations. The Capital Flywheel describes what the founder does personally and is not a recommendation. Alexander Diaz is not a licensed investment adviser, broker, CPA, attorney, insurance adjuster, electrician, plumber or air-conditioning contractor. Clients make and are responsible for their own decisions. FelRon never takes custody of client funds, crypto keys or account logins and never places trades for clients. No results are guaranteed.</div></section></div>
 <div id="view-waiver" class="view"><section class="hero-bg border-b border-gold-400/15"><div class="max-w-7xl mx-auto px-5 sm:px-8 py-12 sm:py-16 space-y-4"><div class="eyebrow">Client acknowledgment</div><h1 class="serif h-display font-bold text-white max-w-4xl">Acknowledgment <span class="italic text-gold-300">&amp; waiver.</span></h1><p class="text-lg text-gray-300 max-w-2xl leading-relaxed">A short, plain-language agreement signed before personal sessions. Printable.</p></div></section><section class="max-w-5xl mx-auto px-5 sm:px-8 py-14 space-y-6">
       <div class="flex flex-wrap items-center justify-between gap-3 no-print">
         <p class="text-xs sm:text-sm text-gray-400 max-w-2xl">Every engagement begins with this plain-language acknowledgment. Read it, ask any questions, then print it to sign.</p>
@@ -466,7 +490,7 @@
         <p class="mb-3">Please read each statement. By signing below, you confirm that you understand and agree.</p>
         <ol class="list-decimal pl-5 space-y-2">
           <li><strong>Services.</strong> <span class="seg">FelRon IT-Legacy-Capital</span> ("FelRon"), operated by Matthew Alexander Diaz, provides educational, organizational, logistical and hands-on help services, including learning modules, the FelRon App and tools, crypto hardware sourcing and plug-in setup, quote comparison, handyman coordination and done-with-you walkthrough help.</li>
-          <li><strong>Not a licensed professional.</strong> Matthew is not a licensed investment adviser, broker, certified public accountant (CPA), attorney, insurance adjuster, electrician, plumber or air-conditioning contractor, and does not act as one.</li>
+          <li><strong>Not a licensed professional.</strong> Alexander is not a licensed investment adviser, broker, certified public accountant (CPA), attorney, insurance adjuster, electrician, plumber or air-conditioning contractor, and does not act as one.</li>
           <li><strong>General information, not personal recommendations.</strong> Anything discussed is general information and a description of options. It is not personalized investment, legal, tax or insurance advice, and it is not a recommendation to buy, sell or hold any security or other asset.</li>
           <li><strong>Your decisions.</strong> I make all of my own decisions, and I am solely responsible for them and their results, including any decision to act on information I received.</li>
           <li><strong>Done-with-you help.</strong> When FelRon helps carry out a task with me, I approve every action before it happens. FelRon walks me through each step, and I remain the decision-maker.</li>
@@ -496,7 +520,7 @@
   <div id="toast" class="fixed bottom-5 right-5 z-50 hidden px-4 py-3 rounded-xl bg-gold-400 text-navy-950 font-bold text-sm shadow-2xl">Copied to clipboard!</div>
   <footer class="border-t border-gold-400/20 bg-navy-900 no-print">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8">
-      <div class="lg:col-span-2 space-y-3"><div class="flex items-center gap-3"><svg viewBox="0 0 100 100" class="w-11 h-11 shrink-0" aria-hidden="true"><polygon points="50,4 93,27 93,73 50,96 7,73 7,27" fill="#0b1324" stroke="#d4af37" stroke-width="4"/><polygon points="50,11 86,31 86,69 50,89 14,69 14,31" fill="none" stroke="#d4af37" stroke-width="1.2" stroke-opacity=".5"/><text x="50" y="58" text-anchor="middle" fill="#f3d98b" font-family="Cormorant Garamond, Georgia, serif" font-weight="700" font-size="30" letter-spacing="2">FR</text></svg><div><div class="serif text-lg font-bold text-gold-300 uppercase tracking-wide">FelRon IT-Legacy-Capital</div><div class="serif text-white font-semibold">Matthew Alexander Diaz</div></div></div>
+      <div class="lg:col-span-2 space-y-3"><div class="flex items-center gap-3"><img src="assets/logo-emblem.svg" alt="" class="emblem w-12 h-12 sm:w-14 sm:h-14" width="56" height="56" /><div><div class="brand-line font-bold text-gold-300 uppercase">FelRon IT-Legacy-Capital</div><div class="wordmark mt-0.5">Zorro de Oro</div><div class="serif text-white font-semibold mt-1">Alexander Diaz</div></div></div>
         <p class="text-sm text-gray-400 max-w-sm">Fel + Ron: named for Felicia and Ronald. The physical side of AI: knowledge, hands-on work and coordination in one place. San Antonio, TX.</p>
         <div class="text-sm space-y-1"><a href="tel:+12105354987" class="block text-white hover:text-gold-300">(210) 535-4987</a><a href="mailto:MattDiazSA@gmail.com" class="block text-white hover:text-gold-300 break-all">MattDiazSA@gmail.com</a></div></div>
       <div class="space-y-3"><div class="eyebrow">Explore</div><ul class="space-y-2 text-sm"><li><a href="#/services" class="text-gray-300 hover:text-gold-300">Services</a></li><li><a href="#/how" class="text-gray-300 hover:text-gold-300">How It Works</a></li><li><a href="#/pricing" class="text-gray-300 hover:text-gold-300">Pricing</a></li><li><a href="#/about" class="text-gray-300 hover:text-gold-300">About</a></li></ul></div>
@@ -506,7 +530,7 @@
     </div>
     <div class="border-t border-gray-800"><div class="max-w-7xl mx-auto px-5 sm:px-8 py-5 text-xs text-gray-500 leading-relaxed space-y-1">
       <p>FelRon IT-Legacy-Capital provides education, guidance and hands-on help on flat fees, and clients make their own decisions. Not legal, tax, insurance or investment advice. Tools are hypothetical illustrations. FelRon never holds client funds, keys or logins. <a href="#/legal" class="text-gold-300 hover:underline">Legal framework</a> • <a href="#/waiver" class="text-gold-300 hover:underline">Acknowledgment</a></p>
-      <p>© 2026 FelRon IT-Legacy-Capital • Matthew Alexander Diaz • San Antonio, TX</p></div></div>
+      <p>© 2026 FelRon IT-Legacy-Capital • Alexander Diaz • San Antonio, TX</p></div></div>
   </footer>
   <script>
     // ==================== DATA ====================
@@ -578,7 +602,7 @@
     function intakeMsg(p) {
       const v = (s) => document.getElementById(p + '-' + s).value.trim();
       const pref = (document.querySelector(`input[name="${p}-pref"]:checked`) || {}).value || 'Call';
-      return { text: `Hi Matthew,\n\nMy name is ${v('name') || '[first name]'}.\nThe friction: ${v('type')}\nWhat's going on: ${v('desc') || '[a sentence or two]'}\n\nBest way to reach me: ${pref} at ${v('reach') || '[phone or email]'}\n\n(Sent from the FelRon website)`, type: v('type') };
+      return { text: `Hi Alexander,\n\nMy name is ${v('name') || '[first name]'}.\nThe friction: ${v('type')}\nWhat's going on: ${v('desc') || '[a sentence or two]'}\n\nBest way to reach me: ${pref} at ${v('reach') || '[phone or email]'}\n\n(Sent from the FelRon website)`, type: v('type') };
     }
     function updateIntake(p) {
       const m = intakeMsg(p);
@@ -608,7 +632,7 @@
     function updateEnroll() {
       const o = ENROLL.find((x) => x.id === document.getElementById('enroll-item').value) || ENROLL[0];
       document.getElementById('enroll-summary').innerHTML = `<div class="font-bold text-white">${o.label}</div>` + o.detail.map((d) => `<div>✓ ${d}</div>`).join('') + '<div class="text-xs text-gray-500 pt-1">Starting price, subject to change. Confirmed in writing before payment.</div>';
-      const body = 'Hi Matthew,\n\nI\'d like to book a free 15-minute first call.\nInterested in: ' + o.label + '\nBest times to reach me: \n\nThanks!';
+      const body = 'Hi Alexander,\n\nI\'d like to book a free 15-minute first call.\nInterested in: ' + o.label + '\nBest times to reach me: \n\nThanks!';
       document.getElementById('enroll-mail').href = 'mailto:MattDiazSA@gmail.com?subject=' + encodeURIComponent('FelRon: book my free first call') + '&body=' + encodeURIComponent(body);
     }
 
