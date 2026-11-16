@@ -52,6 +52,7 @@
     .footer-name { font-size: clamp(1.05rem, 4.2vw, 1.3rem); line-height: 1.2; }
     .seg { display: inline-block; }
     html, body { max-width: 100%; overflow-x: hidden; }
+    .nav-tab { padding: .375rem .75rem; border-radius: .5rem; font-size: .75rem; font-weight: 600; white-space: nowrap; }
     .edu-badge { background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(243, 217, 139, 0.45); color: #f3d98b; }
     input[type="range"] { accent-color: #d4af37; }
     ::-webkit-scrollbar { width: 6px; height: 6px; }
@@ -76,7 +77,7 @@
 
   <!-- Top Navigation Bar (Executive Dossier Masthead) -->
   <header class="sticky top-0 z-40 bg-obsidian-950/95 backdrop-blur-md border-b border-lime-400/30 no-print">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-3 pb-2 flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
       <div class="flex items-center gap-3 min-w-0">
         <div class="w-11 h-11 shrink-0 flex items-center justify-center relative">
           <svg viewBox="0 0 100 100" class="w-11 h-11">
@@ -94,30 +95,38 @@
             <span class="founder-name dossier-serif font-semibold text-white">Matthew Alexander Diaz</span>
             <span class="text-[10px] font-mono uppercase tracking-widest text-lime-400">Founder</span>
           </div>
-          <p class="hidden md:block text-[10px] font-mono tracking-wider uppercase text-gray-400 mt-0.5">Guidance &amp; Education • IT Help • Problem Solving</p>
+          <p class="hidden md:block text-[10px] font-mono tracking-wider uppercase text-gray-400 mt-0.5">Systems Operations • Market Analysis • Executive Problem Solving</p>
         </div>
       </div>
 
-      <nav class="flex items-center gap-1.5 overflow-x-auto py-1 max-w-full" aria-label="Modules">
-        <a href="#/" data-mod="menu" class="nav-tab px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap">☰ Modules</a>
-        <a href="#/about" data-mod="about" class="nav-tab px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap">01 About</a>
-        <a href="#/help" data-mod="help" class="nav-tab px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap">02 How I Can Help</a>
-        <a href="#/triage" data-mod="triage" class="nav-tab px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap">03 TRIAGE</a>
-        <a href="#/tools" data-mod="tools" class="nav-tab px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap">04 Tools</a>
-        <a href="#/pricing" data-mod="pricing" class="nav-tab px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap">05 Pricing</a>
-        <a href="#/privacy" data-mod="privacy" class="nav-tab px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap">06 How I Work</a>
-        <a href="#/legal" data-mod="legal" class="nav-tab px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap">07 Legal</a>
-        <a href="#/waiver" data-mod="waiver" class="nav-tab px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap">08 Acknowledgment</a>
-        <a href="#/contact" data-mod="contact" class="nav-tab px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap">09 Contact</a>
+      <div class="hidden md:block text-right ml-auto">
+        <div class="text-[11px] font-mono uppercase tracking-[0.25em] text-lime-400 font-bold">Executive Dossier</div>
+        <div class="text-[10px] font-mono uppercase tracking-widest text-gray-400 mt-0.5">Founder • <span class="seg">Matthew Alexander Diaz</span></div>
+        <a href="tel:+12105354987" class="text-[11px] font-mono text-gray-300 hover:text-lime-300">(210) 535-4987 • San Antonio, TX</a>
+      </div>
+      <div class="w-full">
+            <nav class="flex items-center gap-1.5 overflow-x-auto py-1 max-w-full" aria-label="Modules">
+        <a href="#/" data-mod="menu" class="nav-tab">☰ Home</a>
+        <a href="#/about" data-mod="about" class="nav-tab">01 About</a>
+        <a href="#/help" data-mod="help" class="nav-tab">02 How I Can Help</a>
+        <a href="#/triage" data-mod="triage" class="nav-tab">03 TRIAGE</a>
+        <a href="#/packages" data-mod="packages" class="nav-tab">04 Modules &amp; Packages</a>
+        <a href="#/app" data-mod="app" class="nav-tab">05 FelRon App</a>
+        <a href="#/privacy" data-mod="privacy" class="nav-tab">06 How I Work</a>
+        <a href="#/legal" data-mod="legal" class="nav-tab">07 Legal</a>
+        <a href="#/waiver" data-mod="waiver" class="nav-tab">08 Acknowledgment</a>
+        <a href="#/book" data-mod="book" class="nav-tab">09 Book &amp; Enroll</a>
+        <a href="#/contact" data-mod="contact" class="nav-tab">10 Contact</a>
       </nav>
+      </div>
     </div>
     <div class="border-t border-lime-400/10 bg-obsidian-900/80"><div id="crumb" class="max-w-7xl mx-auto px-4 sm:px-6 py-1.5 text-[11px] font-mono uppercase tracking-wider text-gray-400"></div></div>
   </header>
 
   <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-6 space-y-8">
 
-    <!-- ==================== MODULE MENU ==================== -->
-    <section id="view-menu" class="module-view space-y-6 dossier-frame rounded-2xl p-5 sm:p-8 bg-obsidian-950/80">
+    <!-- ==================== HOME: EXECUTIVE DOSSIER ==================== -->
+    <section id="view-menu" class="module-view space-y-7 dossier-frame rounded-2xl p-5 sm:p-8 bg-obsidian-950/80">
       <!-- Hero -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center border-b border-lime-400/20 pb-7">
         <div class="lg:col-span-7 space-y-3">
@@ -133,25 +142,47 @@
           </div>
           <div class="flex flex-wrap gap-3 pt-3">
             <button onclick="go('help')" class="px-4 py-2.5 rounded-lg bg-lime-400 hover:bg-lime-300 text-black font-bold text-xs sm:text-sm uppercase tracking-wider transition-all lime-glow">How Can I Help You Today? →</button>
-            <button onclick="go('triage')" class="px-4 py-2.5 rounded-lg bg-obsidian-800 hover:bg-obsidian-700 text-lime-300 border border-lime-400/40 font-semibold text-xs sm:text-sm transition-all">See the TRIAGE Framework</button>
-            <button onclick="go('contact')" class="px-4 py-2.5 rounded-lg bg-obsidian-800 hover:bg-obsidian-700 text-gray-200 border border-gray-700 font-semibold text-xs sm:text-sm transition-all">Start a Confidential First Call</button>
+            <button onclick="go('packages')" class="px-4 py-2.5 rounded-lg bg-obsidian-800 hover:bg-obsidian-700 text-lime-300 border border-lime-400/40 font-semibold text-xs sm:text-sm transition-all">See Modules &amp; Packages</button>
+            <button onclick="go('book')" class="px-4 py-2.5 rounded-lg bg-obsidian-800 hover:bg-obsidian-700 text-gray-200 border border-gray-700 font-semibold text-xs sm:text-sm transition-all">Book a Free 15-Min Call</button>
           </div>
         </div>
         <div class="lg:col-span-5 pl-0 lg:pl-6 lg:border-l-2 border-lime-400/40 space-y-3">
           <p class="text-sm sm:text-base text-gray-200 leading-relaxed">
-            When technology breaks, money feels confusing, or paperwork starts piling up, <strong class="text-white">FelRon is a friendly, discreet first call.</strong> I'll help you understand what's going on and lay out your options. Then I'll either point you to the right professional or help you carry out what you decide, before an IT firm, a CPA, or a lawyer starts billing.
+            When technology fails, finances tangle, or daily logistics stall, <strong class="text-white">FelRon is the single, discreet first call.</strong> I'll show you how I did it, show you how you can do it, and then help you get it done, walking you through every task and choice before an IT firm, a CPA or a lawyer starts billing. You make every decision.
           </p>
           <p class="dossier-serif italic text-lg sm:text-xl text-lime-300">Private by design. Discreet by upbringing.</p>
         </div>
       </div>
 
 
-      <div class="space-y-4">
-        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
-          <h2 class="dossier-serif text-2xl sm:text-3xl font-bold text-white">Choose a <span class="italic text-lime-300">module</span></h2>
-          <p class="text-xs sm:text-sm text-gray-400">Each module opens on its own page. Use Back and Next to move through them in order.</p>
+      <div class="card-surface rounded-xl p-5 space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-lime-400/20 pb-3">
+          <div class="flex items-center gap-2.5">
+            <span class="w-6 h-6 rounded-full bg-lime-400/15 border border-lime-400/40 flex items-center justify-center text-lime-300 text-xs">🛡</span>
+            <h2 class="dossier-serif text-xl sm:text-2xl font-bold text-white">Private by Design. <span class="italic text-lime-300">Zero-Knowledge by Default.</span></h2>
+          </div>
+          <span class="text-[11px] font-mono tracking-widest uppercase text-lime-400 font-semibold">CORE DIFFERENTIATOR</span>
         </div>
-        <div id="module-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div class="space-y-1"><div class="text-xs font-bold text-lime-300">Need-to-Know Handling</div><p class="text-[11px] text-gray-300 leading-relaxed">Only what the task requires is requested.</p></div>
+          <div class="space-y-1"><div class="text-xs font-bold text-lime-300">Minimal Retention</div><p class="text-[11px] text-gray-300 leading-relaxed">Data is kept no longer than the work demands.</p></div>
+          <div class="space-y-1"><div class="text-xs font-bold text-lime-300">Client-Held Keys</div><p class="text-[11px] text-gray-300 leading-relaxed">Self-custody keeps your keys, passwords and logins in your hands.</p></div>
+          <div class="space-y-1"><div class="text-xs font-bold text-lime-300">Encrypted Channels</div><p class="text-[11px] text-gray-300 leading-relaxed">Sensitive conversations move over encrypted communications.</p></div>
+          <div class="p-3 rounded-lg bg-lime-400/10 border border-lime-400/40 space-y-1"><div class="text-xs font-bold text-lime-300">Zero-Knowledge Infrastructure</div><p class="text-[11px] text-gray-200 leading-relaxed">Privacy-preserving tools and protocols: the operator never needs to see more than necessary.</p></div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <div class="lg:col-span-8 space-y-3">
+          <h2 class="dossier-serif text-2xl sm:text-3xl font-bold text-white">Raised on <span class="italic text-lime-300">composure under pressure.</span></h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-xs sm:text-sm text-gray-300 leading-relaxed">
+            <p><span class="dossier-serif float-left text-4xl font-bold text-lime-300 pr-2.5 leading-none">M</span>atthew Alexander Diaz is the son of a 29-year U.S. Army combat medic and Bronze Star recipient, and of a devoted mother who cared for her family while earning numerous medals for her service in the Family Readiness Group (FRG). From them, he learned what steady composure and genuine caretaking look like.</p>
+            <p>In that household, when family or friends faced a technical failure, a financial or insurance tangle, or a logistical bottleneck, you stepped up and helped resolve it. <strong class="text-white"><span class="seg">FelRon IT-Legacy-Capital</span></strong>, founded in his parents' honor, brings that same calm, precision and good faith to every private client. <a href="#/about" class="text-lime-300 hover:underline">Read the full story →</a></p>
+          </div>
+        </div>
+        <div class="lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3">
+          <div class="card-surface rounded-xl p-3.5 border-l-4 border-l-lime-400"><div class="dossier-serif text-lg font-bold text-lime-300">29 Years • Bronze Star</div><p class="text-xs text-gray-300 mt-0.5">Father's career as a U.S. Army combat medic across airborne, light infantry and Stryker units.</p></div>
+          <div class="card-surface rounded-xl p-3.5 border-l-4 border-l-lime-400"><div class="dossier-serif text-lg font-bold text-lime-300">FRG Honors</div><p class="text-xs text-gray-300 mt-0.5">Mother's numerous medals for Family Readiness Group service, and her career in fine retail and diamond jewelry.</p></div>
+        </div>
       </div>
       <!-- Why Clients Call First -->
       <div class="bg-obsidian-900/90 border-y border-lime-400/25 py-3 px-4 rounded-lg flex flex-wrap items-center justify-between gap-3">
@@ -164,8 +195,123 @@
         </div>
       </div>
 
+          <div class="card-surface rounded-xl p-5 sm:p-6 space-y-4">
+        <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-lime-400/20 pb-3">
+          <h2 class="dossier-serif text-2xl sm:text-3xl font-bold text-white">How it works: <span class="italic text-lime-300">show, teach, then do it together.</span></h2>
+          <span class="text-[11px] font-mono tracking-widest uppercase text-lime-400 font-semibold">THE FELRON METHOD</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-4 rounded-lg bg-obsidian-950/70 border border-gray-800/90 space-y-1.5">
+            <div class="dossier-serif text-3xl font-bold text-lime-300">01</div>
+            <div class="font-bold text-white">How I Did It</div>
+            <p class="text-xs text-gray-300 leading-relaxed">I show you how I handled it myself, from real experience and real examples, mistakes included. My past results are not a promise of yours.</p>
+          </div>
+          <div class="p-4 rounded-lg bg-obsidian-950/70 border border-gray-800/90 space-y-1.5">
+            <div class="dossier-serif text-3xl font-bold text-lime-300">02</div>
+            <div class="font-bold text-white">How You Can Do It</div>
+            <p class="text-xs text-gray-300 leading-relaxed">Learning modules lay out how it works and the options people commonly consider, with practice and testing in the FelRon App.</p>
+          </div>
+          <div class="p-4 rounded-lg bg-lime-400/10 border border-lime-400/40 space-y-1.5">
+            <div class="dossier-serif text-3xl font-bold text-lime-300">03</div>
+            <div class="font-bold text-white">Let's Get It Done Together</div>
+            <p class="text-xs text-gray-300 leading-relaxed">Done-with-you help. I walk you through each step and handle the tasks, and you approve every action and make every decision. Licensed work is referred out.</p>
+          </div>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+          <h2 class="dossier-serif text-2xl sm:text-3xl font-bold text-white">The <span class="italic text-lime-300">TRIAGE</span> Protocol</h2>
+          <p class="dossier-serif italic text-base sm:text-lg text-gray-300">Four pillars, applied the way a medic triages a scene: what matters most, handled first.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="card-surface rounded-xl p-5 relative overflow-hidden">
+            <div class="pillar-watermark absolute top-3 right-4">01</div>
+            <div class="space-y-2.5 relative z-10">
+              <div class="flex items-center gap-2.5">
+                <span class="w-8 h-8 shrink-0 rounded-full bg-lime-400/15 border border-lime-400/40 flex items-center justify-center text-sm">🏛</span>
+                <h3 class="dossier-serif text-xl sm:text-2xl font-bold text-white">I — Business &amp; Bureaucracy</h3>
+              </div>
+              <p class="dossier-serif italic text-sm sm:text-base text-lime-300/90">Red tape organized before it becomes expensive.</p>
+              <ul class="space-y-1.5 text-xs sm:text-sm text-gray-300"><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Business-plan walkthroughs</strong> and entity basics (DBA, LLC, EIN), plus marketing, API &amp; MCP setup</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Health, life &amp; auto insurance paperwork</strong>, organized and explained, plus assisted-living research</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Tax record organization</strong>, business banking setup and admin checklists</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Get organized first</strong>, before professional fees start adding up</span></li></ul>
+              <div class="grid grid-cols-1 gap-2 pt-1"><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">01 How I Did It</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">I've untangled insurance letters, bills and records for family, and ran inventory and operations as an assistant GM. I'm building FelRon itself one filing at a time.</p></div><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">02 How You Can Do It</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">The Business Setup, Tax Records and Insurance Paperwork modules lay out every option and where each form is filed.</p></div><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">03 Let's Get It Done Together</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">We fill out the forms side by side, and you review, sign and submit. Tax returns go to a CPA or IRS VITA, and legal questions go to a Texas attorney.</p></div></div>
+              <button onclick="filterCodexByPillar('B')" class="pt-1 w-full flex items-center justify-between text-xs font-mono text-lime-400 hover:text-lime-300"><span>See Pillar I topics</span><span>→</span></button>
+            </div>
+          </div>
+          <div class="card-surface rounded-xl p-5 relative overflow-hidden">
+            <div class="pillar-watermark absolute top-3 right-4">02</div>
+            <div class="space-y-2.5 relative z-10">
+              <div class="flex items-center gap-2.5">
+                <span class="w-8 h-8 shrink-0 rounded-full bg-lime-400/15 border border-lime-400/40 flex items-center justify-center text-sm">📈</span>
+                <h3 class="dossier-serif text-xl sm:text-2xl font-bold text-white">II — Options, Equities &amp; Macro</h3>
+              </div>
+              <p class="dossier-serif italic text-sm sm:text-base text-lime-300/90">Clarity and context before capital moves.</p>
+              <ul class="space-y-1.5 text-xs sm:text-sm text-gray-300"><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">AP Macroeconomics</strong> foundation and historical cycle analysis</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">How markets work</strong>: volume profile, mark price and multi-asset research</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">LEAPS, options, perps &amp; funding-rate education</strong>, with isolated-margin risk made clear</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">401(k) literacy</strong>: understanding your fund menu and allocation basics</span></li></ul>
+              <div class="grid grid-cols-1 gap-2 pt-1"><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">01 How I Did It</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">I trade my own account with written rules: long-dated contracts, defined risk and a set exit point before entry. I'll show you my real process, including mistakes. Past results are not a promise.</p></div><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">02 How You Can Do It</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">The Options &amp; LEAPS and Money Basics modules, plus the FelRon App simulators, show you how it works and the common approaches people consider.</p></div><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">03 Let's Get It Done Together</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">I walk you through your own platform's screens and your own written checklist. You place your own trades and make every decision. Personalized advice is referred to a licensed fiduciary.</p></div></div>
+              <button onclick="filterCodexByPillar('O')" class="pt-1 w-full flex items-center justify-between text-xs font-mono text-lime-400 hover:text-lime-300"><span>See Pillar II topics</span><span>→</span></button>
+            </div>
+          </div>
+          <div class="card-surface rounded-xl p-5 relative overflow-hidden">
+            <div class="pillar-watermark absolute top-3 right-4">03</div>
+            <div class="space-y-2.5 relative z-10">
+              <div class="flex items-center gap-2.5">
+                <span class="w-8 h-8 shrink-0 rounded-full bg-lime-400/15 border border-lime-400/40 flex items-center justify-center text-sm">🛡</span>
+                <h3 class="dossier-serif text-xl sm:text-2xl font-bold text-white">III — Networks, Web3 &amp; Hardware</h3>
+              </div>
+              <p class="dossier-serif italic text-sm sm:text-base text-lime-300/90">Systems secured, private, and running.</p>
+              <ul class="space-y-1.5 text-xs sm:text-sm text-gray-300"><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Crypto wallet security</strong>, cold storage and client-held self-custody</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">DeFi education</strong>: how decentralized apps and yield work, and their risks</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">DePIN &amp; ASIC hardware</strong> setup and diagnostics (electrical work referred to licensed electricians)</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Home &amp; office networking</strong>, device setup, rebooting and IT rescue</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Zero-knowledge &amp; privacy-preserving</strong> tools</span></li></ul>
+              <div class="grid grid-cols-1 gap-2 pt-1"><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">01 How I Did It</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">I run my own self-custody wallets, mining/DePIN hardware and home network, and I've fixed plenty of locked-up computers and dead Wi-Fi for family and friends.</p></div><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">02 How You Can Do It</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">The Crypto Self-Custody and Home/Office IT Rescue modules teach the setup and safety habits step by step.</p></div><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">03 Let's Get It Done Together</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">I set up your network and devices with you hands-on. You create and keep your own keys and passwords, and I never see them.</p></div></div>
+              <button onclick="filterCodexByPillar('N')" class="pt-1 w-full flex items-center justify-between text-xs font-mono text-lime-400 hover:text-lime-300"><span>See Pillar III topics</span><span>→</span></button>
+            </div>
+          </div>
+          <div class="card-surface rounded-xl p-5 relative overflow-hidden">
+            <div class="pillar-watermark absolute top-3 right-4">04</div>
+            <div class="space-y-2.5 relative z-10">
+              <div class="flex items-center gap-2.5">
+                <span class="w-8 h-8 shrink-0 rounded-full bg-lime-400/15 border border-lime-400/40 flex items-center justify-center text-sm">⏱</span>
+                <h3 class="dossier-serif text-xl sm:text-2xl font-bold text-white">IV — Direct Execution &amp; Logistics</h3>
+              </div>
+              <p class="dossier-serif italic text-sm sm:text-base text-lime-300/90">Handled quietly, precisely, and on time.</p>
+              <ul class="space-y-1.5 text-xs sm:text-sm text-gray-300"><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">High-trust personal assistance</strong>, 1-on-1 guidance &amp; education and calendar help</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Hands-on money organization</strong>: budgeting, savings planning and follow-through on the plan you choose</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Medical appointment logistics</strong>, assisted-living support and driving coordination</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Physical labor, secure transport</strong> and rapid problem-solving on tight deadlines</span></li></ul>
+              <div class="grid grid-cols-1 gap-2 pt-1"><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">01 How I Did It</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">I grew up in a military family where we handled the logistics for each other, and I spent years running store operations, inventory and teams.</p></div><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">02 How You Can Do It</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">The Money Basics &amp; Budgeting module and the App checklists show you how to build your own system.</p></div><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">03 Let's Get It Done Together</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">Appointments, calendars, errands and paperwork runs, done with you. Nothing happens without your approval.</p></div></div>
+              <button onclick="filterCodexByPillar('D')" class="pt-1 w-full flex items-center justify-between text-xs font-mono text-lime-400 hover:text-lime-300"><span>See Pillar IV topics</span><span>→</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-lime-400/25 text-xs sm:text-sm text-gray-300">
+        <div class="space-y-1.5">
+          <div class="font-mono text-[11px] uppercase tracking-widest text-lime-400 font-bold">ACADEMIC &amp; TECHNICAL FOUNDATION</div>
+          <p class="leading-relaxed"><strong class="text-white">Logistics &amp; Supply Chain Management</strong> (Northeast Lakeview College) • <strong class="text-white">Electrical Concepts &amp; HVAC Systems coursework</strong> (Southern Careers Institute) • <strong class="text-white">Dental Assisting Core Curriculum</strong> (Concorde Career College) • <strong class="text-white">AP Macroeconomics &amp; AP European History</strong></p>
+        </div>
+        <div class="space-y-1.5">
+          <div class="font-mono text-[11px] uppercase tracking-widest text-lime-400 font-bold">OPERATIONAL EXPERIENCE</div>
+          <p class="leading-relaxed">Years of hands-on retail management and assistant general management, spanning inventory control, logistics and team direction, plus electrical concepts coursework and programmatic data tracking in <strong class="text-white">Python and Go</strong>. All of it is grounded in objective analysis, transparency and good faith.</p>
+        </div>
+      </div>
+      <div class="gold-cta-banner rounded-xl p-5 sm:p-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-5 shadow-xl">
+        <div class="space-y-1">
+          <h3 class="dossier-serif text-2xl sm:text-3xl font-bold text-obsidian-950">Make FelRon your <span class="italic">first call.</span></h3>
+          <p class="text-xs sm:text-sm text-obsidian-900 font-semibold leading-relaxed">Before a problem becomes an invoice, bring it to someone raised to resolve it calmly, privately, and in good faith.</p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <a href="#/book" class="px-4 py-2 rounded bg-obsidian-950 text-lime-300 font-bold text-xs uppercase tracking-wider hover:bg-obsidian-800">Book &amp; Enroll →</a>
+            <a href="#/packages" class="px-4 py-2 rounded border border-obsidian-950/60 text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-obsidian-950/10">See Modules &amp; Packages</a>
+          </div>
+        </div>
+        <div class="bg-obsidian-950 text-white rounded-lg p-4 border border-obsidian-800 space-y-2 text-xs font-mono">
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5 border-b border-gray-800 pb-2"><span class="text-lime-400 uppercase tracking-widest font-bold">Direct</span><span class="text-gray-100 font-semibold"><a href="tel:+12105354987" class="hover:text-lime-300">(210) 535-4987</a> <span class="seg">• San Antonio, TX</span></span></div>
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5 border-b border-gray-800 pb-2"><span class="text-lime-400 uppercase tracking-widest font-bold">Dispatch</span><a href="mailto:MattDiazSA@gmail.com" class="text-gray-100 font-semibold hover:text-lime-300">MattDiazSA@gmail.com</a></div>
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5"><span class="text-lime-400 uppercase tracking-widest font-bold">Founder</span><span class="dossier-serif text-base text-white font-semibold">Matthew Alexander Diaz</span></div>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+          <h2 class="dossier-serif text-2xl sm:text-3xl font-bold text-white">Explore the <span class="italic text-lime-300">dossier</span></h2>
+          <p class="text-xs sm:text-sm text-gray-400">Each module opens on its own page. Use Back and Next to move through them in order.</p>
+        </div>
+        <div id="module-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+      </div>
     </section>
-    <!-- ==================== MODULE 01: ABOUT MATTHEW &AMP; HIS PARENTS ==================== -->
+    <!-- ==================== MODULE 01: ABOUT MATTHEW & HIS PARENTS ==================== -->
     <section id="view-about" class="module-view hidden space-y-6 dossier-frame rounded-2xl p-5 sm:p-8 bg-obsidian-950/80">
       <div class="border-b border-lime-400/20 pb-4 no-print">
         <div class="text-xs font-mono tracking-widest uppercase text-lime-400 font-semibold">MODULE 01</div>
@@ -213,7 +359,21 @@
           <p class="leading-relaxed">Years of hands-on retail management and assistant general management, covering inventory control, logistics and team leadership. I've also completed coursework in electrical concepts and HVAC systems and built data-tracking tools in <strong class="text-white">Python and Go</strong>. Everything I do is grounded in honesty, transparency and good faith.</p>
         </div>
       </div>
-
+      <div class="gold-cta-banner rounded-xl p-5 sm:p-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-5 shadow-xl">
+        <div class="space-y-1">
+          <h3 class="dossier-serif text-2xl sm:text-3xl font-bold text-obsidian-950">Make FelRon your <span class="italic">first call.</span></h3>
+          <p class="text-xs sm:text-sm text-obsidian-900 font-semibold leading-relaxed">Before a problem becomes an invoice, bring it to someone raised to resolve it calmly, privately, and in good faith.</p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <a href="#/book" class="px-4 py-2 rounded bg-obsidian-950 text-lime-300 font-bold text-xs uppercase tracking-wider hover:bg-obsidian-800">Book &amp; Enroll →</a>
+            <a href="#/packages" class="px-4 py-2 rounded border border-obsidian-950/60 text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-obsidian-950/10">See Modules &amp; Packages</a>
+          </div>
+        </div>
+        <div class="bg-obsidian-950 text-white rounded-lg p-4 border border-obsidian-800 space-y-2 text-xs font-mono">
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5 border-b border-gray-800 pb-2"><span class="text-lime-400 uppercase tracking-widest font-bold">Direct</span><span class="text-gray-100 font-semibold"><a href="tel:+12105354987" class="hover:text-lime-300">(210) 535-4987</a> <span class="seg">• San Antonio, TX</span></span></div>
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5 border-b border-gray-800 pb-2"><span class="text-lime-400 uppercase tracking-widest font-bold">Dispatch</span><a href="mailto:MattDiazSA@gmail.com" class="text-gray-100 font-semibold hover:text-lime-300">MattDiazSA@gmail.com</a></div>
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5"><span class="text-lime-400 uppercase tracking-widest font-bold">Founder</span><span class="dossier-serif text-base text-white font-semibold">Matthew Alexander Diaz</span></div>
+        </div>
+      </div>
 
       <div id="pager-about"></div>
     </section>
@@ -222,7 +382,30 @@
       <div class="border-b border-lime-400/20 pb-4 no-print">
         <div class="text-xs font-mono tracking-widest uppercase text-lime-400 font-semibold">MODULE 02</div>
         <h1 class="dossier-serif text-3xl sm:text-4xl font-bold text-white mt-1">How Can I Help You Today?</h1>
-        <p class="text-sm text-gray-400 mt-1 max-w-3xl">Four friendly paths for everyday people: money, IT, business, and taxes &amp; paperwork.</p>
+        <p class="text-sm text-gray-400 mt-1 max-w-3xl">Show you how I did it, show you how you can do it, then get it done together across money, IT, business, and taxes &amp; paperwork.</p>
+      </div>
+      <div class="card-surface rounded-xl p-5 sm:p-6 space-y-4">
+        <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-lime-400/20 pb-3">
+          <h2 class="dossier-serif text-2xl sm:text-3xl font-bold text-white">How it works: <span class="italic text-lime-300">show, teach, then do it together.</span></h2>
+          <span class="text-[11px] font-mono tracking-widest uppercase text-lime-400 font-semibold">THE FELRON METHOD</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-4 rounded-lg bg-obsidian-950/70 border border-gray-800/90 space-y-1.5">
+            <div class="dossier-serif text-3xl font-bold text-lime-300">01</div>
+            <div class="font-bold text-white">How I Did It</div>
+            <p class="text-xs text-gray-300 leading-relaxed">I show you how I handled it myself, from real experience and real examples, mistakes included. My past results are not a promise of yours.</p>
+          </div>
+          <div class="p-4 rounded-lg bg-obsidian-950/70 border border-gray-800/90 space-y-1.5">
+            <div class="dossier-serif text-3xl font-bold text-lime-300">02</div>
+            <div class="font-bold text-white">How You Can Do It</div>
+            <p class="text-xs text-gray-300 leading-relaxed">Learning modules lay out how it works and the options people commonly consider, with practice and testing in the FelRon App.</p>
+          </div>
+          <div class="p-4 rounded-lg bg-lime-400/10 border border-lime-400/40 space-y-1.5">
+            <div class="dossier-serif text-3xl font-bold text-lime-300">03</div>
+            <div class="font-bold text-white">Let's Get It Done Together</div>
+            <p class="text-xs text-gray-300 leading-relaxed">Done-with-you help. I walk you through each step and handle the tasks, and you approve every action and make every decision. Licensed work is referred out.</p>
+          </div>
+        </div>
       </div>
       <p class="text-sm text-gray-300 max-w-3xl leading-relaxed">Pick the path that fits. For each one you'll see <strong class="text-white">your next steps</strong>, <strong class="text-white">what I can help with directly</strong>, and <strong class="text-white">where I'll point you</strong>, with links to trusted, official resources. I either point you in the right direction or help you carry out what you decide. The choices are always yours.</p>
       <div id="help-path-grid" class="grid grid-cols-1 gap-5"></div>
@@ -235,87 +418,91 @@
       <div class="border-b border-lime-400/20 pb-4 no-print">
         <div class="text-xs font-mono tracking-widest uppercase text-lime-400 font-semibold">MODULE 03</div>
         <h1 class="dossier-serif text-3xl sm:text-4xl font-bold text-white mt-1">The TRIAGE Framework</h1>
-        <p class="text-sm text-gray-400 mt-1 max-w-3xl">Four pillars and 17 topics, approached the way a medic triages a scene: what matters most, first.</p>
+        <p class="text-sm text-gray-400 mt-1 max-w-3xl">Four pillars and 17 topics, each following the same three steps.</p>
       </div>
-      <!-- Pillars -->
-      <div class="space-y-4 pt-2">
+      <div class="card-surface rounded-xl p-5 sm:p-6 space-y-4">
+        <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-lime-400/20 pb-3">
+          <h2 class="dossier-serif text-2xl sm:text-3xl font-bold text-white">How it works: <span class="italic text-lime-300">show, teach, then do it together.</span></h2>
+          <span class="text-[11px] font-mono tracking-widest uppercase text-lime-400 font-semibold">THE FELRON METHOD</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-4 rounded-lg bg-obsidian-950/70 border border-gray-800/90 space-y-1.5">
+            <div class="dossier-serif text-3xl font-bold text-lime-300">01</div>
+            <div class="font-bold text-white">How I Did It</div>
+            <p class="text-xs text-gray-300 leading-relaxed">I show you how I handled it myself, from real experience and real examples, mistakes included. My past results are not a promise of yours.</p>
+          </div>
+          <div class="p-4 rounded-lg bg-obsidian-950/70 border border-gray-800/90 space-y-1.5">
+            <div class="dossier-serif text-3xl font-bold text-lime-300">02</div>
+            <div class="font-bold text-white">How You Can Do It</div>
+            <p class="text-xs text-gray-300 leading-relaxed">Learning modules lay out how it works and the options people commonly consider, with practice and testing in the FelRon App.</p>
+          </div>
+          <div class="p-4 rounded-lg bg-lime-400/10 border border-lime-400/40 space-y-1.5">
+            <div class="dossier-serif text-3xl font-bold text-lime-300">03</div>
+            <div class="font-bold text-white">Let's Get It Done Together</div>
+            <p class="text-xs text-gray-300 leading-relaxed">Done-with-you help. I walk you through each step and handle the tasks, and you approve every action and make every decision. Licensed work is referred out.</p>
+          </div>
+        </div>
+      </div>
+      <div class="space-y-4">
         <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
-          <h2 class="dossier-serif text-2xl sm:text-3xl font-bold text-white">The <span class="text-lime-300">TRIAGE</span> Protocol</h2>
-          <p class="dossier-serif italic text-base sm:text-lg text-gray-300">Four pillars, approached the way a medic triages a scene: what matters most, first. <span class="text-xs font-mono not-italic text-lime-400 ml-1">(Click any pillar to see its topics)</span></p>
+          <h2 class="dossier-serif text-2xl sm:text-3xl font-bold text-white">The <span class="italic text-lime-300">TRIAGE</span> Protocol</h2>
+          <p class="dossier-serif italic text-base sm:text-lg text-gray-300">Four pillars, applied the way a medic triages a scene: what matters most, handled first.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div onclick="filterCodexByPillar('B')" class="cursor-pointer card-surface rounded-xl p-5 relative overflow-hidden transition-all hover:-translate-y-0.5">
+          <div class="card-surface rounded-xl p-5 relative overflow-hidden">
             <div class="pillar-watermark absolute top-3 right-4">01</div>
             <div class="space-y-2.5 relative z-10">
               <div class="flex items-center gap-2.5">
-                <span class="w-7 h-7 rounded-full bg-lime-400/15 border border-lime-400/40 flex items-center justify-center text-lime-300 font-mono text-xs font-bold">I</span>
+                <span class="w-8 h-8 shrink-0 rounded-full bg-lime-400/15 border border-lime-400/40 flex items-center justify-center text-sm">🏛</span>
                 <h3 class="dossier-serif text-xl sm:text-2xl font-bold text-white">I — Business &amp; Bureaucracy</h3>
               </div>
               <p class="dossier-serif italic text-sm sm:text-base text-lime-300/90">Red tape organized before it becomes expensive.</p>
-              <ul class="space-y-1.5 text-xs sm:text-sm text-gray-300 pt-1">
-                <li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Business-plan building</strong> and entity basics (DBA vs. LLC) explained, plus marketing, API &amp; MCP setup</span></li>
-                <li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Insurance paperwork</strong>: organizing it and understanding your health, life or auto policy, plus assisted-living research</span></li>
-                <li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Tax record organization</strong> and business banking setup, with referrals to a CPA or IRS VITA</span></li>
-                <li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Get organized first</strong>, so time with a lawyer or accountant is focused and efficient</span></li>
-              </ul>
-              <div class="pt-2 flex items-center justify-between text-xs font-mono text-lime-400"><span>Open Pillar I Topics</span><span>→</span></div>
+              <ul class="space-y-1.5 text-xs sm:text-sm text-gray-300"><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Business-plan walkthroughs</strong> and entity basics (DBA, LLC, EIN), plus marketing, API &amp; MCP setup</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Health, life &amp; auto insurance paperwork</strong>, organized and explained, plus assisted-living research</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Tax record organization</strong>, business banking setup and admin checklists</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Get organized first</strong>, before professional fees start adding up</span></li></ul>
+              <div class="grid grid-cols-1 gap-2 pt-1"><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">01 How I Did It</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">I've untangled insurance letters, bills and records for family, and ran inventory and operations as an assistant GM. I'm building FelRon itself one filing at a time.</p></div><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">02 How You Can Do It</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">The Business Setup, Tax Records and Insurance Paperwork modules lay out every option and where each form is filed.</p></div><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">03 Let's Get It Done Together</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">We fill out the forms side by side, and you review, sign and submit. Tax returns go to a CPA or IRS VITA, and legal questions go to a Texas attorney.</p></div></div>
+              <button onclick="filterCodexByPillar('B')" class="pt-1 w-full flex items-center justify-between text-xs font-mono text-lime-400 hover:text-lime-300"><span>See Pillar I topics</span><span>→</span></button>
             </div>
           </div>
-          <div onclick="filterCodexByPillar('O')" class="cursor-pointer card-surface rounded-xl p-5 relative overflow-hidden transition-all hover:-translate-y-0.5">
+          <div class="card-surface rounded-xl p-5 relative overflow-hidden">
             <div class="pillar-watermark absolute top-3 right-4">02</div>
             <div class="space-y-2.5 relative z-10">
               <div class="flex items-center gap-2.5">
-                <span class="w-7 h-7 rounded-full bg-lime-400/15 border border-lime-400/40 flex items-center justify-center text-lime-300 font-mono text-xs font-bold">II</span>
+                <span class="w-8 h-8 shrink-0 rounded-full bg-lime-400/15 border border-lime-400/40 flex items-center justify-center text-sm">📈</span>
                 <h3 class="dossier-serif text-xl sm:text-2xl font-bold text-white">II — Options, Equities &amp; Macro</h3>
               </div>
               <p class="dossier-serif italic text-sm sm:text-base text-lime-300/90">Clarity and context before capital moves.</p>
-              <ul class="space-y-1.5 text-xs sm:text-sm text-gray-300 pt-1">
-                <li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">AP Macroeconomics</strong> foundation and how economic cycles have played out historically</span></li>
-                <li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">How markets work</strong>: volume, mark price and the basics of researching a company</span></li>
-                <li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">LEAPS, options, perps &amp; funding-rate education</strong>, with the risks explained plainly</span></li>
-                <li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">401(k) literacy</strong>: understanding your fund menu and how allocation works</span></li>
-              </ul>
-              <div class="pt-2 flex items-center justify-between text-xs font-mono text-lime-400"><span>Open Pillar II Topics (10)</span><span>→</span></div>
+              <ul class="space-y-1.5 text-xs sm:text-sm text-gray-300"><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">AP Macroeconomics</strong> foundation and historical cycle analysis</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">How markets work</strong>: volume profile, mark price and multi-asset research</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">LEAPS, options, perps &amp; funding-rate education</strong>, with isolated-margin risk made clear</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">401(k) literacy</strong>: understanding your fund menu and allocation basics</span></li></ul>
+              <div class="grid grid-cols-1 gap-2 pt-1"><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">01 How I Did It</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">I trade my own account with written rules: long-dated contracts, defined risk and a set exit point before entry. I'll show you my real process, including mistakes. Past results are not a promise.</p></div><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">02 How You Can Do It</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">The Options &amp; LEAPS and Money Basics modules, plus the FelRon App simulators, show you how it works and the common approaches people consider.</p></div><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">03 Let's Get It Done Together</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">I walk you through your own platform's screens and your own written checklist. You place your own trades and make every decision. Personalized advice is referred to a licensed fiduciary.</p></div></div>
+              <button onclick="filterCodexByPillar('O')" class="pt-1 w-full flex items-center justify-between text-xs font-mono text-lime-400 hover:text-lime-300"><span>See Pillar II topics</span><span>→</span></button>
             </div>
           </div>
-          <div onclick="filterCodexByPillar('N')" class="cursor-pointer card-surface rounded-xl p-5 relative overflow-hidden transition-all hover:-translate-y-0.5">
+          <div class="card-surface rounded-xl p-5 relative overflow-hidden">
             <div class="pillar-watermark absolute top-3 right-4">03</div>
             <div class="space-y-2.5 relative z-10">
               <div class="flex items-center gap-2.5">
-                <span class="w-7 h-7 rounded-full bg-lime-400/15 border border-lime-400/40 flex items-center justify-center text-lime-300 font-mono text-xs font-bold">III</span>
+                <span class="w-8 h-8 shrink-0 rounded-full bg-lime-400/15 border border-lime-400/40 flex items-center justify-center text-sm">🛡</span>
                 <h3 class="dossier-serif text-xl sm:text-2xl font-bold text-white">III — Networks, Web3 &amp; Hardware</h3>
               </div>
               <p class="dossier-serif italic text-sm sm:text-base text-lime-300/90">Systems secured, private, and running.</p>
-              <ul class="space-y-1.5 text-xs sm:text-sm text-gray-300 pt-1">
-                <li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Crypto wallet security</strong>, cold storage and self-custody that you control</span></li>
-                <li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">DeFi education</strong>: how decentralized apps work and the risks involved</span></li>
-                <li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">DePIN &amp; ASIC hardware</strong> setup and diagnostics (240V and other electrical work is referred to licensed electricians)</span></li>
-                <li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Home &amp; office networking</strong>, device setup and IT rescue</span></li>
-                <li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Zero-knowledge &amp; privacy-preserving</strong> tools</span></li>
-              </ul>
-              <div class="pt-2 flex items-center justify-between text-xs font-mono text-lime-400"><span>Open Pillar III Topics</span><span>→</span></div>
+              <ul class="space-y-1.5 text-xs sm:text-sm text-gray-300"><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Crypto wallet security</strong>, cold storage and client-held self-custody</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">DeFi education</strong>: how decentralized apps and yield work, and their risks</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">DePIN &amp; ASIC hardware</strong> setup and diagnostics (electrical work referred to licensed electricians)</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Home &amp; office networking</strong>, device setup, rebooting and IT rescue</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Zero-knowledge &amp; privacy-preserving</strong> tools</span></li></ul>
+              <div class="grid grid-cols-1 gap-2 pt-1"><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">01 How I Did It</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">I run my own self-custody wallets, mining/DePIN hardware and home network, and I've fixed plenty of locked-up computers and dead Wi-Fi for family and friends.</p></div><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">02 How You Can Do It</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">The Crypto Self-Custody and Home/Office IT Rescue modules teach the setup and safety habits step by step.</p></div><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">03 Let's Get It Done Together</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">I set up your network and devices with you hands-on. You create and keep your own keys and passwords, and I never see them.</p></div></div>
+              <button onclick="filterCodexByPillar('N')" class="pt-1 w-full flex items-center justify-between text-xs font-mono text-lime-400 hover:text-lime-300"><span>See Pillar III topics</span><span>→</span></button>
             </div>
           </div>
-          <div onclick="filterCodexByPillar('D')" class="cursor-pointer card-surface rounded-xl p-5 relative overflow-hidden transition-all hover:-translate-y-0.5">
+          <div class="card-surface rounded-xl p-5 relative overflow-hidden">
             <div class="pillar-watermark absolute top-3 right-4">04</div>
             <div class="space-y-2.5 relative z-10">
               <div class="flex items-center gap-2.5">
-                <span class="w-7 h-7 rounded-full bg-lime-400/15 border border-lime-400/40 flex items-center justify-center text-lime-300 font-mono text-xs font-bold">IV</span>
-                <h3 class="dossier-serif text-xl sm:text-2xl font-bold text-white">IV — Direct Execution, Guidance &amp; Logistics</h3>
+                <span class="w-8 h-8 shrink-0 rounded-full bg-lime-400/15 border border-lime-400/40 flex items-center justify-center text-sm">⏱</span>
+                <h3 class="dossier-serif text-xl sm:text-2xl font-bold text-white">IV — Direct Execution &amp; Logistics</h3>
               </div>
               <p class="dossier-serif italic text-sm sm:text-base text-lime-300/90">Handled quietly, precisely, and on time.</p>
-              <ul class="space-y-1.5 text-xs sm:text-sm text-gray-300 pt-1">
-                <li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Money guidance &amp; education</strong>: savings planning, budgeting and organizing</span></li>
-                <li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">1-on-1 guidance &amp; education</strong>, personal assistance and calendar help</span></li>
-                <li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Medical appointment logistics</strong>, assisted-living coordination and driving support</span></li>
-                <li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Hands-on help carrying out what you decide</strong>, including heavy logistics on tight deadlines</span></li>
-              </ul>
-              <div class="pt-2 flex items-center justify-between text-xs font-mono text-lime-400"><span>Open Pillar IV Topics</span><span>→</span></div>
+              <ul class="space-y-1.5 text-xs sm:text-sm text-gray-300"><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">High-trust personal assistance</strong>, 1-on-1 guidance &amp; education and calendar help</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Hands-on money organization</strong>: budgeting, savings planning and follow-through on the plan you choose</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Medical appointment logistics</strong>, assisted-living support and driving coordination</span></li><li class="flex items-start gap-2"><span class="text-lime-400 mt-1">•</span><span><strong class="text-white">Physical labor, secure transport</strong> and rapid problem-solving on tight deadlines</span></li></ul>
+              <div class="grid grid-cols-1 gap-2 pt-1"><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">01 How I Did It</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">I grew up in a military family where we handled the logistics for each other, and I spent years running store operations, inventory and teams.</p></div><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">02 How You Can Do It</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">The Money Basics &amp; Budgeting module and the App checklists show you how to build your own system.</p></div><div class="p-2.5 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-[10px] font-mono uppercase tracking-wider text-lime-400 font-bold">03 Let's Get It Done Together</div><p class="text-[11px] text-gray-300 leading-relaxed mt-0.5">Appointments, calendars, errands and paperwork runs, done with you. Nothing happens without your approval.</p></div></div>
+              <button onclick="filterCodexByPillar('D')" class="pt-1 w-full flex items-center justify-between text-xs font-mono text-lime-400 hover:text-lime-300"><span>See Pillar IV topics</span><span>→</span></button>
             </div>
           </div>
         </div>
       </div>
-
       <div id="codex-anchor" class="scroll-mt-32"></div>
       <div class="card-surface rounded-2xl p-6 space-y-5">
         <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
@@ -345,12 +532,94 @@
 
       <div id="pager-triage"></div>
     </section>
-    <!-- ==================== MODULE 04: TOOLS &AMP; SIMULATORS ==================== -->
-    <section id="view-tools" class="module-view hidden space-y-6 dossier-frame rounded-2xl p-5 sm:p-8 bg-obsidian-950/80">
+    <!-- ==================== MODULE 04: MODULES & PACKAGES ==================== -->
+    <section id="view-packages" class="module-view hidden space-y-6 dossier-frame rounded-2xl p-5 sm:p-8 bg-obsidian-950/80">
       <div class="border-b border-lime-400/20 pb-4 no-print">
         <div class="text-xs font-mono tracking-widest uppercase text-lime-400 font-semibold">MODULE 04</div>
-        <h1 class="dossier-serif text-3xl sm:text-4xl font-bold text-white mt-1">Tools &amp; Simulators</h1>
-        <p class="text-sm text-gray-400 mt-1 max-w-3xl">Hypothetical calculators for learning only. Educational simulator: hypothetical illustration, not a recommendation.</p>
+        <h1 class="dossier-serif text-3xl sm:text-4xl font-bold text-white mt-1">Modules &amp; Packages</h1>
+        <p class="text-sm text-gray-400 mt-1 max-w-3xl">Paid learning modules with walkthrough sessions and testing, bundled into packages. The FelRon App is included in every package.</p>
+      </div>
+      <div class="edu-badge rounded-xl px-4 py-3 text-xs sm:text-sm leading-relaxed"><strong>Starting prices, subject to change.</strong> Single modules start at $29 each. Final pricing is confirmed in writing before you pay.</div>
+      <div class="space-y-3">
+        <div class="flex flex-wrap items-baseline justify-between gap-2">
+          <h2 class="dossier-serif text-2xl sm:text-3xl font-bold text-white">Learning <span class="italic text-lime-300">Modules</span></h2>
+          <p class="text-xs text-gray-400">Each module: lesson + walkthrough + practice &amp; testing in the FelRon App, following the 3 steps</p>
+        </div>
+        <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+      </div>
+      <div class="space-y-3">
+        <h2 class="dossier-serif text-2xl sm:text-3xl font-bold text-white">Packages, <span class="italic text-lime-300">FelRon App included</span></h2>
+        <div id="package-grid" class="grid grid-cols-1 lg:grid-cols-3 gap-4"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="card-surface rounded-xl p-5 space-y-2">
+          <div class="text-[11px] font-mono uppercase tracking-widest text-lime-400 font-bold">The FelRon App Only</div>
+          <h3 class="dossier-serif text-2xl font-bold text-white">App Access</h3>
+          <div class="font-mono text-lime-300 font-bold">$9.50/mo or $49/yr <span class="text-[10px] text-gray-400 font-normal">starting price, subject to change</span></div>
+          <p class="text-xs text-gray-300">Simulators, module quizzes and testing, plus progress tracking. Already included in every package.</p>
+          <a href="#/book?item=app" class="inline-block mt-1 px-4 py-2 rounded-lg bg-obsidian-800 border border-lime-400/40 text-lime-300 font-bold text-xs uppercase tracking-wider">Get the App →</a>
+        </div>
+        <div class="card-surface rounded-xl p-5 space-y-2">
+          <div class="text-[11px] font-mono uppercase tracking-widest text-lime-400 font-bold">Single Session / Hourly Help</div>
+          <h3 class="dossier-serif text-2xl font-bold text-white">IT Help, Logistics &amp; Education Sessions</h3>
+          <div class="font-mono text-lime-300 font-bold">$30–50 / hour <span class="text-[10px] text-gray-400 font-normal">starting price, subject to change</span></div>
+          <p class="text-xs text-gray-300">A single walkthrough or education session, one-off IT fixes, or appointment and errand logistics. IT jobs can also be quoted per job.</p>
+          <a href="#/book?item=hourly" class="inline-block mt-1 px-4 py-2 rounded-lg bg-lime-400 hover:bg-lime-300 text-black font-bold text-xs uppercase tracking-wider">Book Hourly Help →</a>
+        </div>
+        <div class="card-surface rounded-xl p-5 space-y-2">
+          <div class="text-[11px] font-mono uppercase tracking-widest text-lime-400 font-bold">What FelRon Never Charges or Holds</div>
+          <ul class="text-xs text-gray-300 space-y-1.5">
+            <li><span class="text-rose-300 font-bold">✕</span> No percentage of your assets</li>
+            <li><span class="text-rose-300 font-bold">✕</span> No performance fee or share of profits</li>
+            <li><span class="text-rose-300 font-bold">✕</span> No commissions from any product, broker or platform</li>
+            <li><span class="text-rose-300 font-bold">✕</span> No custody of your funds, passwords, keys or logins</li>
+          </ul>
+          <p class="text-[11px] text-gray-400">Paid by traceable methods with a receipt that reads "educational session" or "IT service." <a href="#/legal" class="text-lime-300 hover:underline">See the legal framework →</a></p>
+        </div>
+      </div>
+
+      <div id="pager-packages"></div>
+    </section>
+    <!-- ==================== MODULE 05: THE FELRON APP ==================== -->
+    <section id="view-app" class="module-view hidden space-y-6 dossier-frame rounded-2xl p-5 sm:p-8 bg-obsidian-950/80">
+      <div class="border-b border-lime-400/20 pb-4 no-print">
+        <div class="text-xs font-mono tracking-widest uppercase text-lime-400 font-semibold">MODULE 05</div>
+        <h1 class="dossier-serif text-3xl sm:text-4xl font-bold text-white mt-1">The FelRon App</h1>
+        <p class="text-sm text-gray-400 mt-1 max-w-3xl">Your learning hub: simulators, quizzes and testing, and a progress checklist. Included in every package.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+        <div class="card-surface rounded-xl p-4"><div class="font-bold text-lime-300">Simulators</div><p class="text-gray-300 mt-1">Hypothetical, education-only tools for options, perps and 401(k) literacy.</p></div>
+        <div class="card-surface rounded-xl p-4"><div class="font-bold text-lime-300">Quizzes &amp; Testing</div><p class="text-gray-300 mt-1">Check what you've learned in each module. Demo below: Options &amp; LEAPS.</p></div>
+        <div class="card-surface rounded-xl p-4"><div class="font-bold text-lime-300">Progress</div><p class="text-gray-300 mt-1">Track lessons, walkthrough sessions and tests, saved on your device.</p></div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="card-surface rounded-2xl p-6 space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-gray-800 pb-3">
+            <div>
+              <span class="text-xs font-mono uppercase text-lime-400 font-bold">MY PROGRESS</span>
+              <h2 class="dossier-serif text-2xl font-bold text-white">Module Progress Checklist</h2>
+            </div>
+            <div class="text-right"><div id="progress-pct" class="font-mono text-2xl font-extrabold text-lime-300">0%</div><div class="text-[10px] text-gray-400">saved on this device</div></div>
+          </div>
+          <div class="h-2 rounded-full bg-obsidian-800 overflow-hidden"><div id="progress-bar" class="h-2 bg-lime-400 transition-all" style="width:0%"></div></div>
+          <div id="progress-list" class="space-y-3 max-h-[520px] overflow-y-auto pr-1"></div>
+          <button onclick="resetProgress()" class="text-[11px] font-mono text-gray-400 hover:text-lime-300">Reset progress on this device</button>
+        </div>
+        <div class="card-surface rounded-2xl p-6 space-y-4">
+          <div class="border-b border-gray-800 pb-3">
+            <span class="text-xs font-mono uppercase text-lime-400 font-bold">TESTING • MODULE QUIZZES</span>
+            <h2 class="dossier-serif text-2xl font-bold text-white">Knowledge Check</h2>
+            <p class="text-xs text-gray-400">Choose a module quiz. Your answers stay in your browser, and your best score is saved on this device.</p>
+            <select id="quiz-select" onchange="setQuiz(this.value)" class="mt-2 w-full bg-obsidian-950 border border-gray-700 rounded-xl px-3.5 py-2 text-sm text-white outline-none focus:border-lime-400"></select>
+          </div>
+          <div id="quiz-box" class="space-y-4"></div>
+          <div class="flex flex-wrap items-center gap-3">
+            <button onclick="gradeQuiz()" class="px-4 py-2 rounded-lg bg-lime-400 hover:bg-lime-300 text-black font-bold text-xs uppercase tracking-wider">Check My Answers</button>
+            <button onclick="renderQuiz()" class="px-3 py-2 rounded-lg bg-obsidian-800 border border-gray-700 text-gray-300 text-xs font-mono">Retake</button>
+            <span id="quiz-score" class="text-sm font-mono text-lime-300"></span>
+          </div>
+          <p class="text-[11px] text-gray-500">Educational testing only. Passing the quiz is not a qualification or a recommendation to trade.</p>
+        </div>
       </div>
       <div class="edu-badge rounded-xl px-4 py-3 text-xs sm:text-sm leading-relaxed">
         <strong>Educational simulator: hypothetical illustration, not a recommendation.</strong> These tools use made-up numbers to show how options, leverage and allocation math works. They simplify pricing and ignore fees, taxes, slippage and real market conditions. Real results can differ greatly, and options and leveraged products can lose 100% of the money put in. Nothing here tells you what to buy, sell or hold.
@@ -474,76 +743,14 @@
         </div>
       </div>
 
-      <div id="pager-tools"></div>
+      <div id="pager-app"></div>
     </section>
-    <!-- ==================== MODULE 05: SERVICES &AMP; PRICING ==================== -->
-    <section id="view-pricing" class="module-view hidden space-y-6 dossier-frame rounded-2xl p-5 sm:p-8 bg-obsidian-950/80">
-      <div class="border-b border-lime-400/20 pb-4 no-print">
-        <div class="text-xs font-mono tracking-widest uppercase text-lime-400 font-semibold">MODULE 05</div>
-        <h1 class="dossier-serif text-3xl sm:text-4xl font-bold text-white mt-1">Services &amp; Pricing</h1>
-        <p class="text-sm text-gray-400 mt-1 max-w-3xl">Simple, flat, traceable fees. All prices shown are example placeholders.</p>
-      </div>
-      <div class="edu-badge rounded-xl px-4 py-3 text-xs sm:text-sm leading-relaxed"><strong>Example pricing, placeholder only.</strong> Every price below is an example to show how services could be structured. Final rates are confirmed in writing before any work begins.</div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div class="card-surface rounded-xl p-5 space-y-3 relative overflow-hidden">
-          <div class="pillar-watermark absolute top-3 right-4">$</div>
-          <div class="text-[11px] font-mono uppercase tracking-widest text-lime-400 font-bold">Education Sessions</div>
-          <h3 class="dossier-serif text-2xl font-bold text-white">1-on-1 Guidance &amp; Education</h3>
-          <div class="font-mono text-lime-300 text-lg font-bold">~$50–100 / hour <span class="text-[10px] text-gray-400 align-middle">(example placeholder)</span></div>
-          <ul class="text-xs text-gray-300 space-y-1.5"><li>• Money &amp; investing basics</li><li>• Business setup basics</li><li>• Taxes &amp; paperwork organization</li><li>• Written recap after every session</li></ul>
-        </div>
-        <div class="card-surface rounded-xl p-5 space-y-3 relative overflow-hidden">
-          <div class="pillar-watermark absolute top-3 right-4">$</div>
-          <div class="text-[11px] font-mono uppercase tracking-widest text-lime-400 font-bold">Package</div>
-          <h3 class="dossier-serif text-2xl font-bold text-white">Business Starter</h3>
-          <div class="font-mono text-lime-300 text-lg font-bold">Flat fee, e.g. $[Price] <span class="text-[10px] text-gray-400 align-middle">(example placeholder)</span></div>
-          <ul class="text-xs text-gray-300 space-y-1.5"><li>• Walkthrough of DBA vs. LLC steps and where to file (Bexar County Clerk / Texas SOS)</li><li>• Applying for your free EIN with the IRS, done by you with me alongside</li><li>• Basic business budget and record-keeping setup</li><li>• Referral list: SCORE, SBA, a Texas attorney, a CPA</li></ul>
-        </div>
-        <div class="card-surface rounded-xl p-5 space-y-3 relative overflow-hidden">
-          <div class="pillar-watermark absolute top-3 right-4">$</div>
-          <div class="text-[11px] font-mono uppercase tracking-widest text-lime-400 font-bold">Package</div>
-          <h3 class="dossier-serif text-2xl font-bold text-white">Money Basics Series</h3>
-          <div class="font-mono text-lime-300 text-lg font-bold">e.g. 3–4 sessions, $[Price] <span class="text-[10px] text-gray-400 align-middle">(example placeholder)</span></div>
-          <ul class="text-xs text-gray-300 space-y-1.5"><li>• Budgeting, savings and emergency funds</li><li>• Credit and debt basics</li><li>• 401(k) literacy: understanding your fund menu</li><li>• How stocks, options and leverage work, including the risks</li></ul>
-        </div>
-        <div class="card-surface rounded-xl p-5 space-y-3 relative overflow-hidden">
-          <div class="pillar-watermark absolute top-3 right-4">$</div>
-          <div class="text-[11px] font-mono uppercase tracking-widest text-lime-400 font-bold">IT Help</div>
-          <h3 class="dossier-serif text-2xl font-bold text-white">IT &amp; Tech Help</h3>
-          <div class="font-mono text-lime-300 text-lg font-bold">Hourly or per job, $[Rate] <span class="text-[10px] text-gray-400 align-middle">(example placeholder)</span></div>
-          <ul class="text-xs text-gray-300 space-y-1.5"><li>• Wi-Fi, network and device setup</li><li>• Computer cleanup and backups</li><li>• Wallet and security setup where you hold your own keys</li><li>• Hardware diagnostics (electrical work referred out)</li></ul>
-        </div>
-        <div class="card-surface rounded-xl p-5 space-y-3 relative overflow-hidden">
-          <div class="pillar-watermark absolute top-3 right-4">$</div>
-          <div class="text-[11px] font-mono uppercase tracking-widest text-lime-400 font-bold">Logistics</div>
-          <h3 class="dossier-serif text-2xl font-bold text-white">Personal Logistics</h3>
-          <div class="font-mono text-lime-300 text-lg font-bold">Hourly, $[Rate] <span class="text-[10px] text-gray-400 align-middle">(example placeholder)</span></div>
-          <ul class="text-xs text-gray-300 space-y-1.5"><li>• Appointment and calendar coordination</li><li>• Paperwork organization</li><li>• Errands, moving and heavy logistics</li></ul>
-        </div>
-        <div class="card-surface rounded-xl p-5 space-y-3 border-l-4 border-l-lime-400">
-          <div class="text-[11px] font-mono uppercase tracking-widest text-lime-400 font-bold">How Payment Works</div>
-          <h3 class="dossier-serif text-2xl font-bold text-white">Traceable &amp; Receipted</h3>
-          <ul class="text-xs text-gray-300 space-y-1.5"><li>• Paid through traceable methods: Square, Stripe, Cash App Business or invoice</li><li>• Every payment comes with a receipt describing the service as an "educational session" or "IT service"</li><li>• The fee is the same no matter what you decide to do</li></ul>
-        </div>
-      </div>
-      <div class="card-surface rounded-xl p-5">
-        <div class="text-[11px] font-mono uppercase tracking-widest text-lime-400 font-bold mb-3">What FelRon Never Charges or Holds</div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
-          <div class="p-3 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><span class="text-rose-300 font-bold">✕</span> <strong class="text-white">No percentage of assets</strong><p class="text-gray-400 mt-1">I don't charge a fee based on how much money you have.</p></div>
-          <div class="p-3 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><span class="text-rose-300 font-bold">✕</span> <strong class="text-white">No performance or profit share</strong><p class="text-gray-400 mt-1">I don't take a cut of your gains.</p></div>
-          <div class="p-3 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><span class="text-rose-300 font-bold">✕</span> <strong class="text-white">No commissions</strong><p class="text-gray-400 mt-1">I'm not paid by any product, broker or platform I mention.</p></div>
-          <div class="p-3 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><span class="text-rose-300 font-bold">✕</span> <strong class="text-white">No custody</strong><p class="text-gray-400 mt-1">I never hold your funds, passwords or keys.</p></div>
-        </div>
-      </div>
-
-      <div id="pager-pricing"></div>
-    </section>
-    <!-- ==================== MODULE 06: HOW I WORK &AMP; PRIVACY ==================== -->
+    <!-- ==================== MODULE 06: HOW I WORK & PRIVACY ==================== -->
     <section id="view-privacy" class="module-view hidden space-y-6 dossier-frame rounded-2xl p-5 sm:p-8 bg-obsidian-950/80">
       <div class="border-b border-lime-400/20 pb-4 no-print">
         <div class="text-xs font-mono tracking-widest uppercase text-lime-400 font-semibold">MODULE 06</div>
         <h1 class="dossier-serif text-3xl sm:text-4xl font-bold text-white mt-1">How I Work &amp; Privacy</h1>
-        <p class="text-sm text-gray-400 mt-1 max-w-3xl">Education first. Private by design. No custody, ever.</p>
+        <p class="text-sm text-gray-400 mt-1 max-w-3xl">Education first. Done with you. Private by design. No custody, ever.</p>
       </div>
       <!-- How I Work -->
       <div class="card-surface rounded-xl p-5 space-y-3">
@@ -577,7 +784,6 @@
         </div>
       </div>
 
-
       <div id="pager-privacy"></div>
     </section>
     <!-- ==================== MODULE 07: LEGAL FRAMEWORK I FOLLOW ==================== -->
@@ -585,7 +791,7 @@
       <div class="border-b border-lime-400/20 pb-4 no-print">
         <div class="text-xs font-mono tracking-widest uppercase text-lime-400 font-semibold">MODULE 07</div>
         <h1 class="dossier-serif text-3xl sm:text-4xl font-bold text-white mt-1">Legal Framework I Follow</h1>
-        <p class="text-sm text-gray-400 mt-1 max-w-3xl">A plain checklist of the rules behind every session.</p>
+        <p class="text-sm text-gray-400 mt-1 max-w-3xl">A plain checklist of the rules behind every session, module and done-with-you task.</p>
       </div>
       <p class="text-sm text-gray-300 max-w-3xl leading-relaxed">These are the rules I hold myself to in every conversation, online or in person. They protect you, and they keep FelRon on the right side of Texas and federal rules. This is a plain summary, not legal advice.</p>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -596,8 +802,9 @@
             <li class="flex gap-3"><span class="text-lime-400 font-bold">☑</span><span><strong class="text-white">Signed acknowledgment first.</strong> No personal session starts without a signed Client Acknowledgment.</span></li>
             <li class="flex gap-3"><span class="text-lime-400 font-bold">☑</span><span><strong class="text-white">Written recap after every session.</strong> It records what we covered, and that the decisions are yours.</span></li>
             <li class="flex gap-3"><span class="text-lime-400 font-bold">☑</span><span><strong class="text-white">Speak as if recorded.</strong> Texas is a one-party-consent state, so anyone in a conversation may legally record it. I keep every conversation consistent with this framework.</span></li>
+            <li class="flex gap-3"><span class="text-lime-400 font-bold">☑</span><span><strong class="text-white">Done-with-you, never done-for-you on money.</strong> I walk you through tasks and handle the legwork, but you approve every action and place your own trades.</span></li>
             <li class="flex gap-3"><span class="text-lime-400 font-bold">☑</span><span><strong class="text-white">Privacy and no custody.</strong> Need-to-know information only, minimal retention, and I never hold your funds, keys, passwords or logins.</span></li>
-            <li class="flex gap-3"><span class="text-lime-400 font-bold">☑</span><span><strong class="text-white">Flat, traceable fees.</strong> No percentage of assets, no profit share, no commissions.</span></li>
+            <li class="flex gap-3"><span class="text-lime-400 font-bold">☑</span><span><strong class="text-white">Flat, traceable fees for modules and sessions.</strong> No percentage of assets, no profit share, no commissions. <a href="#/packages" class="text-lime-300 hover:underline">See Modules &amp; Packages</a>.</span></li>
           </ul>
         </div>
         <div class="card-surface rounded-xl p-5 space-y-3">
@@ -618,12 +825,12 @@
 
       <div id="pager-legal"></div>
     </section>
-    <!-- ==================== MODULE 08: CLIENT ACKNOWLEDGMENT &AMP; WAIVER ==================== -->
+    <!-- ==================== MODULE 08: CLIENT ACKNOWLEDGMENT & WAIVER ==================== -->
     <section id="view-waiver" class="module-view hidden space-y-6 dossier-frame rounded-2xl p-5 sm:p-8 bg-obsidian-950/80">
       <div class="border-b border-lime-400/20 pb-4 no-print">
         <div class="text-xs font-mono tracking-widest uppercase text-lime-400 font-semibold">MODULE 08</div>
         <h1 class="dossier-serif text-3xl sm:text-4xl font-bold text-white mt-1">Client Acknowledgment &amp; Waiver</h1>
-        <p class="text-sm text-gray-400 mt-1 max-w-3xl">A plain-language acknowledgment signed before every engagement.</p>
+        <p class="text-sm text-gray-400 mt-1 max-w-3xl">A plain-language acknowledgment signed before every personal session.</p>
       </div>
       <div class="flex flex-wrap items-center justify-between gap-3 no-print">
         <p class="text-xs sm:text-sm text-gray-400 max-w-2xl">Every engagement begins with this plain-language acknowledgment. Read it, ask any questions, then print it to sign.</p>
@@ -646,9 +853,12 @@
           <li><strong>Not a licensed professional.</strong> Matthew is not a licensed investment adviser, broker, certified public accountant (CPA), attorney, insurance adjuster or electrician, and does not act as one.</li>
           <li><strong>General information, not personal recommendations.</strong> Anything discussed is general information and a description of options. It is not personalized investment, legal, tax or insurance advice, and it is not a recommendation to buy, sell or hold any security or other asset.</li>
           <li><strong>Your decisions.</strong> I make all of my own decisions, and I am solely responsible for them and their results, including any decision to act on information I received.</li>
-          <li><strong>No custody.</strong> FelRon will never take custody of, hold or control my funds, crypto keys or seed phrases, passwords, or account logins, and will not place trades on my behalf.</li>
+          <li><strong>Done-with-you help.</strong> When FelRon helps carry out a task with me, I approve every action before it happens. FelRon walks me through each step, and I remain the decision-maker.</li>
+          <li><strong>No custody.</strong> FelRon will never take custody of, hold or control my funds, crypto keys or seed phrases, passwords, or account logins.</li>
+          <li><strong>I place my own trades.</strong> I enter and submit any trade or financial transaction myself, on my own accounts. FelRon does not place trades for me.</li>
           <li><strong>No guarantees.</strong> No result, return or outcome is promised or guaranteed. Investing, especially in options, leveraged products and crypto, involves risk, including the loss of all money invested.</li>
           <li><strong>Limit of liability.</strong> To the extent permitted by Texas law, FelRon's total liability for any claim relating to the services is limited to the fees I paid for those services.</li>
+          <li><strong>Modules, packages and the App.</strong> Paid modules, walkthrough sessions, packages and FelRon App access are educational services. Prices are starting prices, subject to change, and are confirmed in writing before I pay. Quizzes and simulators are practice tools, not predictions or recommendations.</li>
           <li><strong>Written recaps.</strong> Sessions may be summarized in a written recap that is sent to me for my records.</li>
           <li><strong>Independent review.</strong> I am encouraged to review any decision with an independent licensed professional (such as a fiduciary adviser, CPA or attorney) before acting.</li>
           <li><strong>Privacy.</strong> FelRon requests only the information needed for the task and keeps it no longer than necessary.</li>
@@ -659,30 +869,45 @@
           <div><div class="sig-line"></div><div class="text-[11px] uppercase tracking-wider text-gray-600 mt-1">Client signature</div></div>
           <div><div class="sig-line"></div><div class="text-[11px] uppercase tracking-wider text-gray-600 mt-1">Matthew Alexander Diaz, <span class="seg">FelRon IT-Legacy-Capital</span></div></div>
         </div>
-        <p class="text-[10px] text-gray-500 mt-8 border-t border-gray-300 pt-3">Template. Have a Texas attorney review before use. <span class="seg">FelRon IT-Legacy-Capital</span> • San Antonio, TX</p>
+        <p class="text-[10px] text-gray-500 mt-8 border-t border-gray-300 pt-3">Template. Have a Texas attorney review before use. <span class="seg">FelRon IT-Legacy-Capital</span> • San Antonio, TX • (210) 535-4987 • MattDiazSA@gmail.com</p>
       </div>
 
       <div id="pager-waiver"></div>
     </section>
-    <!-- ==================== MODULE 09: CONTACT &AMP; FIRST-CALL BRIEF ==================== -->
-    <section id="view-contact" class="module-view hidden space-y-6 dossier-frame rounded-2xl p-5 sm:p-8 bg-obsidian-950/80">
+    <!-- ==================== MODULE 09: BOOK & ENROLL ==================== -->
+    <section id="view-book" class="module-view hidden space-y-6 dossier-frame rounded-2xl p-5 sm:p-8 bg-obsidian-950/80">
       <div class="border-b border-lime-400/20 pb-4 no-print">
         <div class="text-xs font-mono tracking-widest uppercase text-lime-400 font-semibold">MODULE 09</div>
-        <h1 class="dossier-serif text-3xl sm:text-4xl font-bold text-white mt-1">Contact &amp; First-Call Brief</h1>
-        <p class="text-sm text-gray-400 mt-1 max-w-3xl">Reach out, and send a short brief with your first message.</p>
+        <h1 class="dossier-serif text-3xl sm:text-4xl font-bold text-white mt-1">Book &amp; Enroll</h1>
+        <p class="text-sm text-gray-400 mt-1 max-w-3xl">Choose a module or package, then follow four simple steps.</p>
       </div>
-      <div class="gold-cta-banner rounded-xl p-5 sm:p-6 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 shadow-xl">
-        <div class="space-y-1 max-w-xl">
-          <h3 class="dossier-serif text-2xl sm:text-3xl font-bold text-obsidian-950">Make FelRon your <span class="italic">first call.</span></h3>
-          <p class="text-xs sm:text-sm text-obsidian-900 font-medium leading-relaxed">Before a problem turns into an invoice, talk it through with someone raised to handle it calmly, privately and in good faith.</p>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <div class="lg:col-span-5 card-surface rounded-2xl p-6 space-y-4">
+          <span class="text-xs font-mono uppercase text-lime-400 font-bold">STEP 0 • CHOOSE</span>
+          <h2 class="dossier-serif text-2xl font-bold text-white">What would you like to start with?</h2>
+          <select id="enroll-item" onchange="updateEnroll()" class="w-full bg-obsidian-950 border border-gray-700 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-lime-400"></select>
+          <div id="enroll-summary" class="p-4 rounded-lg bg-obsidian-950/70 border border-gray-800/90 text-xs text-gray-300 space-y-1"></div>
+          <div class="p-4 rounded-lg border border-dashed border-lime-400/50 space-y-2">
+            <div class="text-[11px] font-mono uppercase tracking-widest text-lime-400 font-bold">Checkout (coming soon)</div>
+            <button disabled class="w-full px-4 py-2.5 rounded-lg bg-lime-400/30 text-black/70 font-bold text-xs uppercase tracking-wider cursor-not-allowed" title="Placeholder">Pay Online (Stripe Payment Link / Square Checkout)</button>
+            <p class="text-[11px] text-gray-400">Placeholder: the Stripe Payment Link or Square Checkout URL goes here. Online payment is not live yet, so please book your free first call below and you'll get a payment link or invoice.</p>
+            <!-- TODO: replace with real Stripe Payment Link or Square checkout URL per module/package -->
+          </div>
         </div>
-        <div class="w-full lg:w-auto bg-obsidian-950 text-white rounded-lg p-3.5 border border-obsidian-800 space-y-1 text-xs font-mono">
-          <div class="flex items-center gap-3"><span class="text-lime-400 uppercase tracking-wider w-28">DIRECT LINE:</span><span class="text-gray-200 font-semibold">[Phone Number]</span></div>
-          <div class="flex items-center gap-3"><span class="text-lime-400 uppercase tracking-wider w-28">FIVERR:</span><span class="text-gray-200 font-semibold">[Fiverr Profile Link]</span></div>
-          <div class="flex items-center gap-3"><span class="text-lime-400 uppercase tracking-wider w-28">LOCATION:</span><span class="text-gray-200 font-semibold">San Antonio, TX</span></div>
+        <div class="lg:col-span-7 card-surface rounded-2xl p-6 space-y-4">
+          <span class="text-xs font-mono uppercase text-lime-400 font-bold">HOW ENROLLMENT WORKS</span>
+          <ol class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <li class="p-4 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="dossier-serif text-2xl font-bold text-lime-300">01</div><div class="font-bold text-white">Free 15-minute first call</div><p class="text-gray-300 mt-1">We talk through what you need and whether FelRon is the right fit, or whether a licensed professional is.</p></li>
+            <li class="p-4 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="dossier-serif text-2xl font-bold text-lime-300">02</div><div class="font-bold text-white">Sign the acknowledgment</div><p class="text-gray-300 mt-1">A plain-language <a href="#/waiver" class="text-lime-300 hover:underline">Client Acknowledgment &amp; Waiver</a> before any personal session.</p></li>
+            <li class="p-4 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="dossier-serif text-2xl font-bold text-lime-300">03</div><div class="font-bold text-white">Pay</div><p class="text-gray-300 mt-1">Stripe, Square, Cash App Business or an invoice (payment links coming soon). Your receipt reads "educational session" or "IT service."</p></li>
+            <li class="p-4 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="dossier-serif text-2xl font-bold text-lime-300">04</div><div class="font-bold text-white">Start</div><p class="text-gray-300 mt-1">You get access to the FelRon App, your first lesson and your first walkthrough session, with a written recap after each one.</p></li>
+          </ol>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <a href="tel:+12105354987" class="px-4 py-2.5 rounded-lg bg-lime-400 hover:bg-lime-300 text-black font-bold text-xs uppercase tracking-wider">Call (210) 535-4987</a>
+            <a id="enroll-mail" href="mailto:MattDiazSA@gmail.com" class="px-4 py-2.5 rounded-lg bg-obsidian-800 border border-lime-400/40 text-lime-300 font-bold text-xs uppercase tracking-wider">Email to Book the Free Call</a>
+          </div>
         </div>
       </div>
-
       <div class="card-surface rounded-2xl p-6 space-y-6">
         <div class="border-b border-gray-800 pb-4">
           <span class="text-xs font-mono uppercase text-lime-400 font-bold">FIRST-CALL BRIEF • NEED-TO-KNOW ONLY</span>
@@ -717,6 +942,59 @@
         </div>
       </div>
 
+      <div id="pager-book"></div>
+    </section>
+    <!-- ==================== MODULE 10: CONTACT ==================== -->
+    <section id="view-contact" class="module-view hidden space-y-6 dossier-frame rounded-2xl p-5 sm:p-8 bg-obsidian-950/80">
+      <div class="border-b border-lime-400/20 pb-4 no-print">
+        <div class="text-xs font-mono tracking-widest uppercase text-lime-400 font-semibold">MODULE 10</div>
+        <h1 class="dossier-serif text-3xl sm:text-4xl font-bold text-white mt-1">Contact</h1>
+        <p class="text-sm text-gray-400 mt-1 max-w-3xl">Phone, email, or a quick message. The first 15-minute call is free.</p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <div class="lg:col-span-5 space-y-4">
+          <div class="card-surface rounded-2xl p-6 space-y-4">
+            <div class="space-y-1"><div class="text-[11px] font-mono uppercase tracking-widest text-lime-400 font-bold">Phone</div><a href="tel:+12105354987" class="dossier-serif text-2xl font-bold text-white hover:text-lime-300">(210) 535-4987</a></div>
+            <div class="space-y-1"><div class="text-[11px] font-mono uppercase tracking-widest text-lime-400 font-bold">Email</div><a href="mailto:MattDiazSA@gmail.com" class="text-base sm:text-lg font-semibold text-white hover:text-lime-300 break-all">MattDiazSA@gmail.com</a></div>
+            <div class="space-y-1"><div class="text-[11px] font-mono uppercase tracking-widest text-lime-400 font-bold">Location</div><div class="text-white font-semibold">San Antonio, TX</div><div class="text-xs text-gray-400">Remote sessions available. On-site visits in the San Antonio area.</div></div>
+            <div class="space-y-1"><div class="text-[11px] font-mono uppercase tracking-widest text-lime-400 font-bold">Hours</div><div class="text-white font-semibold">[Hours, e.g. Mon–Sat, by appointment]</div></div>
+            <div class="space-y-1"><div class="text-[11px] font-mono uppercase tracking-widest text-lime-400 font-bold">Founder</div><div class="dossier-serif text-xl font-bold text-lime-300">Matthew Alexander Diaz</div></div>
+          </div>
+          <p class="text-[11px] text-gray-500">Please don't send account numbers, passwords, seed phrases or other sensitive details by email or text.</p>
+        </div>
+        <div class="lg:col-span-7 card-surface rounded-2xl p-6 space-y-4">
+          <span class="text-xs font-mono uppercase text-lime-400 font-bold">QUICK MESSAGE</span>
+          <h2 class="dossier-serif text-2xl font-bold text-white">Send a quick note</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div><label class="block text-xs text-gray-400 mb-1" for="qm-name">Your first name</label><input id="qm-name" oninput="updateQuickMsg()" class="w-full bg-obsidian-950 border border-gray-700 rounded-xl px-3.5 py-2 text-sm text-white outline-none focus:border-lime-400" /></div>
+            <div><label class="block text-xs text-gray-400 mb-1" for="qm-topic">Topic</label><select id="qm-topic" onchange="updateQuickMsg()" class="w-full bg-obsidian-950 border border-gray-700 rounded-xl px-3.5 py-2 text-sm text-white outline-none focus:border-lime-400"><option>Money &amp; investing education</option><option>IT &amp; tech help</option><option>Starting or growing a business</option><option>Taxes &amp; paperwork</option><option>Something else</option></select></div>
+          </div>
+          <div><label class="block text-xs text-gray-400 mb-1" for="qm-msg">What's going on? (a sentence or two)</label><textarea id="qm-msg" rows="4" oninput="updateQuickMsg()" class="w-full bg-obsidian-950 border border-gray-700 rounded-xl px-3.5 py-2 text-sm text-white outline-none focus:border-lime-400"></textarea></div>
+          <pre id="qm-out" class="text-xs font-mono text-gray-200 whitespace-pre-wrap bg-obsidian-900 p-4 rounded-lg border border-gray-800"></pre>
+          <div class="flex flex-wrap gap-2">
+            <a id="qm-mail" href="mailto:MattDiazSA@gmail.com" class="px-4 py-2.5 rounded-lg bg-lime-400 hover:bg-lime-300 text-black font-bold text-xs uppercase tracking-wider">Open in Email</a>
+            <a id="qm-sms" href="sms:+12105354987" class="px-4 py-2.5 rounded-lg bg-obsidian-800 border border-lime-400/40 text-lime-300 font-bold text-xs uppercase tracking-wider">Send as Text</a>
+            <button onclick="copyText(document.getElementById('qm-out').textContent)" class="px-4 py-2.5 rounded-lg bg-obsidian-800 border border-gray-700 text-gray-300 text-xs font-mono">Copy</button>
+          </div>
+          <p class="text-[11px] text-gray-500">Ready to sign up? <a href="#/book" class="text-lime-300 hover:underline">Go to Book &amp; Enroll →</a></p>
+        </div>
+      </div>
+      <div class="gold-cta-banner rounded-xl p-5 sm:p-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-5 shadow-xl">
+        <div class="space-y-1">
+          <h3 class="dossier-serif text-2xl sm:text-3xl font-bold text-obsidian-950">Make FelRon your <span class="italic">first call.</span></h3>
+          <p class="text-xs sm:text-sm text-obsidian-900 font-semibold leading-relaxed">Before a problem becomes an invoice, bring it to someone raised to resolve it calmly, privately, and in good faith.</p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <a href="#/book" class="px-4 py-2 rounded bg-obsidian-950 text-lime-300 font-bold text-xs uppercase tracking-wider hover:bg-obsidian-800">Book &amp; Enroll →</a>
+            <a href="#/packages" class="px-4 py-2 rounded border border-obsidian-950/60 text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-obsidian-950/10">See Modules &amp; Packages</a>
+          </div>
+        </div>
+        <div class="bg-obsidian-950 text-white rounded-lg p-4 border border-obsidian-800 space-y-2 text-xs font-mono">
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5 border-b border-gray-800 pb-2"><span class="text-lime-400 uppercase tracking-widest font-bold">Direct</span><span class="text-gray-100 font-semibold"><a href="tel:+12105354987" class="hover:text-lime-300">(210) 535-4987</a> <span class="seg">• San Antonio, TX</span></span></div>
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5 border-b border-gray-800 pb-2"><span class="text-lime-400 uppercase tracking-widest font-bold">Dispatch</span><a href="mailto:MattDiazSA@gmail.com" class="text-gray-100 font-semibold hover:text-lime-300">MattDiazSA@gmail.com</a></div>
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5"><span class="text-lime-400 uppercase tracking-widest font-bold">Founder</span><span class="dossier-serif text-base text-white font-semibold">Matthew Alexander Diaz</span></div>
+        </div>
+      </div>
+
       <div id="pager-contact"></div>
     </section>
   </main>
@@ -730,7 +1008,7 @@
           <div class="footer-name text-lime-300 dossier-serif font-bold tracking-wide">FelRon IT-Legacy-Capital</div>
           <div class="text-gray-300 text-xs mt-0.5"><span class="seg">Founded by <span class="dossier-serif text-sm text-white font-semibold">Matthew Alexander Diaz</span></span> <span class="seg">• San Antonio, TX</span></div>
         </div>
-        <span class="font-mono">The TRIAGE Protocol • Guidance &amp; Education</span>
+        <span class="font-mono text-gray-300"><a href="tel:+12105354987" class="hover:text-lime-300">(210) 535-4987</a> • <a href="mailto:MattDiazSA@gmail.com" class="hover:text-lime-300">MattDiazSA@gmail.com</a></span>
       </div>
       <p><strong class="text-gray-200">Disclaimer:</strong> <span class="seg">FelRon IT-Legacy-Capital</span> provides educational, organizational and logistical services only. Nothing on this site or in any session is legal, tax, insurance or investment advice, or a recommendation to buy, sell or hold any security or asset. Matthew Alexander Diaz is not a licensed investment adviser, broker, CPA, attorney, insurance adjuster or electrician. Clients make and are solely responsible for their own decisions. FelRon never takes custody of client funds, crypto keys or account logins and never places trades for clients. No results are promised or guaranteed. Simulators are hypothetical illustrations only. For advice specific to your situation, consult a licensed professional.</p>
     </div>
@@ -739,15 +1017,16 @@
   <script>
     // ==================== MODULES & HASH ROUTER ====================
     const MODULES = [
-      { id: 'about', num: '01', title: 'About Matthew & His Parents', blurb: 'The family of service behind FelRon, and why I do this work.' },
-      { id: 'help', num: '02', title: 'How I Can Help', blurb: 'Four friendly paths (money, IT, business, taxes & paperwork) with real next steps and official resources.' },
-      { id: 'triage', num: '03', title: 'The TRIAGE Framework', blurb: 'The four pillars and all 17 topics, from trading education to IT, explained in plain English.' },
-      { id: 'tools', num: '04', title: 'Tools & Simulators', blurb: 'Hypothetical, education-only calculators for options, leverage and 401(k) literacy.' },
-      { id: 'pricing', num: '05', title: 'Services & Pricing', blurb: 'Example session rates and packages, traceable payments, and what I never charge.' },
-      { id: 'privacy', num: '06', title: 'How I Work & Privacy', blurb: 'Education first, zero-knowledge habits, written recaps, and no custody, ever.' },
+      { id: 'about', num: '01', title: 'About Matthew & His Parents', blurb: 'Raised on composure under pressure: the family of service behind FelRon.' },
+      { id: 'help', num: '02', title: 'How I Can Help', blurb: 'Show you, teach you, then do it together: money, IT, business, taxes & paperwork.' },
+      { id: 'triage', num: '03', title: 'The TRIAGE Framework', blurb: 'Four pillars and 17 topics, each with How I Did It / How You Can / Done Together.' },
+      { id: 'packages', num: '04', title: 'Modules & Packages', blurb: 'Paid learning modules, walkthrough sessions and testing, with the App included.' },
+      { id: 'app', num: '05', title: 'The FelRon App', blurb: 'Simulators, quizzes and a progress checklist. Included in every package.' },
+      { id: 'privacy', num: '06', title: 'How I Work & Privacy', blurb: 'Education first, done with you, zero-knowledge habits, no custody.' },
       { id: 'legal', num: '07', title: 'Legal Framework I Follow', blurb: 'The checklist I hold myself to, and the licensed work I refer out.' },
-      { id: 'waiver', num: '08', title: 'Client Acknowledgment & Waiver', blurb: 'The plain-language agreement every client signs. Printable.' },
-      { id: 'contact', num: '09', title: 'Contact & First-Call Brief', blurb: 'Reach out, and build a short brief to send with your first message.' }
+      { id: 'waiver', num: '08', title: 'Client Acknowledgment & Waiver', blurb: 'Plain-language agreement, signed before personal sessions. Printable.' },
+      { id: 'book', num: '09', title: 'Book & Enroll', blurb: 'Pick a module or package. Free 15-min call → sign → pay → start.' },
+      { id: 'contact', num: '10', title: 'Contact', blurb: '(210) 535-4987 • MattDiazSA@gmail.com • San Antonio, TX.' }
     ];
 
     let currentView = 'menu';
@@ -765,7 +1044,7 @@
             <div class="text-[11px] font-mono uppercase tracking-widest text-lime-400 font-bold">Module ${m.num}</div>
             <h3 class="dossier-serif text-2xl font-bold text-white">${m.title}</h3>
             <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">${m.blurb}</p>
-            <div class="pt-1 text-xs font-mono text-lime-300">Open module →</div>
+            <div class="pt-1 text-xs font-mono text-lime-300">Open →</div>
           </div>
         </a>`).join('');
     }
@@ -778,9 +1057,9 @@
       if (!el) return;
       el.innerHTML = `
         <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pt-6 border-t border-lime-400/20 no-print">
-          ${prev ? `<a href="#/${prev.id}" class="px-4 py-2.5 rounded-lg bg-obsidian-800 hover:bg-obsidian-700 border border-gray-700 text-gray-200 text-xs sm:text-sm font-semibold">← ${prev.num}. ${prev.title}</a>` : '<a href="#/" class="px-4 py-2.5 rounded-lg bg-obsidian-800 hover:bg-obsidian-700 border border-gray-700 text-gray-200 text-xs sm:text-sm font-semibold">← Module Menu</a>'}
-          <a href="#/" class="text-center text-xs font-mono text-lime-300 hover:underline">☰ All Modules</a>
-          ${next ? `<a href="#/${next.id}" class="px-4 py-2.5 rounded-lg bg-lime-400 hover:bg-lime-300 text-black text-xs sm:text-sm font-bold text-right">${next.num}. ${next.title} →</a>` : '<a href="#/" class="px-4 py-2.5 rounded-lg bg-lime-400 hover:bg-lime-300 text-black text-xs sm:text-sm font-bold text-right">Back to Module Menu →</a>'}
+          ${prev ? `<a href="#/${prev.id}" class="px-4 py-2.5 rounded-lg bg-obsidian-800 hover:bg-obsidian-700 border border-gray-700 text-gray-200 text-xs sm:text-sm font-semibold">← ${prev.num}. ${prev.title}</a>` : '<a href="#/" class="px-4 py-2.5 rounded-lg bg-obsidian-800 hover:bg-obsidian-700 border border-gray-700 text-gray-200 text-xs sm:text-sm font-semibold">← Home</a>'}
+          <a href="#/" class="text-center text-xs font-mono text-lime-300 hover:underline">☰ Home</a>
+          ${next ? `<a href="#/${next.id}" class="px-4 py-2.5 rounded-lg bg-lime-400 hover:bg-lime-300 text-black text-xs sm:text-sm font-bold text-right">${next.num}. ${next.title} →</a>` : '<a href="#/" class="px-4 py-2.5 rounded-lg bg-lime-400 hover:bg-lime-300 text-black text-xs sm:text-sm font-bold text-right">Back to Home →</a>'}
         </div>`;
     }
 
@@ -793,15 +1072,17 @@
       const m = MODULES.find((x) => x.id === id);
       document.getElementById('crumb').innerHTML = m
         ? `<a href="#/" class="hover:text-lime-300">Modules</a> <span class="text-gray-600">/</span> <span class="text-lime-300">${m.num}. ${m.title}</span> <span class="text-gray-600">(${MODULES.indexOf(m) + 1} of ${MODULES.length})</span>`
-        : '<span class="text-lime-300">Module Menu</span>';
+        : '<span class="text-lime-300">Executive Dossier • Home</span>';
       document.querySelectorAll('.nav-tab').forEach((t) => {
-        const on = t.dataset.mod === id || (id === 'menu' && t.dataset.mod === 'menu');
-        t.className = 'nav-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition-all whitespace-nowrap ' + (on ? 'bg-lime-400 text-black' : 'text-gray-300 hover:text-lime-300 hover:bg-obsidian-800');
+        const on = t.dataset.mod === id;
+        t.className = 'nav-tab transition-all ' + (on ? 'bg-lime-400 text-black' : 'text-gray-300 hover:text-lime-300 hover:bg-obsidian-800');
       });
       if (m) renderPager(id);
       if (id === 'triage') renderCodex();
-      if (id === 'tools') { updateDerivativesLab(); updatePerpsLab(); updateBarbellModel(); }
-      if (id === 'contact') { renderServiceCheckboxes(); updateClientBrief(); }
+      if (id === 'app') { updateDerivativesLab(); updatePerpsLab(); updateBarbellModel(); renderProgress(); if (!document.querySelector('#quiz-box div')) renderQuiz(); }
+      if (id === 'packages') renderProducts();
+      if (id === 'book') { initEnroll(); renderServiceCheckboxes(); updateClientBrief(); }
+      if (id === 'contact') updateQuickMsg();
       window.scrollTo(0, 0);
     }
     function go(id) { location.hash = '#/' + id; }
@@ -1204,7 +1485,174 @@
       });
     }
 
-    // ==================== CONTACT: FIRST-CALL BRIEF ====================
+    // ==================== PAID MODULES, PACKAGES & ENROLLMENT ====================
+    const PRICE_NOTE = 'starting price, subject to change';
+    const PRODUCTS = [
+      { id: 'money', icon: '💵', title: 'Money Basics & Budgeting', price: '$29', pillar: 'IV', includes: ['Budgeting, savings and emergency-fund systems', 'Credit and debt basics', '401(k) literacy: reading your fund menu', 'Done-with-you budget setup on accounts you own'] },
+      { id: 'market', icon: '🏦', title: 'How the Market Works', price: '$29', pillar: 'II', includes: ['What moves a price: buyers, sellers, supply, demand and news', 'Order types: market, limit, stop and stop-limit, plus bid/ask spreads', 'Options basics: calls, puts, strikes, expirations and premiums', 'Reading a quote screen and a basic chart'],
+        steps: ['I walk through how I learned to read price action and order flow on my own account, mistakes included.', 'Lessons and App quizzes show how orders fill and how options are priced.', 'We open your own brokerage app together and practice reading quotes and setting up order types. You place anything real yourself.'] },
+      { id: 'treasuries', icon: '📊', title: 'Stocks & Treasuries', price: '$29', pillar: 'II', includes: ['What Treasury yields are and how to read the 10-year', 'How the Fed, rates and inflation feed into stock prices', 'Why rising yields tend to pressure growth and small-cap stocks, and falling yields tend to support them', 'Building a simple macro watchlist (10-year, CPI, Fed meetings)'],
+        steps: ['I show how I watch the 10-year yield, Fed decisions and inflation reports alongside my own positions.', 'Lessons explain the relationships, plus the 10-year quiz in the App.', 'We set up your own macro dashboard and calendar alerts together.'] },
+      { id: 'ai', icon: '🤖', title: 'Ticker Evaluation with AI', price: '$29', pillar: 'II', includes: ['My screening process: filters, liquidity and price range', 'RSI, volume and trend basics', 'Catalysts: earnings, news and sector moves', 'Reading an option chain: open interest, spread, expiration', 'Using AI tools for research and summaries, with the human always making the decision', 'Education only: no stock picks or recommendations'],
+        steps: ['I demo my real screening and research workflow, including how I use AI to summarize and how I double-check it.', 'You learn each step and build your own written checklist.', 'We set up your screener, watchlist and AI research prompts together. You decide what, if anything, to do.'] },
+      { id: 'options', icon: '📈', title: 'Options & LEAPS Education', price: '$29', pillar: 'II', includes: ['Calls, puts, strikes, expirations and the Greeks', 'LEAPS and time decay, isolated margin vs. cross margin', 'How I build my own written trade checklist (my process, not a promise)', 'Platform walkthrough: you place your own trades'] },
+      { id: 'crypto', icon: '🔐', title: 'Crypto Self-Custody & Security', price: '$29', pillar: 'III', includes: ['Hardware wallets, seed phrases and cold storage', 'Scam and phishing defense', 'DeFi basics and risks', 'Guided setup: you create and keep your own keys'] },
+      { id: 'business', icon: '🏛', title: 'Business Setup Walkthrough (DBA / LLC / EIN)', price: '$29', pillar: 'I', includes: ['Sole proprietor vs. DBA vs. LLC explained', 'Bexar County DBA and Texas SOS filing walkthrough', 'Free IRS EIN application, done side by side', 'Business bank account and record-keeping setup'] },
+      { id: 'taxes', icon: '📑', title: 'Tax Records & Paperwork Organization', price: '$29', pillar: 'I', includes: ['W-2, 1099, receipt and mileage organization', 'A labeled system, paper or digital', 'A checklist for your CPA or IRS VITA', 'Deadline reminders on your calendar'] },
+      { id: 'it', icon: '🖥', title: 'Home/Office IT Rescue', price: '$29', pillar: 'III', includes: ['Wi-Fi, router and network setup', 'Computer cleanup and backups', 'Password manager and 2-factor setup', 'A written recap of everything configured'] },
+      { id: 'insurance', icon: '🩺', title: 'Insurance & Claims Paperwork', price: '$29', pillar: 'I', includes: ['Reading your health, life or auto policy', 'Organizing claim documents and deadlines', 'A question list for your insurer', 'You file and negotiate. TDI help if you\'re stuck'] }
+    ];
+    const DEFAULT_STEPS = {
+      money: ['I share how I built my own budget and savings habits on a retail paycheck.', 'Lessons and worksheets show common budgeting approaches.', 'We set up your budget and automatic savings on accounts you own.'],
+      options: ['I show my real long-dated options process and written rules, including losses. Past results are not a promise.', 'Lessons, the App simulators and the Options quiz.', 'Platform walkthrough on your own account. You place your own trades.'],
+      crypto: ['I show how I run my own self-custody setup.', 'Lessons on wallets, backups and scam defense.', 'A guided setup where you create and keep the keys.'],
+      business: ['I show how I\'m setting up FelRon step by step.', 'Lessons on DBA vs. LLC vs. sole proprietor, and where each is filed.', 'We fill out the forms side by side, and you sign and submit.'],
+      taxes: ['I show how I keep my own records organized.', 'Lessons and checklists for a clean file.', 'We sort your documents together and prep a file for your CPA or VITA.'],
+      it: ['I show the network and device setups I run at home.', 'Lessons on Wi-Fi, backups and security basics.', 'Hands-on setup and fixes, plus a written recap.'],
+      insurance: ['I share how I\'ve untangled insurance letters for family.', 'Lessons on reading a policy and tracking a claim.', 'We organize your claim file together, and you handle the insurer.']
+    };
+    const PACKAGES = [
+      { id: 'starter', name: 'Starter', price: '$75', tag: 'Start with the basics', features: ['Any 3 learning modules', 'One 1-hour walkthrough session', '3 months of the FelRon App: tools, quizzes and progress', 'Written recap after the session'] },
+      { id: 'builder', name: 'Builder', price: '$175', tag: 'Most popular', features: ['All learning modules', '3 walkthrough sessions', '6 months of the FelRon App with testing for every module', 'Written recaps after every session'] },
+      { id: 'full', name: 'Full-Service', price: 'from $375 or $75/mo', tag: 'Done-with-you execution', features: ['Everything in Builder', 'Done-with-you execution: I handle the tasks, and you approve every action', 'Ongoing walkthrough sessions', 'FelRon App included', 'Priority scheduling for IT and logistics'] }
+    ];
+    const ENROLL_OPTIONS = PRODUCTS.map((p) => ({ id: p.id, label: 'Module: ' + p.title + ' (' + p.price + ', starting)', detail: p.includes }))
+      .concat(PACKAGES.map((k) => ({ id: k.id, label: 'Package: ' + k.name + ' (' + k.price + ', starting)', detail: k.features })))
+      .concat([{ id: 'hourly', label: 'Single walkthrough session / hourly help ($30–50/hr, starting)', detail: ['Education, IT help or logistics', 'Billed hourly or quoted per job', 'Written recap included'] },
+               { id: 'app', label: 'The FelRon App only ($9.50/mo or $49/yr, starting)', detail: ['Simulators, quizzes and testing', 'Progress tracking for every module'] },
+               { id: 'unsure', label: 'Not sure yet: just book the free 15-min call', detail: ['We figure out the right fit together'] }]);
+
+    function renderProducts() {
+      document.getElementById('product-grid').innerHTML = PRODUCTS.map((p) => `
+        <div class="card-surface rounded-xl p-5 flex flex-col justify-between space-y-3">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between gap-2"><span class="text-2xl">${p.icon}</span><span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-lime-400/15 text-lime-300 border border-lime-400/30">Pillar ${p.pillar}</span></div>
+            <h3 class="dossier-serif text-xl font-bold text-white">${p.title}</h3>
+            <div class="font-mono text-lime-300 font-bold">${p.price} <span class="text-[10px] text-gray-400 font-normal">starting price, subject to change</span></div>
+            <ul class="text-xs text-gray-300 space-y-1">${p.includes.map((i) => `<li class="flex gap-2"><span class="text-lime-400">✓</span><span>${i}</span></li>`).join('')}</ul>
+            ${(() => { const st = p.steps || DEFAULT_STEPS[p.id] || []; return st.length ? `<div class="space-y-1 border-t border-gray-800 pt-2">${['01 How I did it', '02 How you can do it', '03 Let\'s get it done together'].map((l, i) => `<div class="text-[11px] text-gray-300"><span class="font-mono text-lime-400 font-bold">${l}:</span> ${st[i]}</div>`).join('')}</div>` : ''; })()}
+            <div class="text-[11px] text-gray-400 border-t border-gray-800 pt-2"><strong class="text-gray-200">Format:</strong> lesson + 1-on-1 walkthrough session + practice &amp; testing in the FelRon App</div>
+          </div>
+          <a href="#/book?item=${p.id}" class="block text-center px-4 py-2 rounded-lg bg-lime-400 hover:bg-lime-300 text-black font-bold text-xs uppercase tracking-wider">Get This Module →</a>
+        </div>`).join('');
+      document.getElementById('package-grid').innerHTML = PACKAGES.map((k, i) => `
+        <div class="card-surface rounded-xl p-5 flex flex-col justify-between space-y-3 ${i === 1 ? 'border-2 border-lime-400/70 lime-glow' : ''}">
+          <div class="space-y-2">
+            <div class="text-[11px] font-mono uppercase tracking-widest text-lime-400 font-bold">${k.tag}</div>
+            <h3 class="dossier-serif text-3xl font-bold text-white">${k.name}</h3>
+            <div class="font-mono text-lime-300 text-lg font-bold">${k.price} <span class="text-[10px] text-gray-400 font-normal">starting price, subject to change</span></div>
+            <ul class="text-xs text-gray-300 space-y-1.5">${k.features.map((f) => `<li class="flex gap-2"><span class="text-lime-400">✓</span><span>${f}</span></li>`).join('')}</ul>
+          </div>
+          <a href="#/book?item=${k.id}" class="block text-center px-4 py-2.5 rounded-lg ${i === 1 ? 'bg-lime-400 hover:bg-lime-300 text-black' : 'bg-obsidian-800 hover:bg-obsidian-700 text-lime-300 border border-lime-400/40'} font-bold text-xs uppercase tracking-wider">Enroll in ${k.name} →</a>
+        </div>`).join('');
+    }
+
+    function hashParam(name) {
+      const q = (location.hash.split('?')[1] || '');
+      return new URLSearchParams(q).get(name);
+    }
+    function initEnroll() {
+      const sel = document.getElementById('enroll-item');
+      if (!sel.options.length) sel.innerHTML = ENROLL_OPTIONS.map((o) => `<option value="${o.id}">${o.label}</option>`).join('');
+      const want = hashParam('item');
+      if (want && ENROLL_OPTIONS.some((o) => o.id === want)) sel.value = want;
+      updateEnroll();
+    }
+    function updateEnroll() {
+      const o = ENROLL_OPTIONS.find((x) => x.id === document.getElementById('enroll-item').value) || ENROLL_OPTIONS[0];
+      document.getElementById('enroll-summary').innerHTML = `<div class="font-bold text-white">${o.label}</div>` + o.detail.map((d) => `<div>✓ ${d}</div>`).join('') + '<div class="text-[11px] text-gray-500 pt-1">Starting price, subject to change. Confirmed in writing before payment.</div>';
+      const subj = encodeURIComponent('FelRon: book my free 15-min first call');
+      const body = encodeURIComponent('Hi Matthew,\n\nI\'d like to book a free 15-minute first call.\nInterested in: ' + o.label + '\nBest times to reach me: \n\nThanks!');
+      document.getElementById('enroll-mail').href = 'mailto:MattDiazSA@gmail.com?subject=' + subj + '&body=' + body;
+    }
+
+    // ==================== THE FELRON APP: PROGRESS + QUIZ ====================
+    const PROGRESS_KEY = 'felron_progress_v1';
+    const STEPS = ['Lesson', 'Walkthrough session', 'Practice & test'];
+    function loadProgress() { try { return JSON.parse(localStorage.getItem(PROGRESS_KEY)) || {}; } catch (e) { return {}; } }
+    function saveProgress(p) { try { localStorage.setItem(PROGRESS_KEY, JSON.stringify(p)); } catch (e) {} }
+    function renderProgress() {
+      const p = loadProgress();
+      let done = 0, total = PRODUCTS.length * STEPS.length;
+      document.getElementById('progress-list').innerHTML = PRODUCTS.map((m) => {
+        const row = STEPS.map((s, i) => {
+          const k = m.id + ':' + i; const on = !!p[k]; if (on) done++;
+          return `<label class="flex items-center gap-2 text-xs cursor-pointer ${on ? 'text-lime-300' : 'text-gray-300'}"><input type="checkbox" ${on ? 'checked' : ''} onchange="toggleProgress('${k}')" class="accent-lime-400" />${s}</label>`;
+        }).join('');
+        return `<div class="p-3 rounded-lg bg-obsidian-950/70 border border-gray-800/90"><div class="text-sm font-semibold text-white mb-1.5">${m.icon} ${m.title}</div><div class="flex flex-wrap gap-x-4 gap-y-1">${row}</div></div>`;
+      }).join('');
+      const pct = Math.round((done / total) * 100);
+      document.getElementById('progress-pct').textContent = pct + '%';
+      document.getElementById('progress-bar').style.width = pct + '%';
+    }
+    function toggleProgress(k) { const p = loadProgress(); p[k] = !p[k]; saveProgress(p); renderProgress(); }
+    function resetProgress() { saveProgress({}); renderProgress(); }
+
+    const QUIZZES = {
+      options: { title: 'Options & LEAPS Education', items: [
+        { q: 'When you BUY a call option, what is the most you can lose?', a: ['The premium you paid', 'Unlimited', 'Twice the premium', 'The full stock price × 100'], c: 0, why: 'A long option\'s maximum loss is the premium paid. It can expire worthless.' },
+        { q: 'What does "LEAPS" generally refer to?', a: ['Options that expire in about a week', 'Options with roughly a year or more until expiration', 'A type of savings account', 'Leveraged crypto tokens'], c: 1, why: 'LEAPS are long-dated options, typically a year or more out.' },
+        { q: 'Time decay (theta) usually…', a: ['Stays the same every day', 'Speeds up as expiration gets closer', 'Only affects stocks, not options', 'Increases an option\'s value'], c: 1, why: 'Time value tends to shrink faster in the final weeks before expiration.' },
+        { q: 'One standard U.S. equity option contract usually covers…', a: ['1 share', '10 shares', '100 shares', '1,000 shares'], c: 2, why: 'Standard equity options cover 100 shares.' },
+        { q: 'With ISOLATED margin on a perp position, a liquidation generally…', a: ['Can drain your whole account', 'Is limited to the margin posted to that position', 'Never happens', 'Is covered by the exchange'], c: 1, why: 'Isolated margin limits that position\'s loss to its posted collateral. Cross margin can draw on the whole account.' }
+      ] },
+      treasuries: { title: 'Stocks & Treasuries', items: [
+        { q: 'When Treasury bond PRICES fall, their yields generally…', a: ['Fall too', 'Rise', 'Stay the same', 'Become negative'], c: 1, why: 'Bond prices and yields move in opposite directions.' },
+        { q: 'Rising Treasury yields tend to put the most pressure on…', a: ['Growth and small-cap stocks', 'Cash in a savings account', 'Short-term T-bills', 'Nothing. Yields don\'t affect stocks'], c: 0, why: 'Higher yields raise the discount rate on future earnings and borrowing costs, which weighs most on growth and small caps.' },
+        { q: 'The "10-year" usually refers to…', a: ['A 10-year CD rate', 'The yield on the 10-year U.S. Treasury note', 'The S&P 500\'s 10-year return', 'A 10-year mortgage'], c: 1, why: 'The 10-year Treasury yield is a key benchmark for mortgages, valuations and borrowing costs.' },
+        { q: 'If inflation comes in hotter than expected, markets often expect the Fed to…', a: ['Cut rates sooner', 'Keep rates higher for longer', 'Stop publishing data', 'Buy stocks'], c: 1, why: 'Hot inflation usually raises expectations of tighter policy, which can push yields up.' },
+        { q: 'Falling yields generally…', a: ['Hurt every stock equally', 'Tend to support growth and small-cap stocks', 'Mean the stock market must crash', 'Have no relationship to stocks'], c: 1, why: 'Lower yields reduce discount rates and borrowing costs, which tends to help rate-sensitive stocks. It is a tendency, not a rule.' }
+      ] }
+    };
+    let quizId = 'options';
+    const QUIZ_KEY = 'felron_quiz_best_v2';
+    function quizBest() { try { return JSON.parse(localStorage.getItem(QUIZ_KEY)) || {}; } catch (e) { return {}; } }
+    function setQuiz(id) { quizId = id; renderQuiz(); }
+    function renderQuiz() {
+      const sel = document.getElementById('quiz-select');
+      if (sel && !sel.options.length) sel.innerHTML = Object.entries(QUIZZES).map(([k, v]) => `<option value="${k}">${v.title}</option>`).join('');
+      if (sel) sel.value = quizId;
+      const Q = QUIZZES[quizId].items;
+      document.getElementById('quiz-box').innerHTML = Q.map((x, i) => `
+        <div class="p-3 rounded-lg bg-obsidian-950/70 border border-gray-800/90" id="qz-${i}">
+          <div class="text-sm font-semibold text-white mb-2">${i + 1}. ${x.q}</div>
+          <div class="grid grid-cols-1 gap-1.5">${x.a.map((t, j) => `<label class="flex items-start gap-2 text-xs text-gray-300 cursor-pointer"><input type="radio" name="qz${i}" value="${j}" class="mt-0.5 accent-lime-400" />${t}</label>`).join('')}</div>
+          <div class="qz-fb text-[11px] mt-2"></div>
+        </div>`).join('');
+      const best = quizBest()[quizId];
+      document.getElementById('quiz-score').textContent = best != null ? 'Best score on this device: ' + best + '/' + Q.length : '';
+    }
+    function gradeQuiz() {
+      const Q = QUIZZES[quizId].items; let score = 0;
+      Q.forEach((x, i) => {
+        const pick = document.querySelector(`input[name="qz${i}"]:checked`);
+        const fb = document.querySelector(`#qz-${i} .qz-fb`);
+        const ok = pick && +pick.value === x.c; if (ok) score++;
+        fb.className = 'qz-fb text-[11px] mt-2 ' + (ok ? 'text-lime-300' : 'text-rose-300');
+        fb.textContent = (ok ? '✓ Correct. ' : (pick ? '✕ Not quite. ' : '• Unanswered. ')) + x.why;
+      });
+      const b = quizBest(); b[quizId] = Math.max(score, b[quizId] || 0);
+      try { localStorage.setItem(QUIZ_KEY, JSON.stringify(b)); } catch (e) {}
+      if (score >= 4) { const p = loadProgress(); p[quizId + ':2'] = true; saveProgress(p); renderProgress(); }
+      document.getElementById('quiz-score').textContent = 'Score: ' + score + '/' + Q.length + (score >= 4 ? ', and "Practice & test" is checked off for ' + QUIZZES[quizId].title + '.' : '') + ' (best ' + b[quizId] + '/' + Q.length + ')';
+    }
+
+    // ==================== CONTACT: QUICK MESSAGE ====================
+    function updateQuickMsg() {
+      const n = document.getElementById('qm-name').value.trim() || '[your name]';
+      const t = document.getElementById('qm-topic').value;
+      const m = document.getElementById('qm-msg').value.trim() || '[a sentence or two about what you need]';
+      const text = `Hi Matthew,\n\nMy name is ${n}. I'm reaching out about: ${t}.\n\n${m}\n\nBest way to reach me: \n\nThanks!`;
+      document.getElementById('qm-out').textContent = text;
+      document.getElementById('qm-mail').href = 'mailto:MattDiazSA@gmail.com?subject=' + encodeURIComponent('FelRon: ' + t) + '&body=' + encodeURIComponent(text);
+      document.getElementById('qm-sms').href = 'sms:+12105354987?&body=' + encodeURIComponent(text);
+    }
+    function copyText(text) {
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(showToast).catch(() => fallbackCopy(text));
+      else fallbackCopy(text);
+    }
+
+    // ==================== BOOK: FIRST-CALL BRIEF ====================
     const DISCLAIMER = 'Disclaimer: FelRon IT-Legacy-Capital provides guidance & education, organization and logistics only. This is not legal, tax or investment advice. Matthew is not a licensed investment adviser, CPA, attorney, insurance adjuster or electrician. The client makes all decisions. FelRon never takes custody of funds, keys or account logins.';
 
     function renderServiceCheckboxes() {
@@ -1229,6 +1677,7 @@
       const lines = [
         '====================================================',
         'FELRON IT-LEGACY-CAPITAL • FIRST-CALL BRIEF',
+        'Matthew Alexander Diaz • (210) 535-4987 • MattDiazSA@gmail.com',
         'The TRIAGE Protocol • San Antonio, TX',
         'Privacy: need-to-know only. Please do not include account numbers or passwords.',
         '====================================================',
